@@ -147,7 +147,7 @@ Auf einem Steam Deck ist das Ziel normalerweise:
 ```
 
 Auf anderen Geräten wird das tatsächliche Home-Verzeichnis und die vorhandene
-Steam-Installation ermittelt. Auch `/home/fabian`, Bazzites Benutzerverzeichnis
+Steam-Installation ermittelt. Auch `/home/user`, Bazzites Benutzerverzeichnis
 und die üblichen Flatpak-Steam-Pfade werden berücksichtigt. Fehlende
 Zielverzeichnisse werden angelegt. Ist noch keine Steam-Installation erkennbar,
 werden Videos unter `~/.steam/root/config/uioverrides/movies/` abgelegt; für Decky

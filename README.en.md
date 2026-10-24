@@ -111,7 +111,7 @@ The startup movies include our own creations as well as videos from
 Only WebM movies are copied. Missing directories are created and matching
 filenames are replaced; other existing movies remain. The normal Steam Deck
 destination is `/home/deck/.steam/root/config/uioverrides/movies/`. Other user
-homes and common Flatpak Steam paths are detected automatically.
+homes, such as `/home/user`, and common Flatpak Steam paths are detected automatically.
 
 After installation enable them in **Game Mode → Settings → Customization →
 Startup Movie**. Exact menu wording depends on Steam language/version.
