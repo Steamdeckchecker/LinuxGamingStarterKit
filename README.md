@@ -19,6 +19,12 @@ mit simulierten Systembefehlen geprüft. Tests wurden auf SteamOS, CachyOS und B
 Decky-Plugins und externer Apps hängt zusätzlich von deren eigener Unterstützung
 für die jeweilige Steam-Version, Distribution und Hardware ab.
 
+## Video-Tutorial
+
+[![Video-Tutorial: Linux Handheld Starter Kit](https://i.ytimg.com/vi/bLE9qumR9XI/hqdefault.jpg)](https://youtu.be/bLE9qumR9XI)
+
+[Video-Tutorial auf YouTube ansehen](https://youtu.be/bLE9qumR9XI)
+
 ## Downloads
 
 | Datei | Zweck |
@@ -113,6 +119,9 @@ gestartet. Bei fehlgeschlagenem Decky-Setup wird die Plugin-Installation
 übersprungen; Apps und Emulation bleiben verfügbar.
 
 ## Startvideos und Steam-Pfade
+
+Die Startvideos stammen sowohl aus eigener Hand als auch von
+[steamdeckrepo.com](https://steamdeckrepo.com/).
 
 | Auswahl | Quelle |
 | --- | --- |
@@ -318,7 +327,7 @@ Die [Webseite](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/de/
 ist in allen sieben Sprachen verfügbar. Sie enthält das Original-Logo, offizielle
 Projektlinks, Downloads und die **neun neuesten Videos** des
 [Steam Deck Checker Kanals](https://www.youtube.com/@SteamDeckChecker/).
-Das Tutorial-Video kann später ergänzt werden.
+Das [Video-Tutorial](https://youtu.be/bLE9qumR9XI) ist direkt auf der Webseite eingebunden.
 Der teilbare Kurzlink lautet <https://is.gd/linux_handheld_starter_kit>.
 
 Die Webseitenquellen liegen unter [`website/`](website/README.md).

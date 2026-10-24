@@ -85,11 +85,11 @@
     "source": "Quellcode-Paket (ZIP)",
     "testNote": "Erste Testversion: 74 automatisierte Tests bestanden. Tests wurden auf SteamOS, CachyOS und Bazzite durchgeführt. Einzelne Apps und Plugins haben eigene Voraussetzungen.",
     "tutorialEyebrow": "VON FABIAN. FÜR DEINEN HANDHELD.",
-    "tutorialTitle": "Tipps, Tests und mehr auf YouTube.",
-    "tutorialText": "Auf Steam Deck Checker findest du Videos rund um Linux-Gaming und Handhelds. Das Video zum Starter Kit ergänze ich hier später.",
+    "tutorialTitle": "Das Starter Kit im Video erklärt.",
+    "tutorialText": "Schau dir mein Video-Tutorial zum Linux Handheld Starter Kit auf Steam Deck Checker an. Du kannst es hier abspielen oder direkt auf YouTube öffnen.",
     "channel": "Zum YouTube-Kanal",
-    "videoSoon": "Starter-Kit-Tutorial folgt",
-    "videoSub": "Hier bekommt die Video-Anleitung ihren Platz.",
+    "videoSoon": "Video-Tutorial zum Starter Kit",
+    "videoSub": "Zum Abspielen anklicken oder auf YouTube ansehen.",
     "faqTitle": "Noch kurz geklärt.",
     "faqEyebrow": "GUT ZU WISSEN",
     "faq": [
@@ -138,7 +138,9 @@
     "latestWatch": "Auf YouTube ansehen",
     "latestChannel": "Alle Videos auf YouTube",
     "terminalAlternative": "Alternativ im Terminal starten",
-    "terminalAlternativeText": "Kopiere diesen Befehl in ein Terminal im Desktop-Modus. Er lädt Version 0.1.0 herunter und startet den Installer erst nach erfolgreichem Download. Als normaler Benutzer ausführen, ohne sudo."
+    "terminalAlternativeText": "Kopiere diesen Befehl in ein Terminal im Desktop-Modus. Er lädt Version 0.1.0 herunter und startet den Installer erst nach erfolgreichem Download. Als normaler Benutzer ausführen, ohne sudo.",
+    "videoCredit": "Die Startvideos stammen sowohl aus eigener Hand als auch von steamdeckrepo.com.",
+    "tutorialWatch": "Tutorial auf YouTube ansehen"
   },
   "en": {
     "language": "Language",
@@ -226,11 +228,11 @@
     "source": "Source package (ZIP)",
     "testNote": "Early test version: 74 automated tests passed. Tests have been carried out on SteamOS, CachyOS and Bazzite. Individual apps and plugins have their own requirements.",
     "tutorialEyebrow": "FROM FABIAN. FOR YOUR HANDHELD.",
-    "tutorialTitle": "Tips, reviews and more on YouTube.",
-    "tutorialText": "Steam Deck Checker covers Linux gaming and handhelds. I’ll add the Starter Kit video here later.",
+    "tutorialTitle": "Watch the Starter Kit tutorial.",
+    "tutorialText": "Watch my Linux Handheld Starter Kit video tutorial on Steam Deck Checker. Play it here or open it directly on YouTube.",
     "channel": "Visit the YouTube channel",
-    "videoSoon": "Starter Kit tutorial coming later",
-    "videoSub": "This is where the video guide will live.",
+    "videoSoon": "Starter Kit video tutorial",
+    "videoSub": "Click to play or watch on YouTube.",
     "faqTitle": "A few things to know.",
     "faqEyebrow": "GOOD TO KNOW",
     "faq": [
@@ -279,7 +281,9 @@
     "latestWatch": "Watch on YouTube",
     "latestChannel": "All videos on YouTube",
     "terminalAlternative": "Alternatively, use a terminal",
-    "terminalAlternativeText": "Copy this command into a terminal in Desktop Mode. It downloads version 0.1.0 and starts the installer only after the download succeeds. Run as your normal user, without sudo."
+    "terminalAlternativeText": "Copy this command into a terminal in Desktop Mode. It downloads version 0.1.0 and starts the installer only after the download succeeds. Run as your normal user, without sudo.",
+    "videoCredit": "The startup movies include our own creations as well as videos from steamdeckrepo.com.",
+    "tutorialWatch": "Watch the tutorial on YouTube"
   },
   "es": {
     "language": "Idioma",
@@ -367,11 +371,11 @@
     "source": "Paquete de código (ZIP)",
     "testNote": "Versión de prueba: 74 pruebas automatizadas superadas. Se han realizado pruebas en SteamOS, CachyOS y Bazzite. Cada app y plugin tiene sus propios requisitos.",
     "tutorialEyebrow": "DE FABIAN. PARA TU CONSOLA.",
-    "tutorialTitle": "Consejos, análisis y más en YouTube.",
-    "tutorialText": "Steam Deck Checker trata sobre juegos en Linux y consolas portátiles. Añadiré aquí el vídeo del Starter Kit más adelante.",
+    "tutorialTitle": "El Starter Kit explicado en vídeo.",
+    "tutorialText": "Mira mi tutorial del Linux Handheld Starter Kit en Steam Deck Checker. Puedes reproducirlo aquí o abrirlo directamente en YouTube.",
     "channel": "Visitar el canal de YouTube",
-    "videoSoon": "El tutorial llegará más adelante",
-    "videoSub": "Aquí irá la guía en vídeo del Starter Kit.",
+    "videoSoon": "Tutorial en vídeo del Starter Kit",
+    "videoSub": "Haz clic para reproducirlo o verlo en YouTube.",
     "faqTitle": "Algunas respuestas rápidas.",
     "faqEyebrow": "CONVIENE SABER",
     "faq": [
@@ -420,7 +424,9 @@
     "latestWatch": "Ver en YouTube",
     "latestChannel": "Todos los vídeos en YouTube",
     "terminalAlternative": "También puedes usar una terminal",
-    "terminalAlternativeText": "Copia este comando en una terminal en modo escritorio. Descarga la versión 0.1.0 e inicia el instalador solo si la descarga se completa correctamente. Ejecútalo como usuario normal, sin sudo."
+    "terminalAlternativeText": "Copia este comando en una terminal en modo escritorio. Descarga la versión 0.1.0 e inicia el instalador solo si la descarga se completa correctamente. Ejecútalo como usuario normal, sin sudo.",
+    "videoCredit": "Los vídeos de inicio incluyen creaciones propias y vídeos de steamdeckrepo.com.",
+    "tutorialWatch": "Ver el tutorial en YouTube"
   },
   "fr": {
     "language": "Langue",
@@ -508,11 +514,11 @@
     "source": "Archive du code (ZIP)",
     "testNote": "Version de test : 74 tests automatisés réussis. Des tests ont été effectués sous SteamOS, CachyOS et Bazzite. Les applications et plugins ont leurs propres prérequis.",
     "tutorialEyebrow": "PAR FABIAN. POUR VOTRE CONSOLE.",
-    "tutorialTitle": "Conseils, tests et plus sur YouTube.",
-    "tutorialText": "Steam Deck Checker parle de jeux Linux et de consoles portables. J’ajouterai ici la vidéo du Starter Kit plus tard.",
+    "tutorialTitle": "Le Starter Kit expliqué en vidéo.",
+    "tutorialText": "Regardez mon tutoriel vidéo du Linux Handheld Starter Kit sur Steam Deck Checker. Lancez-le ici ou ouvrez-le directement sur YouTube.",
     "channel": "Voir la chaîne YouTube",
-    "videoSoon": "Le tutoriel arrivera plus tard",
-    "videoSub": "La vidéo du Starter Kit trouvera sa place ici.",
+    "videoSoon": "Tutoriel vidéo du Starter Kit",
+    "videoSub": "Cliquez pour lire la vidéo ou la regarder sur YouTube.",
     "faqTitle": "Quelques réponses utiles.",
     "faqEyebrow": "BON À SAVOIR",
     "faq": [
@@ -561,7 +567,9 @@
     "latestWatch": "Regarder sur YouTube",
     "latestChannel": "Toutes les vidéos sur YouTube",
     "terminalAlternative": "Autre possibilité : le terminal",
-    "terminalAlternativeText": "Copiez cette commande dans un terminal en mode Bureau. Elle télécharge la version 0.1.0 et lance l’installateur uniquement si le téléchargement réussit. Utilisez votre compte habituel, sans sudo."
+    "terminalAlternativeText": "Copiez cette commande dans un terminal en mode Bureau. Elle télécharge la version 0.1.0 et lance l’installateur uniquement si le téléchargement réussit. Utilisez votre compte habituel, sans sudo.",
+    "videoCredit": "Les vidéos de démarrage comprennent des créations personnelles ainsi que des vidéos provenant de steamdeckrepo.com.",
+    "tutorialWatch": "Voir le tutoriel sur YouTube"
   },
   "ru": {
     "language": "Язык",
@@ -649,11 +657,11 @@
     "source": "Архив исходного кода (ZIP)",
     "testNote": "Тестовая версия: пройдено 74 автоматических тестов. Тесты проведены на SteamOS, CachyOS и Bazzite. У приложений и плагинов есть собственные требования.",
     "tutorialEyebrow": "ОТ ФАБИАНА. ДЛЯ ВАШЕЙ КОНСОЛИ.",
-    "tutorialTitle": "Советы, обзоры и больше на YouTube.",
-    "tutorialText": "На Steam Deck Checker выходят видео о Linux-гейминге и портативных консолях. Видео о Starter Kit я добавлю сюда позже.",
+    "tutorialTitle": "Видеоинструкция по Starter Kit.",
+    "tutorialText": "Посмотрите мою видеоинструкцию по Linux Handheld Starter Kit на Steam Deck Checker. Запустите её здесь или откройте прямо на YouTube.",
     "channel": "Перейти на YouTube-канал",
-    "videoSoon": "Видеоинструкция появится позже",
-    "videoSub": "Здесь будет руководство по Starter Kit.",
+    "videoSoon": "Видеоинструкция по Starter Kit",
+    "videoSub": "Нажмите для воспроизведения или откройте на YouTube.",
     "faqTitle": "Несколько важных ответов.",
     "faqEyebrow": "ПОЛЕЗНО ЗНАТЬ",
     "faq": [
@@ -702,7 +710,9 @@
     "latestWatch": "Смотреть на YouTube",
     "latestChannel": "Все видео на YouTube",
     "terminalAlternative": "Также можно запустить через терминал",
-    "terminalAlternativeText": "Скопируйте эту команду в терминал в режиме рабочего стола. Она скачает версию 0.1.0 и запустит установщик только после успешной загрузки. Запускайте от обычного пользователя, без sudo."
+    "terminalAlternativeText": "Скопируйте эту команду в терминал в режиме рабочего стола. Она скачает версию 0.1.0 и запустит установщик только после успешной загрузки. Запускайте от обычного пользователя, без sudo.",
+    "videoCredit": "Среди стартовых видео есть собственные работы и видео с steamdeckrepo.com.",
+    "tutorialWatch": "Смотреть инструкцию на YouTube"
   },
   "zh": {
     "language": "语言",
@@ -790,11 +800,11 @@
     "source": "源代码压缩包（ZIP）",
     "testNote": "早期测试版：已通过 74 项自动化测试。已在 SteamOS、CachyOS 和 Bazzite 上进行了测试。各应用和插件也有自己的使用要求。",
     "tutorialEyebrow": "来自 FABIAN，为你的掌机而做。",
-    "tutorialTitle": "在 YouTube 了解技巧、评测和更多内容。",
-    "tutorialText": "Steam Deck Checker 分享 Linux 游戏和掌机相关视频。Starter Kit 的视频教程稍后会添加到这里。",
+    "tutorialTitle": "通过视频了解 Starter Kit。",
+    "tutorialText": "观看 Steam Deck Checker 的 Linux Handheld Starter Kit 视频教程。你可以在这里播放，也可以直接在 YouTube 上打开。",
     "channel": "访问 YouTube 频道",
-    "videoSoon": "Starter Kit 视频教程稍后推出",
-    "videoSub": "这里将放置视频使用指南。",
+    "videoSoon": "Starter Kit 视频教程",
+    "videoSub": "点击播放，或在 YouTube 上观看。",
     "faqTitle": "你可能还想了解。",
     "faqEyebrow": "常见问题",
     "faq": [
@@ -843,7 +853,9 @@
     "latestWatch": "在 YouTube 上观看",
     "latestChannel": "在 YouTube 上查看所有视频",
     "terminalAlternative": "也可以通过终端启动",
-    "terminalAlternativeText": "在桌面模式下，将此命令复制到终端运行。它会下载 0.1.0 版，并且仅在下载成功后启动安装程序。请以普通用户运行，不要使用 sudo。"
+    "terminalAlternativeText": "在桌面模式下，将此命令复制到终端运行。它会下载 0.1.0 版，并且仅在下载成功后启动安装程序。请以普通用户运行，不要使用 sudo。",
+    "videoCredit": "启动视频既包含自行制作的作品，也包含来自 steamdeckrepo.com 的视频。",
+    "tutorialWatch": "在 YouTube 上观看教程"
   },
   "ja": {
     "language": "言語",
@@ -931,11 +943,11 @@
     "source": "ソースコード（ZIP）",
     "testNote": "初期テスト版：74項目の自動テストに合格しています。SteamOS、CachyOS、Bazzite でテストを実施しました。各アプリやプラグインには独自の動作要件があります。",
     "tutorialEyebrow": "FABIAN から、あなたのハンドヘルドへ。",
-    "tutorialTitle": "YouTube でヒントやレビューを。",
-    "tutorialText": "Steam Deck Checker では Linux ゲームやハンドヘルドの動画を公開しています。Starter Kit の解説動画は後日ここに追加します。",
+    "tutorialTitle": "Starter Kit を動画で解説。",
+    "tutorialText": "Steam Deck Checker の Linux Handheld Starter Kit 解説動画をご覧ください。このページで再生するか、YouTube で直接開くことができます。",
     "channel": "YouTube チャンネルへ",
-    "videoSoon": "Starter Kit の解説動画は後日公開",
-    "videoSub": "ここに動画ガイドを追加する予定です。",
+    "videoSoon": "Starter Kit の解説動画",
+    "videoSub": "クリックして再生するか、YouTube でご覧ください。",
     "faqTitle": "よくある質問。",
     "faqEyebrow": "知っておきたいこと",
     "faq": [
@@ -984,6 +996,8 @@
     "latestWatch": "YouTube で見る",
     "latestChannel": "YouTube ですべての動画を見る",
     "terminalAlternative": "ターミナルから起動する場合",
-    "terminalAlternativeText": "デスクトップモードのターミナルにこのコマンドをコピーしてください。バージョン 0.1.0 をダウンロードし、成功した場合のみインストーラーを起動します。sudo を付けず、通常のユーザーで実行してください。"
+    "terminalAlternativeText": "デスクトップモードのターミナルにこのコマンドをコピーしてください。バージョン 0.1.0 をダウンロードし、成功した場合のみインストーラーを起動します。sudo を付けず、通常のユーザーで実行してください。",
+    "videoCredit": "起動動画には、自作のものと steamdeckrepo.com からのものが含まれています。",
+    "tutorialWatch": "YouTube で解説動画を見る"
   }
 }

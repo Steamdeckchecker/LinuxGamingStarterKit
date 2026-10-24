@@ -20,10 +20,12 @@ node scripts/validate-artifact.mjs
 node --test tests/worker.test.mjs
 ```
 
-To add the future YouTube tutorial, edit `public/assets/config.js` and set
-`youtubeVideoId` to the video's 11-character YouTube ID. The placeholder then
-becomes a clickable thumbnail. The player loads only after the visitor clicks.
-The channel link is already present in the header, tutorial section and footer.
+The [Starter Kit video tutorial](https://youtu.be/bLE9qumR9XI) is configured in
+`public/assets/config.js` as `youtubeVideoId`. To change it, set the new video’s
+11-character YouTube ID there and rebuild. The linked preview also works
+without JavaScript; the embedded player loads only after a click. A direct
+YouTube link is always visible. The channel link remains in the header,
+tutorial section and footer.
 
 The bottom video section loads the latest nine channel uploads from YouTube's
 official RSS feed through the same-origin Worker endpoint, cached for up to ten
@@ -33,7 +35,7 @@ snapshot with its retrieval date. No API key or third-party CORS proxy is used.
 Video titles stay in their original language; UI labels have all seven translations.
 
 No third-party analytics or remote fonts are used. The video cards link to YouTube;
-the separate future tutorial player loads only after a click. The interactive
+the tutorial player loads only after a click. The interactive
 device chooser is a clearly labeled workflow preview. Actual installation happens
 in the downloaded installer.
 
@@ -70,3 +72,6 @@ the nine-video snapshot remains visible without it.
 This repository does not automatically republish the live website. The existing
 public deployment remains independently hosted. Installer releases are handled
 by the repository's release workflow; see `../CONTRIBUTING.md`.
+
+Startup movie credits are shown in all seven languages: the packs include
+original creations as well as videos from [steamdeckrepo.com](https://steamdeckrepo.com/).

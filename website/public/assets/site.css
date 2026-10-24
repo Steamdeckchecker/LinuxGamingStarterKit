@@ -24,3 +24,4 @@ html[lang=ru] .hero h1{font-size:clamp(39px,4.25vw,60px)}html[lang=ja] .hero h1{
 .branding{min-width:0}.brand.project-brand{display:block;flex:0 1 250px;width:250px;min-width:0;border-left:0;padding-left:0}.brand .project-logo-frame{display:block;margin:0;padding:8px 12px;background:#f3f6fa;border:1px solid #dfe6ef;border-radius:6px}.project-brand img{width:100%;height:auto}
 @media(max-width:850px){.brand.project-brand{flex-basis:220px;width:220px}}
 @media(max-width:560px){.branding{flex:1;gap:10px}.brand.project-brand{flex:0 1 150px;width:150px}.brand .project-logo-frame{padding:5px 7px}.header-tools{flex-shrink:0}}
+.tab-panel .video-credit{margin-top:16px;font-size:12px;line-height:1.75}.tutorial-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.tutorial .tutorial-actions .button{margin-top:0}.video-fallback{display:block}

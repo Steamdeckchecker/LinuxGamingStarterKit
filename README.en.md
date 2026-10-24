@@ -14,6 +14,12 @@ Guided first-time setup for Linux handhelds running
 logic with simulated system commands. Tests have been carried out on SteamOS, CachyOS and Bazzite. Third-party apps and
 plugins have their own Steam, distribution and hardware requirements.
 
+## Video tutorial
+
+[![Video tutorial: Linux Handheld Starter Kit](https://i.ytimg.com/vi/bLE9qumR9XI/hqdefault.jpg)](https://youtu.be/bLE9qumR9XI)
+
+[Watch the video tutorial on YouTube](https://youtu.be/bLE9qumR9XI)
+
 ## Download and start
 
 | Download | Use |
@@ -89,6 +95,9 @@ the run and revoked on exit. The Decky authorization fix uses separate
 `sudo -k` and `sudo -S -v` operations.
 
 ## Startup movies
+
+The startup movies include our own creations as well as videos from
+[steamdeckrepo.com](https://steamdeckrepo.com/).
 
 | Device | Repository |
 | --- | --- |
@@ -172,8 +181,7 @@ and detected paths. `--dry-run` simulates setup without installations, password
 changes or reboot; a selected external plugin catalogue may still be read.
 
 The [website sources](website/README.md) include seven language versions and
-the latest **nine** channel videos. The tutorial placeholder is ready for a
-future YouTube ID. See [CONTRIBUTING.md](CONTRIBUTING.md) for build, test and
+the latest **nine** channel videos. The [video tutorial](https://youtu.be/bLE9qumR9XI) is embedded on the website. See [CONTRIBUTING.md](CONTRIBUTING.md) for build, test and
 release instructions. Building uses Python 3.12 and Node.js 20+, with no npm or
 Python package installation required.
 

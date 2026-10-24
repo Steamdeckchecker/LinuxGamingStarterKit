@@ -3,11 +3,19 @@
 import html
 import hashlib
 import json
+import re
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 DIST = BASE / "public"
 STYLE_VERSION = hashlib.sha256((DIST / "assets/site.css").read_bytes()).hexdigest()[:12]
+CONFIG_SOURCE = (DIST / "assets/config.js").read_text()
+CONFIG_VERSION = hashlib.sha256(CONFIG_SOURCE.encode()).hexdigest()[:12]
+TUTORIAL_MATCH = re.search(r"youtubeVideoId:\s*['\"]([\w-]{11})['\"]", CONFIG_SOURCE)
+if TUTORIAL_MATCH is None:
+    raise ValueError("Configure an 11-character tutorial video ID in public/assets/config.js")
+TUTORIAL_ID = TUTORIAL_MATCH[1]
+TUTORIAL_URL = "https://youtu.be/" + TUTORIAL_ID
 CONTENT = json.loads((BASE / "content.json").read_text())
 LATEST = json.loads((BASE / "latest-videos.json").read_text())
 ORIGIN = "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site"
@@ -17,13 +25,13 @@ SCRIPT = "/downloads/install.sh"
 LAUNCHER = "/downloads/Linux-Handheld-Starter-Kit.desktop"
 GITHUB = "https://github.com/Steamdeckchecker/LinuxGamingStarterKit"
 TERMINAL_COMMAND = 'curl -fL --retry 3 -o install.sh "https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh" && bash install.sh'
-OFFICIAL = {"SteamOS": "https://store.steampowered.com/steamos/", "CachyOS": "https://cachyos.org/", "Bazzite": "https://bazzite.gg/", "Decky Loader": "https://decky.xyz/", "RetroDECK": "https://retrodeck.net/", "EmuDeck": "https://www.emudeck.com/"}
+OFFICIAL = {"SteamOS": "https://store.steampowered.com/steamos/", "CachyOS": "https://cachyos.org/", "Bazzite": "https://bazzite.gg/", "Decky Loader": "https://decky.xyz/", "RetroDECK": "https://retrodeck.net/", "EmuDeck": "https://www.emudeck.com/", "steamdeckrepo.com": "https://steamdeckrepo.com/"}
 LANGUAGES = {"de": "Deutsch", "en": "English", "es": "Español", "fr": "Français", "ru": "Русский", "zh": "中文", "ja": "日本語"}
 E = lambda value: html.escape(str(value), quote=True)
 
 
 def linked_text(value):
-    """Link only a fixed allowlist of product names, after escaping content."""
+    """Link fixed product names and the video source after escaping content."""
     import re
     return re.sub("|".join(re.escape(name) for name in OFFICIAL),
                   lambda match: f'<a class="product-link" href="{OFFICIAL[match[0]]}" target="_blank" rel="noopener noreferrer">{match[0]}</a>', E(value))
@@ -87,7 +95,8 @@ def page(lang):
         cloud = "".join(f'<span class="tag{" tag-featured" if n < 2 else ""}">{linked_text(name)}</span>' for n, name in enumerate(tags[i]))
         if i == 1:
             cloud += f'<a class="text-link tag-foot" href="/downloads/recommend.txt" download>{E(t["recommend"])} {icon("download")}</a>'
-        panels.append(f'<section class="tab-panel" id="panel-{i}" role="tabpanel" aria-labelledby="tab-{i}" tabindex="0"{" hidden" if i else ""}><div><h3>{E(tab["title"])}</h3><p>{linked_text(tab["text"])}</p><p class="tab-note">{icon("check")}{E(tab["note"])}</p></div><div class="tag-cloud">{cloud}</div></section>')
+        credit = f'<p class="video-credit">{linked_text(t["videoCredit"])}</p>' if i == 0 else ""
+        panels.append(f'<section class="tab-panel" id="panel-{i}" role="tabpanel" aria-labelledby="tab-{i}" tabindex="0"{" hidden" if i else ""}><div><h3>{E(tab["title"])}</h3><p>{linked_text(tab["text"])}</p><p class="tab-note">{icon("check")}{E(tab["note"])}</p>{credit}</div><div class="tag-cloud">{cloud}</div></section>')
     step_html = []
     for i, (title, text) in enumerate(t["steps"]):
         command = f'<div class="command"><code>{E(TERMINAL_COMMAND)}</code><button class="copy-button" type="button" data-copy="{E(TERMINAL_COMMAND)}" aria-label="{E(t["copy"])}">{icon("copy")}<span>{E(t["copy"])}</span></button></div><div id="copy-status" class="copy-status" role="status" aria-live="polite" aria-atomic="true"></div><p class="dry-run">{E(t["tryFirst"])}<code>bash install.sh --dry-run</code></p>' if i == 1 else ""
@@ -111,7 +120,7 @@ def page(lang):
 <meta property="og:image" content="{ORIGIN}/assets/steam-deck-checker.png"><meta property="og:image:alt" content="Steam Deck Checker">
 <link rel="icon" type="image/png" href="/assets/steam-deck-checker.png">
 <link rel="stylesheet" href="/assets/site.css?v={STYLE_VERSION}">
-<script defer src="/assets/config.js"></script><script defer src="/assets/site.js"></script>
+<script defer src="/assets/config.js?v={CONFIG_VERSION}"></script><script defer src="/assets/site.js"></script>
 </head>
 <body data-copied="{E(t['copied'])}" data-copy-error="{E(t['copyError'])}">
 <a class="skip" href="#main">{E(t['skip'])}</a>
@@ -128,7 +137,7 @@ def page(lang):
   </section>
   <section class="kit section" id="kit"><div class="wrap"><div class="section-head"><p class="eyebrow">{E(t['kitEyebrow'])}</p><h2>{E(t['kitTitle'])}</h2><p>{E(t['kitIntro'])}</p></div><div class="tabs" role="tablist" aria-label="{E(t['nav'][0])}">{tabs}</div>{''.join(panels)}</div></section>
   <section class="installation section wrap" id="install"><div class="installation-grid"><div class="section-head"><p class="eyebrow">{E(t['installEyebrow'])}</p><h2>{E(t['installTitle'])}</h2><p>{E(t['installIntro'])}</p><div class="install-download">{button(t)}</div><div class="install-links"><a href="{SCRIPT}" download>{E(t['script'])}</a><a href="{GITHUB}" target="_blank" rel="noopener noreferrer">{E(t['project'])}</a><a href="{PACKAGE}" download>{E(t['source'])}</a><a href="/downloads/SHA256SUMS" download>SHA-256</a></div></div><ol class="steps">{''.join(step_html)}</ol></div><aside class="test-note">{icon('info')}<span>{linked_text(t['testNote'])}</span></aside></section>
-  <section class="tutorial section wrap" id="tutorial"><div class="tutorial-grid"><div class="tutorial-copy"><p class="eyebrow">{E(t['tutorialEyebrow'])}</p><h2>{E(t['tutorialTitle'])}</h2><p>{E(t['tutorialText'])}</p><a class="button button-secondary" href="{CHANNEL}" target="_blank" rel="noopener noreferrer">{icon('youtube')}{E(t['channel'])}{icon('external')}</a></div><div class="video-placeholder" id="tutorial-video" data-play="{E(t['videoPlay'])}"><img src="/assets/steam-deck-checker.png" alt="Steam Deck Checker" width="391" height="166" loading="lazy"><h3>{E(t['videoSoon'])}</h3><p>{E(t['videoSub'])}</p></div></div></section>
+  <section class="tutorial section wrap" id="tutorial"><div class="tutorial-grid"><div class="tutorial-copy"><p class="eyebrow">{E(t['tutorialEyebrow'])}</p><h2>{E(t['tutorialTitle'])}</h2><p>{E(t['tutorialText'])}</p><div class="tutorial-actions"><a class="button button-primary" href="{TUTORIAL_URL}" target="_blank" rel="noopener noreferrer">{icon('youtube')}{E(t['tutorialWatch'])}{icon('external')}</a><a class="button button-secondary" href="{CHANNEL}" target="_blank" rel="noopener noreferrer">{E(t['channel'])}{icon('external')}</a></div></div><div class="video-holder" id="tutorial-video" data-play="{E(t['videoPlay'])}"><a class="video-play video-fallback" href="{TUTORIAL_URL}" target="_blank" rel="noopener noreferrer" aria-label="{E(t['videoPlay'])}"><img src="https://i.ytimg.com/vi/{TUTORIAL_ID}/hqdefault.jpg" alt="{E(t['videoPlay'])}" width="480" height="360" loading="lazy"><span aria-hidden="true">▶</span></a></div></div></section>
   <section class="faq section wrap"><div class="faq-grid"><div class="section-head"><p class="eyebrow">{E(t['faqEyebrow'])}</p><h2>{E(t['faqTitle'])}</h2></div><div class="faq-list">{faqs}</div></div></section>
   <section class="latest section wrap" id="latest-videos" data-watch="{E(t['latestWatch'])}" data-loading="{E(t['latestLoading'])}" data-unavailable="{E(t['latestUnavailable'])}" data-snapshot="{E(t['latestSnapshot'])}" data-updated="{E(t['latestUpdated'])}">
     <div class="latest-heading"><div class="section-head"><p class="eyebrow">{E(t['latestEyebrow'])}</p><h2>{E(t['latestTitle'])}</h2><p>{E(t['latestText'])}</p></div><a class="text-link" href="{CHANNEL}videos" target="_blank" rel="noopener noreferrer">{E(t['latestChannel'])}{icon('arrow')}</a></div>
