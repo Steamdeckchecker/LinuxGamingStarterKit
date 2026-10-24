@@ -10,7 +10,7 @@ Guided first-time setup for Linux handhelds running
 
 [Deutsch](README.md) · [Website](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/en/) · [Releases](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases) · [YouTube](https://www.youtube.com/@SteamDeckChecker/) · [Changelog](CHANGELOG.md)
 
-**v0.1.0 is an initial public test release.** Automated tests cover the core
+**v0.1.0 is the first regular release.** Automated tests cover the core
 logic with simulated system commands. Tests have been carried out on SteamOS, CachyOS and Bazzite. Third-party apps and
 plugins have their own Steam, distribution and hardware requirements.
 

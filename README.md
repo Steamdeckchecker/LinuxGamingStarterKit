@@ -14,7 +14,7 @@ Die Oberfläche nutzt **Zenity** oder **KDialog**, die Installationen laufen
 einzeln und synchron. Die `install.sh` enthält den vollständigen Programmcode.
 Ein Klonen des Projekts oder das Installieren von Python-Paketen ist nicht nötig.
 
-**Entwicklungsstand:** v0.1.0 ist die erste öffentliche Testversion. Die Kernabläufe sind automatisiert
+**Veröffentlichung:** v0.1.0 ist die erste reguläre Veröffentlichung. Die Kernabläufe sind automatisiert
 mit simulierten Systembefehlen geprüft. Tests wurden auf SteamOS, CachyOS und Bazzite durchgeführt. Die Funktion einzelner
 Decky-Plugins und externer Apps hängt zusätzlich von deren eigener Unterstützung
 für die jeweilige Steam-Version, Distribution und Hardware ab.

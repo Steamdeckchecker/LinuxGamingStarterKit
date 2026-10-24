@@ -1,4 +1,4 @@
-name: Publish test release
+name: Publish release
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
           bash website/scripts/build.sh
           node website/scripts/validate-artifact.mjs
           node --test website/tests/worker.test.mjs
-      - name: Create draft, attach verified assets, publish
+      - name: Publish or update release
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -46,12 +46,12 @@ jobs:
           test -f "$notes"
           if gh release view "$tag" --json isDraft --jq .isDraft > "$RUNNER_TEMP/release-draft"; then
             if [[ "$(cat "$RUNNER_TEMP/release-draft")" != true ]]; then
-              gh release edit "$tag" --notes-file "$notes"
-              echo "Updated the description of published release $tag."
+              gh release edit "$tag" --notes-file "$notes" --prerelease=false --latest
+              echo "Updated published release $tag and marked it as the latest regular release."
               exit 0
             fi
           else
-            gh release create "$tag" --target "$GITHUB_SHA" --title "$tag — Linux Handheld Starter Kit" --notes-file "$notes" --prerelease --draft
+            gh release create "$tag" --target "$GITHUB_SHA" --title "$tag — Linux Handheld Starter Kit" --notes-file "$notes" --draft
           fi
           gh release upload "$tag" release/install.sh release/Linux-Handheld-Starter-Kit.desktop "release/Linux-Handheld-Starter-Kit-$tag.zip" release/SHA256SUMS --clobber
-          gh release edit "$tag" --draft=false --prerelease --latest=false
+          gh release edit "$tag" --draft=false --prerelease=false --latest
