@@ -15,8 +15,7 @@ einzeln und synchron. Die `install.sh` enthält den vollständigen Programmcode.
 Ein Klonen des Projekts oder das Installieren von Python-Paketen ist nicht nötig.
 
 **Entwicklungsstand:** v0.1.0 ist die erste öffentliche Testversion. Die Kernabläufe sind automatisiert
-mit simulierten Systembefehlen geprüft. Ein vollständiger Test auf echten
-SteamOS-, CachyOS- und Bazzite-Handhelds steht noch aus. Die Funktion einzelner
+mit simulierten Systembefehlen geprüft. Tests wurden auf SteamOS, CachyOS und Bazzite durchgeführt. Die Funktion einzelner
 Decky-Plugins und externer Apps hängt zusätzlich von deren eigener Unterstützung
 für die jeweilige Steam-Version, Distribution und Hardware ab.
 
@@ -29,7 +28,7 @@ für die jeweilige Steam-Version, Distribution und Hardware ab.
 | [Quellcode-ZIP](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/Linux-Handheld-Starter-Kit-v0.1.0.zip) | Beide Starter, bearbeitbarer Quellcode, Webseite, Dokumentation und Tests. |
 | [SHA256SUMS](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/SHA256SUMS) | SHA-256-Prüfsummen für beide Starter und das ZIP. |
 
-Nur **eine** der beiden Startdateien herunterladen. `recommend.txt` wird nicht zusätzlich benötigt.
+Nur **eine** der beiden Startdateien herunterladen.
 
 ## Starten
 
@@ -310,9 +309,8 @@ temporäre Freigabe beim Beenden auf.
 
 Das ZIP enthält die `.desktop`-Datei, `install.sh`, `recommend.txt`, `starterkit.py`,
 `build.py`, `desktop_launcher.py`, `desktop_bootstrap.py`, diese Dokumentation,
-die Lizenz und die Offline-Tests. Die fertige `install.sh`
-benötigt weder `starterkit.py` noch `build.py` oder `recommend.txt` neben sich.
-Die Empfehlungen sind vollständig enthalten.
+die Lizenz und die Offline-Tests. Die fertige `install.sh` enthält den vollständigen Programmcode und alle
+Plugin-Empfehlungen.
 
 ## Webseite und Weiterentwicklung
 

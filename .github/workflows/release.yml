@@ -3,7 +3,7 @@ name: Publish test release
 on:
   push:
     branches: [main]
-    paths: [VERSION]
+    paths: [VERSION, 'docs/releases/**']
   workflow_dispatch:
 
 permissions:
@@ -46,7 +46,8 @@ jobs:
           test -f "$notes"
           if gh release view "$tag" --json isDraft --jq .isDraft > "$RUNNER_TEMP/release-draft"; then
             if [[ "$(cat "$RUNNER_TEMP/release-draft")" != true ]]; then
-              echo "Release $tag is already published; leaving it unchanged."
+              gh release edit "$tag" --notes-file "$notes"
+              echo "Updated the description of published release $tag."
               exit 0
             fi
           else

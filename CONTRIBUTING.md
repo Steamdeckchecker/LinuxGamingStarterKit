@@ -33,12 +33,14 @@ HTML, the bundled Worker and download copies are not committed.
 the installer/build/website sources, add `docs/releases/v<version>.md`, update
 the changelog and run the checks above. A push to `main` that changes `VERSION`
 starts the release workflow; normal source/documentation commits do not publish
-another release. The same workflow can be started manually in Actions.
+another release. Editing `docs/releases/v<current-version>.md` refreshes the
+published release description. The same workflow can be started manually in Actions.
 
 The workflow rebuilds the launchers, runs the installer and website checks,
 creates a draft release, uploads the two standalone launchers, source ZIP and
 SHA-256 manifest, then publishes it as a prerelease. It uses GitHub's temporary
 `GITHUB_TOKEN`, scoped to this repository; no personal access token is needed.
-An already published version is left untouched on a rerun. To mark a future
+For an already published version, only its description is refreshed from the
+release notes; its tag and download assets are preserved. To mark a future
 well-tested version stable, change the explicit prerelease policy in the
 workflow as part of that release.

@@ -11,8 +11,7 @@ Guided first-time setup for Linux handhelds running
 [Deutsch](README.md) · [Website](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/en/) · [Releases](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases) · [YouTube](https://www.youtube.com/@SteamDeckChecker/) · [Changelog](CHANGELOG.md)
 
 **v0.1.0 is an initial public test release.** Automated tests cover the core
-logic with simulated system commands. Full validation on physical handhelds
-across all three target distributions remains pending. Third-party apps and
+logic with simulated system commands. Tests have been carried out on SteamOS, CachyOS and Bazzite. Third-party apps and
 plugins have their own Steam, distribution and hardware requirements.
 
 ## Download and start
@@ -47,8 +46,7 @@ This saves version **0.1.0** as `install.sh` in the current directory and starts
 it only after the download succeeds. **Do not prefix it with sudo**; the wizard
 asks for administrator authorization when needed. If you have already downloaded
 the script, simply run `bash install.sh`.
-You do not need to clone this repository, install Python packages
-or download `recommend.txt` alongside either launcher.
+You do not need to clone this repository or install Python packages.
 
 ## Requirements and languages
 

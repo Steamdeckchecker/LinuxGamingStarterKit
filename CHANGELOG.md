@@ -30,5 +30,5 @@ First public test release / erste öffentliche Testversion.
 - Seven-language website with the original logo, official project links and the nine newest channel videos.
 - German/English documentation, offline checks, reproducible packages and SHA-256 checksums.
 
-Physical hardware validation across all target distributions remains pending.
+Tests have been carried out on SteamOS, CachyOS and Bazzite.
 Third-party app and plugin compatibility depends on the respective projects.
