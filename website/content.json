@@ -80,7 +80,7 @@
     "copy": "Befehl kopieren",
     "copied": "Kopiert!",
     "copyError": "Bitte den Befehl markieren und manuell kopieren.",
-    "tryFirst": "Erst ausprobieren? Probelauf ohne Installationen:",
+    "tryFirst": "Erst ausprobieren? Lade install.sh separat über den Downloadlink herunter und starte stattdessen diesen Probelauf ohne Installationen:",
     "script": "Alternativ: install.sh",
     "source": "Quellcode-Paket (ZIP)",
     "testNote": "Erste Testversion: 74 automatisierte Tests bestanden. Vollständige Praxistests auf SteamOS, CachyOS und Bazzite stehen noch aus. Einzelne Apps und Plugins haben eigene Voraussetzungen.",
@@ -138,7 +138,7 @@
     "latestWatch": "Auf YouTube ansehen",
     "latestChannel": "Alle Videos auf YouTube",
     "terminalAlternative": "Alternativ im Terminal starten",
-    "terminalAlternativeText": "Lade dafür die install.sh über den Link herunter und öffne ihren Ordner im Terminal. Starte als normaler Benutzer, ohne sudo."
+    "terminalAlternativeText": "Kopiere diesen Befehl in ein Terminal im Desktop-Modus. Er lädt Version 0.1.0 herunter und startet den Installer erst nach erfolgreichem Download. Als normaler Benutzer ausführen, ohne sudo."
   },
   "en": {
     "language": "Language",
@@ -221,7 +221,7 @@
     "copy": "Copy command",
     "copied": "Copied!",
     "copyError": "Please select and copy the command manually.",
-    "tryFirst": "Try it first? Simulate setup without installing:",
+    "tryFirst": "Prefer to try it first? Download install.sh separately using the download link, then run this simulation instead of the command above:",
     "script": "Alternative: install.sh",
     "source": "Source package (ZIP)",
     "testNote": "Early test version: 74 automated tests passed. Full testing on physical SteamOS, CachyOS and Bazzite devices is still pending. Individual apps and plugins have their own requirements.",
@@ -279,7 +279,7 @@
     "latestWatch": "Watch on YouTube",
     "latestChannel": "All videos on YouTube",
     "terminalAlternative": "Alternatively, use a terminal",
-    "terminalAlternativeText": "Download install.sh from the link and open its folder in a terminal. Run it as your normal user, without sudo."
+    "terminalAlternativeText": "Copy this command into a terminal in Desktop Mode. It downloads version 0.1.0 and starts the installer only after the download succeeds. Run as your normal user, without sudo."
   },
   "es": {
     "language": "Idioma",
@@ -362,7 +362,7 @@
     "copy": "Copiar comando",
     "copied": "¡Copiado!",
     "copyError": "Selecciona y copia el comando manualmente.",
-    "tryFirst": "¿Quieres probar antes? Simula sin instalar:",
+    "tryFirst": "¿Prefieres probar primero? Descarga install.sh por separado mediante el enlace y ejecuta esta simulación en lugar del comando anterior:",
     "script": "Alternativa: install.sh",
     "source": "Paquete de código (ZIP)",
     "testNote": "Versión de prueba: 74 pruebas automatizadas superadas. Falta la validación completa en dispositivos físicos con SteamOS, CachyOS y Bazzite. Cada app y plugin tiene sus propios requisitos.",
@@ -420,7 +420,7 @@
     "latestWatch": "Ver en YouTube",
     "latestChannel": "Todos los vídeos en YouTube",
     "terminalAlternative": "También puedes usar una terminal",
-    "terminalAlternativeText": "Descarga install.sh desde el enlace y abre su carpeta en una terminal. Ejecútalo como usuario normal, sin sudo."
+    "terminalAlternativeText": "Copia este comando en una terminal en modo escritorio. Descarga la versión 0.1.0 e inicia el instalador solo si la descarga se completa correctamente. Ejecútalo como usuario normal, sin sudo."
   },
   "fr": {
     "language": "Langue",
@@ -503,7 +503,7 @@
     "copy": "Copier la commande",
     "copied": "Copié !",
     "copyError": "Veuillez sélectionner et copier la commande manuellement.",
-    "tryFirst": "Envie d’essayer ? Simulation sans installation :",
+    "tryFirst": "Vous préférez essayer d’abord ? Téléchargez install.sh séparément via le lien, puis lancez cette simulation à la place de la commande ci-dessus :",
     "script": "Alternative : install.sh",
     "source": "Archive du code (ZIP)",
     "testNote": "Version de test : 74 tests automatisés réussis. La validation complète sur des appareils SteamOS, CachyOS et Bazzite reste à faire. Les applications et plugins ont leurs propres prérequis.",
@@ -561,7 +561,7 @@
     "latestWatch": "Regarder sur YouTube",
     "latestChannel": "Toutes les vidéos sur YouTube",
     "terminalAlternative": "Autre possibilité : le terminal",
-    "terminalAlternativeText": "Téléchargez install.sh via le lien et ouvrez son dossier dans un terminal. Lancez-le avec votre utilisateur habituel, sans sudo."
+    "terminalAlternativeText": "Copiez cette commande dans un terminal en mode Bureau. Elle télécharge la version 0.1.0 et lance l’installateur uniquement si le téléchargement réussit. Utilisez votre compte habituel, sans sudo."
   },
   "ru": {
     "language": "Язык",
@@ -644,7 +644,7 @@
     "copy": "Скопировать команду",
     "copied": "Скопировано!",
     "copyError": "Выделите и скопируйте команду вручную.",
-    "tryFirst": "Хотите попробовать? Симуляция без установки:",
+    "tryFirst": "Хотите сначала попробовать? Скачайте install.sh отдельно по ссылке и вместо команды выше запустите эту симуляцию без установки:",
     "script": "Альтернатива: install.sh",
     "source": "Архив исходного кода (ZIP)",
     "testNote": "Тестовая версия: пройдено 74 автоматических тестов. Полная проверка на физических устройствах со SteamOS, CachyOS и Bazzite ещё предстоит. У приложений и плагинов есть собственные требования.",
@@ -702,7 +702,7 @@
     "latestWatch": "Смотреть на YouTube",
     "latestChannel": "Все видео на YouTube",
     "terminalAlternative": "Также можно запустить через терминал",
-    "terminalAlternativeText": "Скачайте install.sh по ссылке и откройте его папку в терминале. Запускайте от обычного пользователя, без sudo."
+    "terminalAlternativeText": "Скопируйте эту команду в терминал в режиме рабочего стола. Она скачает версию 0.1.0 и запустит установщик только после успешной загрузки. Запускайте от обычного пользователя, без sudo."
   },
   "zh": {
     "language": "语言",
@@ -785,7 +785,7 @@
     "copy": "复制命令",
     "copied": "已复制！",
     "copyError": "请选中命令并手动复制。",
-    "tryFirst": "想先试一试？可模拟流程而不进行安装：",
+    "tryFirst": "想先试用？请先通过下载链接单独下载 install.sh，然后运行以下模拟命令，而不是上面的启动命令：",
     "script": "备选：install.sh",
     "source": "源代码压缩包（ZIP）",
     "testNote": "早期测试版：已通过 74 项自动化测试。尚未完成 SteamOS、CachyOS 和 Bazzite 实机上的全面验证。各应用和插件也有自己的使用要求。",
@@ -843,7 +843,7 @@
     "latestWatch": "在 YouTube 上观看",
     "latestChannel": "在 YouTube 上查看所有视频",
     "terminalAlternative": "也可以通过终端启动",
-    "terminalAlternativeText": "通过链接下载 install.sh，然后在终端中打开其文件夹。以普通用户运行，不要使用 sudo。"
+    "terminalAlternativeText": "在桌面模式下，将此命令复制到终端运行。它会下载 0.1.0 版，并且仅在下载成功后启动安装程序。请以普通用户运行，不要使用 sudo。"
   },
   "ja": {
     "language": "言語",
@@ -926,7 +926,7 @@
     "copy": "コマンドをコピー",
     "copied": "コピーしました！",
     "copyError": "コマンドを選択して手動でコピーしてください。",
-    "tryFirst": "まず試すなら、インストールしないシミュレーション：",
+    "tryFirst": "まず試したい場合は、ダウンロードリンクから install.sh を個別にダウンロードし、上のコマンドの代わりに次のシミュレーションを実行してください：",
     "script": "別の方法：install.sh",
     "source": "ソースコード（ZIP）",
     "testNote": "初期テスト版：74項目の自動テストに合格しています。SteamOS、CachyOS、Bazzite 実機での全面的な検証は未完了です。各アプリやプラグインには独自の動作要件があります。",
@@ -984,6 +984,6 @@
     "latestWatch": "YouTube で見る",
     "latestChannel": "YouTube ですべての動画を見る",
     "terminalAlternative": "ターミナルから起動する場合",
-    "terminalAlternativeText": "リンクから install.sh をダウンロードし、そのフォルダーをターミナルで開きます。sudo を付けず、通常のユーザーで実行してください。"
+    "terminalAlternativeText": "デスクトップモードのターミナルにこのコマンドをコピーしてください。バージョン 0.1.0 をダウンロードし、成功した場合のみインストーラーを起動します。sudo を付けず、通常のユーザーで実行してください。"
   }
 }

@@ -47,17 +47,19 @@ in einem privaten temporären Ordner ausgeführt und nach Ende des Assistenten
 entfernt. Es wird keine weitere Starter-Kit-Datei aus dem Internet nachgeladen.
 Die gewählten Pakete werden wie bisher während der Einrichtung heruntergeladen.
 
-**Alternativ im Terminal:**
+**Alternativ: mit einem Terminalbefehl herunterladen und starten**
 
-1. In den **Desktop-Modus** wechseln und nur `install.sh` herunterladen.
-2. Im Terminal des Download-Ordners ausführen:
+In den **Desktop-Modus** wechseln und diesen Befehl als normalen Benutzer
+ausführen. Über das Kopiersymbol am Codeblock lässt er sich vollständig kopieren:
 
 ```bash
-bash install.sh
+curl -fL --retry 3 -o install.sh "https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh" && bash install.sh
 ```
 
-Den Installer als normalen angemeldeten Benutzer starten. Die benötigte
-Administratorberechtigung wird innerhalb des Assistenten angefragt.
+Der Befehl speichert Version **0.1.0** als `install.sh` im aktuellen Ordner
+und startet sie erst nach erfolgreichem Download. **Kein sudo voranstellen**;
+die benötigte Administratorberechtigung wird innerhalb des Assistenten angefragt.
+Wenn `install.sh` bereits heruntergeladen wurde, genügt `bash install.sh`.
 Alternativ kann `install.sh` ausführbar gemacht und mit dem Dateimanager
 gestartet werden, sofern dieser das Ausführen von Shellskripten unterstützt.
 

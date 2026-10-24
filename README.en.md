@@ -32,14 +32,20 @@ private temporary directory, opens a terminal and waits for setup to end before
 cleaning up. It does not download another Starter Kit file at runtime.
 Your selected apps/plugins are downloaded during setup.
 
-Alternatively, download `install.sh`, open a terminal in its directory and run:
+**Alternatively: download and start with one terminal command**
+
+In **Desktop Mode**, run the following as your normal user. Use the code block's
+copy button to copy the complete command:
 
 ```bash
-bash install.sh
+curl -fL --retry 3 -o install.sh "https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh" && bash install.sh
 ```
 
-Run as your normal desktop user. The wizard asks for administrator authorization
-when needed. You do not need to clone this repository, install Python packages
+This saves version **0.1.0** as `install.sh` in the current directory and starts
+it only after the download succeeds. **Do not prefix it with sudo**; the wizard
+asks for administrator authorization when needed. If you have already downloaded
+the script, simply run `bash install.sh`.
+You do not need to clone this repository, install Python packages
 or download `recommend.txt` alongside either launcher.
 
 ## Requirements and languages

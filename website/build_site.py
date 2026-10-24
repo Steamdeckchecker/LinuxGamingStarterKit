@@ -14,6 +14,7 @@ PACKAGE = "/downloads/Linux-Handheld-Starter-Kit-v0.1.0.zip"
 SCRIPT = "/downloads/install.sh"
 LAUNCHER = "/downloads/Linux-Handheld-Starter-Kit.desktop"
 GITHUB = "https://github.com/Steamdeckchecker/LinuxGamingStarterKit"
+TERMINAL_COMMAND = 'curl -fL --retry 3 -o install.sh "https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh" && bash install.sh'
 OFFICIAL = {"SteamOS": "https://store.steampowered.com/steamos/", "CachyOS": "https://cachyos.org/", "Bazzite": "https://bazzite.gg/", "Decky Loader": "https://decky.xyz/", "RetroDECK": "https://retrodeck.net/", "EmuDeck": "https://www.emudeck.com/"}
 LANGUAGES = {"de": "Deutsch", "en": "English", "es": "Español", "fr": "Français", "ru": "Русский", "zh": "中文", "ja": "日本語"}
 E = lambda value: html.escape(str(value), quote=True)
@@ -87,9 +88,9 @@ def page(lang):
         panels.append(f'<section class="tab-panel" id="panel-{i}" role="tabpanel" aria-labelledby="tab-{i}" tabindex="0"{" hidden" if i else ""}><div><h3>{E(tab["title"])}</h3><p>{linked_text(tab["text"])}</p><p class="tab-note">{icon("check")}{E(tab["note"])}</p></div><div class="tag-cloud">{cloud}</div></section>')
     step_html = []
     for i, (title, text) in enumerate(t["steps"]):
-        command = f'<div class="command"><code>bash install.sh</code><button class="copy-button" type="button" data-copy="bash install.sh" aria-label="{E(t["copy"])}">{icon("copy")}<span>{E(t["copy"])}</span></button></div><p class="dry-run">{E(t["tryFirst"])}<code>bash install.sh --dry-run</code></p><div id="copy-status" class="copy-status" role="status" aria-live="polite" aria-atomic="true"></div>' if i == 1 else ""
+        command = f'<div class="command"><code>{E(TERMINAL_COMMAND)}</code><button class="copy-button" type="button" data-copy="{E(TERMINAL_COMMAND)}" aria-label="{E(t["copy"])}">{icon("copy")}<span>{E(t["copy"])}</span></button></div><div id="copy-status" class="copy-status" role="status" aria-live="polite" aria-atomic="true"></div><p class="dry-run">{E(t["tryFirst"])}<code>bash install.sh --dry-run</code></p>' if i == 1 else ""
         if command:
-            command = f'<details class="terminal-alternative"><summary>{E(t["terminalAlternative"])}</summary><p>{E(t["terminalAlternativeText"])}</p>{command}</details>'
+            command = f'<details class="terminal-alternative" open><summary>{E(t["terminalAlternative"])}</summary><p>{E(t["terminalAlternativeText"])}</p>{command}</details>'
         step_html.append(f'<li><h3>{E(title)}</h3><p>{E(text)}</p>{command}</li>')
     faqs = "".join(f'<details><summary>{E(question)}</summary><p>{linked_text(answer)}</p></details>' for question, answer in t["faq"])
     language_links = " ".join(f'<a href="/{key}/" hreflang="{"zh-Hans" if key == "zh" else key}" lang="{"zh-Hans" if key == "zh" else key}">{E(name)}</a>' for key, name in LANGUAGES.items())
