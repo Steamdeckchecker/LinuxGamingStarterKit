@@ -6,7 +6,7 @@ Chinese and Japanese pages.
 
 - `content.json`: all translated text.
 - `build_site.py`: renders the seven language directories and German root into `public/`.
-- `public/assets/`: responsive CSS, device preview, accessible tabs, languages, clipboard and original logo.
+- `public/assets/`: responsive CSS, device preview, accessible tabs, languages, clipboard, project logo and original Steam Deck Checker logo.
 - `public/downloads/`: the standalone `.desktop` launcher, alternative `install.sh`, checksums and source ZIP. Both launchers include all 23 recommendations.
 - `worker/runtime.js`: serves the pages, files and `/api/latest-videos`.
 - `latest-videos.json`: last verified public feed snapshot, also rendered when JavaScript is unavailable.

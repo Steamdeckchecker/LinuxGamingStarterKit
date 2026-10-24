@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Build seven accessible language versions for the Site Worker."""
 import html
+import hashlib
 import json
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 DIST = BASE / "public"
+STYLE_VERSION = hashlib.sha256((DIST / "assets/site.css").read_bytes()).hexdigest()[:12]
 CONTENT = json.loads((BASE / "content.json").read_text())
 LATEST = json.loads((BASE / "latest-videos.json").read_text())
 ORIGIN = "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site"
@@ -108,13 +110,13 @@ def page(lang):
 <meta property="og:description" content="{E(t['intro'])}"><meta property="og:url" content="{ORIGIN}/{lang}/">
 <meta property="og:image" content="{ORIGIN}/assets/steam-deck-checker.png"><meta property="og:image:alt" content="Steam Deck Checker">
 <link rel="icon" type="image/png" href="/assets/steam-deck-checker.png">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v={STYLE_VERSION}">
 <script defer src="/assets/config.js"></script><script defer src="/assets/site.js"></script>
 </head>
 <body data-copied="{E(t['copied'])}" data-copy-error="{E(t['copyError'])}">
 <a class="skip" href="#main">{E(t['skip'])}</a>
 <header class="header" id="top"><div class="wrap header-inner">
-  <div class="branding"><a class="channel-logo" href="{CHANNEL}" target="_blank" rel="noopener noreferrer" aria-label="Steam Deck Checker · YouTube"><img src="/assets/steam-deck-checker.png" alt="Steam Deck Checker" width="391" height="166"></a><a class="brand" href="/{lang}/">LINUX HANDHELD<span>STARTER KIT</span></a></div>
+  <div class="branding"><a class="channel-logo" href="{CHANNEL}" target="_blank" rel="noopener noreferrer" aria-label="Steam Deck Checker · YouTube"><img src="/assets/steam-deck-checker.png" alt="Steam Deck Checker" width="391" height="166"></a><a class="brand project-brand" href="/{lang}/" aria-label="Linux Handheld Starter Kit"><span class="project-logo-frame"><img src="/assets/linux-handheld-starter-kit-logo.png" alt="Linux Handheld Starter Kit" width="2172" height="724" decoding="async"></span></a></div>
   <nav class="header-nav" aria-label="Linux Handheld Starter Kit"><a href="#kit">{E(t['nav'][0])}</a><a href="#install">{E(t['nav'][1])}</a><a href="#tutorial">{E(t['nav'][2])}</a></nav>
   <div class="header-tools"><a class="youtube-link" href="{CHANNEL}" target="_blank" rel="noopener noreferrer">{icon('youtube')}<span>YouTube</span></a><div class="language">{icon('globe')}<label class="sr-only" for="language">{E(t['language'])}</label><select id="language">{options}</select></div></div>
 </div></header>

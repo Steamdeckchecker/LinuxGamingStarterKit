@@ -1,4 +1,6 @@
-<p align="center"><a href="https://www.youtube.com/@SteamDeckChecker/"><img src="assets/steam-deck-checker.png" width="280" alt="Steam Deck Checker"></a></p>
+<p align="center"><a href="https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/"><img src="assets/linux-handheld-starter-kit-logo.png" width="640" alt="Linux Handheld Starter Kit"></a></p>
+
+<p align="center"><a href="https://www.youtube.com/@SteamDeckChecker/"><img src="assets/steam-deck-checker.png" width="180" alt="Steam Deck Checker"></a></p>
 
 # Linux Handheld Starter Kit
 
