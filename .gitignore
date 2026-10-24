@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+/release/
+/website/dist/
+/website/worker/index.js
+/website/public/downloads/
+/website/public/index.html
+/website/public/de/
+/website/public/en/
+/website/public/es/
+/website/public/fr/
+/website/public/ru/
+/website/public/zh/
+/website/public/ja/
+/website/public/robots.txt
+/website/public/sitemap.xml

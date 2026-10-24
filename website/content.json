@@ -1,0 +1,989 @@
+{
+  "de": {
+    "language": "Sprache",
+    "skip": "Zum Inhalt",
+    "nav": [
+      "Das Starter Kit",
+      "Installation",
+      "Tutorial"
+    ],
+    "release": "v0.1.0 · Erste Testversion",
+    "eyebrow": "VON STEAM DECK CHECKER",
+    "hero": [
+      "Dein Linux-Handheld.",
+      "Einfach eingerichtet."
+    ],
+    "intro": "Startvideos, Decky-Plugins und deine Lieblings-Apps. Ein geführter Installer bringt deinen Linux-Handheld Schritt für Schritt an den Start.",
+    "download": "Starter Kit herunterladen",
+    "how": "So funktioniert’s",
+    "zipNote": "Eine .desktop-Datei · 23 Plugin-Empfehlungen integriert · Kostenlos",
+    "platform": "Entwickelt für",
+    "preview": "Ablaufvorschau",
+    "previewStep": "SCHRITT 01 / 09",
+    "previewTitle": "Welches Gerät nutzt du?",
+    "previewSub": "Dein Gerät. Die passenden Startvideos.",
+    "other": "Anderer Handheld",
+    "selectedVideo": "Passendes Videopaket",
+    "previewNext": "Danach: Passwort & Freigabe",
+    "previewHint": "Eine Vorschau. Deine Auswahl triffst du später im Installer.",
+    "stats": [
+      "Geräteprofile",
+      "empfohlene Decky-Plugins",
+      "Sprachen"
+    ],
+    "kitEyebrow": "DEIN SETUP. DEINE ENTSCHEIDUNG.",
+    "kitTitle": "Alles dabei, was den Start leichter macht.",
+    "kitIntro": "Du wählst aus, was du brauchst. Das Starter Kit führt dich durch die Einrichtung und wartet nach jedem Vorgang auf dessen Abschluss. Fortschritt und Status bleiben im Terminal sichtbar. Jeder Vorgang wird vollständig abgeschlossen, bevor der nächste beginnt.",
+    "tabs": [
+      {
+        "label": "Startvideos",
+        "title": "Ein Start, der zu deinem Gerät passt.",
+        "text": "Wähle ein Videopaket für dein Gerät. Fehlende Ordner werden angelegt und die Videos am passenden Steam-Pfad abgelegt. Anschließend aktivierst du sie im Game Mode unter Anpassungen. Bestehende Startvideos mit gleichem Dateinamen werden überschrieben.",
+        "note": "Sechs Geräteprofile, inklusive Steam Machine."
+      },
+      {
+        "label": "Decky & Plugins",
+        "title": "Deine Plugins. Direkt mit an Bord.",
+        "text": "Installiere Decky Loader und anschließend die 23 Empfehlungen von Steam Deck Checker. Oder suche selbst im Decky Plugins Explorer: mit Kurzbeschreibungen und nach GitHub-Sternen sortiert.",
+        "note": "Alle 23 Empfehlungen sind in install.sh enthalten."
+      },
+      {
+        "label": "Apps & Streaming",
+        "title": "Deine Spiele. Auch über Steam hinaus.",
+        "text": "Launcher, Streaming, Tools und mehr: Wähle aus 16 Anwendungen. Erfolgreich installierte oder bereits vorhandene ausgewählte Apps kannst du anschließend als steamfremde Spiele hinzufügen. Nach dem Speichern wartet der Installer drei Sekunden und startet Steam automatisch wieder.",
+        "note": "Die Installation erfolgt als Benutzer-Flatpak."
+      },
+      {
+        "label": "Emulation",
+        "title": "Platz für deine Klassiker.",
+        "text": "Entscheide dich für RetroDECK oder starte die offizielle EmuDeck-Einrichtung. Oder lass den Schritt aus. Die Einrichtung von EmuDeck schließt du in dessen eigenem Assistenten ab. Anschließend kannst du auch RetroDECK oder EmuDeck als steamfremdes Spiel hinzufügen. Nach dem Speichern wartet der Installer drei Sekunden und startet Steam automatisch wieder.",
+        "note": "ROMs und BIOS-Dateien sind nicht enthalten."
+      }
+    ],
+    "installEyebrow": "BEREIT, WENN DU ES BIST",
+    "installTitle": "In drei Schritten loslegen.",
+    "installIntro": "Wechsle in den Desktop-Modus und starte das Starter Kit per Doppelklick. Der Assistent führt dich durch die Einrichtung.",
+    "steps": [
+      [
+        "Startdatei herunterladen",
+        "Lade Linux-Handheld-Starter-Kit.desktop herunter. Der vollständige Installer samt 23 Plugin-Empfehlungen ist bereits enthalten."
+      ],
+      [
+        "Per Doppelklick starten",
+        "Öffne die Datei im Desktop-Modus. Falls nötig, markiere sie unter Eigenschaften → Berechtigungen als ausführbar und bestätige „Ausführen“. Ein Terminal und der Assistent starten automatisch."
+      ],
+      [
+        "Dein Setup zusammenstellen",
+        "Wähle Sprache und Gerät. Entscheide danach über Videos, Decky, Plugins, Apps und Emulation. Zum Schluss kannst du neu starten."
+      ]
+    ],
+    "copy": "Befehl kopieren",
+    "copied": "Kopiert!",
+    "copyError": "Bitte den Befehl markieren und manuell kopieren.",
+    "tryFirst": "Erst ausprobieren? Probelauf ohne Installationen:",
+    "script": "Alternativ: install.sh",
+    "source": "Quellcode-Paket (ZIP)",
+    "testNote": "Erste Testversion: 74 automatisierte Tests bestanden. Vollständige Praxistests auf SteamOS, CachyOS und Bazzite stehen noch aus. Einzelne Apps und Plugins haben eigene Voraussetzungen.",
+    "tutorialEyebrow": "VON FABIAN. FÜR DEINEN HANDHELD.",
+    "tutorialTitle": "Tipps, Tests und mehr auf YouTube.",
+    "tutorialText": "Auf Steam Deck Checker findest du Videos rund um Linux-Gaming und Handhelds. Das Video zum Starter Kit ergänze ich hier später.",
+    "channel": "Zum YouTube-Kanal",
+    "videoSoon": "Starter-Kit-Tutorial folgt",
+    "videoSub": "Hier bekommt die Video-Anleitung ihren Platz.",
+    "faqTitle": "Noch kurz geklärt.",
+    "faqEyebrow": "GUT ZU WISSEN",
+    "faq": [
+      [
+        "Für welche Geräte ist das Starter Kit gedacht?",
+        "Für Steam Deck LCD und OLED, Steam Machine, MSI Claw, Legion Go und andere Linux-Handhelds. Es ist für SteamOS, CachyOS und Bazzite entwickelt. Auf anderen Geräten wird das tatsächliche Home-Verzeichnis verwendet."
+      ],
+      [
+        "Brauche ich ein sudo-Passwort?",
+        "Für Administratoraktionen wie die Decky-Installation ja. Der Assistent bietet bei fehlendem Passwort die Erstellung an und fragt es danach zur Freigabe erneut ab. Das Passwort wird nicht gespeichert."
+      ],
+      [
+        "Muss ich alles installieren?",
+        "Nein. Videos, Decky, Plugins, Apps und Emulation sind optional. Du entscheidest bei jedem Abschnitt selbst. Downloads, Entpacken und Installationen laufen nacheinander."
+      ],
+      [
+        "Was passiert mit bereits installierten Apps?",
+        "Vorhandene Benutzer- oder System-Flatpaks werden erkannt und wiederverwendet. Für die Steam-Integration wird Steam regulär beendet; vorhandene Verknüpfungen werden erhalten und vor Änderungen gesichert. Nach dem Speichern wartet der Installer drei Sekunden und startet Steam automatisch wieder."
+      ],
+      [
+        "Wie aktiviere ich die Startvideos?",
+        "Öffne nach der Installation im Game Mode die Einstellungen und wähle Anpassungen → Startvideo. Die genaue Bezeichnung kann je nach Steam-Sprache und Version abweichen."
+      ],
+      [
+        "Kann ich den Ablauf zuerst testen?",
+        "Ja. Starte bash install.sh --dry-run. Dieser Probelauf installiert nichts, ändert kein Passwort und startet dein Gerät nicht neu. Der Plugin-Katalog kann dabei lesend geladen werden."
+      ]
+    ],
+    "ctaTitle": "Mach deinen Handheld zu deinem.",
+    "ctaText": "Lade das Starter Kit herunter und stell dir dein Setup zusammen.",
+    "footer": "Ein Community-Projekt von Steam Deck Checker.",
+    "footerNote": "Unabhängiges Projekt. Nicht mit Valve, den genannten Herstellern, Decky Loader, RetroDECK oder EmuDeck verbunden.",
+    "recommend": "Plugin-Empfehlungen",
+    "videoPlay": "Tutorial abspielen",
+    "project": "GitHub-Projekt",
+    "videoNote": "Bestehende Startvideos mit gleichem Dateinamen werden überschrieben.",
+    "embeddedNote": "Alle 23 Empfehlungen sind in install.sh enthalten.",
+    "progressNote": "Fortschritt und Status bleiben im Terminal sichtbar. Jeder Vorgang wird vollständig abgeschlossen, bevor der nächste beginnt.",
+    "latestEyebrow": "NEU AUF STEAM DECK CHECKER",
+    "latestTitle": "Die neuesten Videos vom Kanal.",
+    "latestText": "Die neun neuesten Uploads werden beim Öffnen der Seite automatisch abgerufen. Mit einem Klick geht es zum Video auf YouTube.",
+    "latestLoading": "Aktuelle Videos werden abgerufen …",
+    "latestUnavailable": "Die Videos konnten gerade nicht geladen werden. Besuche den YouTube-Kanal.",
+    "latestSnapshot": "Letzter verfügbarer Stand:",
+    "latestUpdated": "Aktualisiert:",
+    "latestWatch": "Auf YouTube ansehen",
+    "latestChannel": "Alle Videos auf YouTube",
+    "terminalAlternative": "Alternativ im Terminal starten",
+    "terminalAlternativeText": "Lade dafür die install.sh über den Link herunter und öffne ihren Ordner im Terminal. Starte als normaler Benutzer, ohne sudo."
+  },
+  "en": {
+    "language": "Language",
+    "skip": "Skip to content",
+    "nav": [
+      "The Starter Kit",
+      "Installation",
+      "Tutorial"
+    ],
+    "release": "v0.1.0 · Early test version",
+    "eyebrow": "BY STEAM DECK CHECKER",
+    "hero": [
+      "Your Linux handheld.",
+      "Simply set up."
+    ],
+    "intro": "Startup movies, Decky plugins and your favourite apps. One guided installer gets your Linux handheld ready, step by step.",
+    "download": "Download the Starter Kit",
+    "how": "How it works",
+    "zipNote": "One .desktop file · 23 plugin recommendations included · Free",
+    "platform": "Built for",
+    "preview": "Workflow preview",
+    "previewStep": "STEP 01 / 09",
+    "previewTitle": "Which device do you use?",
+    "previewSub": "Your device. The matching startup movies.",
+    "other": "Other handheld",
+    "selectedVideo": "Matching movie pack",
+    "previewNext": "Next: password & authorization",
+    "previewHint": "A preview. Make your actual choices in the installer.",
+    "stats": [
+      "device profiles",
+      "recommended Decky plugins",
+      "languages"
+    ],
+    "kitEyebrow": "YOUR SETUP. YOUR CHOICE.",
+    "kitTitle": "A better place to start.",
+    "kitIntro": "Choose what you need. The Starter Kit guides you through setup and waits for every operation to finish before moving on. Progress and status stay visible in the terminal. Every operation finishes before the next one starts.",
+    "tabs": [
+      {
+        "label": "Startup movies",
+        "title": "A startup that fits your device.",
+        "text": "Choose a movie pack for your device. Missing folders are created and movies go to the appropriate Steam directory. Then enable them under Customization in Game Mode. Existing startup movies with the same filename are overwritten.",
+        "note": "Six device profiles, including Steam Machine."
+      },
+      {
+        "label": "Decky & plugins",
+        "title": "Your plugins. Ready to come along.",
+        "text": "Install Decky Loader, then the 23 recommendations from Steam Deck Checker. Or search the Decky Plugins Explorer yourself, with short descriptions and sorting by GitHub stars.",
+        "note": "All 23 recommendations are included in install.sh."
+      },
+      {
+        "label": "Apps & streaming",
+        "title": "Your games. Beyond Steam, too.",
+        "text": "Launchers, streaming, utilities and more: choose from 16 applications. Afterwards, add the successfully installed or already available selected apps as non-Steam games. After saving, the installer waits three seconds and automatically starts Steam again.",
+        "note": "Applications are installed as user Flatpaks."
+      },
+      {
+        "label": "Emulation",
+        "title": "Make room for your classics.",
+        "text": "Choose RetroDECK or launch the official EmuDeck setup. Or skip this step. Complete EmuDeck configuration in its own wizard. You can then add RetroDECK or EmuDeck as a non-Steam game, too. After saving, the installer waits three seconds and automatically starts Steam again.",
+        "note": "ROMs and BIOS files are not included."
+      }
+    ],
+    "installEyebrow": "READY WHEN YOU ARE",
+    "installTitle": "Get started in three steps.",
+    "installIntro": "Switch to Desktop Mode and double-click the Starter Kit. The wizard guides you through setup.",
+    "steps": [
+      [
+        "Download the launcher",
+        "Download Linux-Handheld-Starter-Kit.desktop. It includes the complete installer and all 23 plugin recommendations."
+      ],
+      [
+        "Double-click to start",
+        "Open the file in Desktop Mode. If needed, enable executable permission in Properties → Permissions and confirm “Run”. A terminal and the wizard open automatically."
+      ],
+      [
+        "Build your setup",
+        "Select your language and device. Then choose movies, Decky, plugins, apps and emulation. Restart at the end if you wish."
+      ]
+    ],
+    "copy": "Copy command",
+    "copied": "Copied!",
+    "copyError": "Please select and copy the command manually.",
+    "tryFirst": "Try it first? Simulate setup without installing:",
+    "script": "Alternative: install.sh",
+    "source": "Source package (ZIP)",
+    "testNote": "Early test version: 74 automated tests passed. Full testing on physical SteamOS, CachyOS and Bazzite devices is still pending. Individual apps and plugins have their own requirements.",
+    "tutorialEyebrow": "FROM FABIAN. FOR YOUR HANDHELD.",
+    "tutorialTitle": "Tips, reviews and more on YouTube.",
+    "tutorialText": "Steam Deck Checker covers Linux gaming and handhelds. I’ll add the Starter Kit video here later.",
+    "channel": "Visit the YouTube channel",
+    "videoSoon": "Starter Kit tutorial coming later",
+    "videoSub": "This is where the video guide will live.",
+    "faqTitle": "A few things to know.",
+    "faqEyebrow": "GOOD TO KNOW",
+    "faq": [
+      [
+        "Which devices is the Starter Kit for?",
+        "Steam Deck LCD and OLED, Steam Machine, MSI Claw, Legion Go and other Linux handhelds. It targets SteamOS, CachyOS and Bazzite. On other devices it uses the actual user home directory."
+      ],
+      [
+        "Do I need a sudo password?",
+        "Yes, for administrator actions such as installing Decky. If no password is set, the wizard offers to create one and then asks for it again to authorize actions. Your password is not saved."
+      ],
+      [
+        "Do I have to install everything?",
+        "No. Movies, Decky, plugins, apps and emulation are optional. You choose at every stage. Downloads, extraction and installations run one at a time."
+      ],
+      [
+        "What happens to existing apps?",
+        "Existing user and system Flatpaks are detected and reused. Steam is shut down normally before library integration; existing shortcuts are preserved and backed up before changes. After saving, the installer waits three seconds and automatically starts Steam again."
+      ],
+      [
+        "How do I enable the startup movies?",
+        "After installation, open Settings in Game Mode and select Customization → Startup Movie. The wording may vary with your Steam language and version."
+      ],
+      [
+        "Can I try the workflow first?",
+        "Yes. Run bash install.sh --dry-run. This simulation installs nothing, changes no passwords and does not restart your device. It may read the plugin catalogue."
+      ]
+    ],
+    "ctaTitle": "Make your handheld your own.",
+    "ctaText": "Download the Starter Kit and choose your setup.",
+    "footer": "A community project by Steam Deck Checker.",
+    "footerNote": "An independent project. Not affiliated with Valve, the named manufacturers, Decky Loader, RetroDECK or EmuDeck.",
+    "recommend": "Plugin recommendations",
+    "videoPlay": "Play tutorial",
+    "project": "GitHub project",
+    "videoNote": "Existing startup movies with the same filename are overwritten.",
+    "embeddedNote": "All 23 recommendations are included in install.sh.",
+    "progressNote": "Progress and status stay visible in the terminal. Every operation finishes before the next one starts.",
+    "latestEyebrow": "NEW ON STEAM DECK CHECKER",
+    "latestTitle": "The latest videos from the channel.",
+    "latestText": "The nine latest uploads are fetched automatically when you open this page. Click a video to watch it on YouTube.",
+    "latestLoading": "Fetching the latest videos …",
+    "latestUnavailable": "Videos could not be loaded right now. Visit the YouTube channel.",
+    "latestSnapshot": "Last available update:",
+    "latestUpdated": "Updated:",
+    "latestWatch": "Watch on YouTube",
+    "latestChannel": "All videos on YouTube",
+    "terminalAlternative": "Alternatively, use a terminal",
+    "terminalAlternativeText": "Download install.sh from the link and open its folder in a terminal. Run it as your normal user, without sudo."
+  },
+  "es": {
+    "language": "Idioma",
+    "skip": "Ir al contenido",
+    "nav": [
+      "El Starter Kit",
+      "Instalación",
+      "Tutorial"
+    ],
+    "release": "v0.1.0 · Versión de prueba",
+    "eyebrow": "POR STEAM DECK CHECKER",
+    "hero": [
+      "Tu consola Linux.",
+      "Configurar es fácil."
+    ],
+    "intro": "Vídeos de inicio, plugins de Decky y tus aplicaciones favoritas. Un instalador guiado prepara tu consola Linux, paso a paso.",
+    "download": "Descargar el Starter Kit",
+    "how": "Cómo funciona",
+    "zipNote": "Un archivo .desktop · 23 recomendaciones incluidas · Gratis",
+    "platform": "Creado para",
+    "preview": "Vista previa del proceso",
+    "previewStep": "PASO 01 / 09",
+    "previewTitle": "¿Qué dispositivo usas?",
+    "previewSub": "Tu dispositivo. Sus vídeos de inicio.",
+    "other": "Otra consola",
+    "selectedVideo": "Paquete de vídeos correspondiente",
+    "previewNext": "Después: contraseña y autorización",
+    "previewHint": "Es una vista previa. La selección real se hace en el instalador.",
+    "stats": [
+      "perfiles de dispositivo",
+      "plugins de Decky recomendados",
+      "idiomas"
+    ],
+    "kitEyebrow": "TU CONFIGURACIÓN. TU DECISIÓN.",
+    "kitTitle": "Todo para empezar con buen pie.",
+    "kitIntro": "Elige lo que necesitas. El Starter Kit te guía y espera a que termine cada operación antes de continuar. El progreso y el estado se muestran en la terminal. Cada operación termina antes de empezar la siguiente.",
+    "tabs": [
+      {
+        "label": "Vídeos de inicio",
+        "title": "Un inicio a la medida de tu dispositivo.",
+        "text": "Elige un paquete para tu dispositivo. Se crean las carpetas que falten y los vídeos se guardan en la ruta de Steam adecuada. Luego actívalos en Personalización, en modo juego. Los vídeos de inicio existentes con el mismo nombre de archivo se sobrescriben.",
+        "note": "Seis perfiles, incluido Steam Machine."
+      },
+      {
+        "label": "Decky y plugins",
+        "title": "Tus plugins, listos para acompañarte.",
+        "text": "Instala Decky Loader y las 23 recomendaciones de Steam Deck Checker. También puedes buscar en Decky Plugins Explorer, con descripciones breves y orden por estrellas de GitHub.",
+        "note": "Las 23 recomendaciones están incluidas en install.sh."
+      },
+      {
+        "label": "Apps y streaming",
+        "title": "Tus juegos, también fuera de Steam.",
+        "text": "Lanzadores, streaming, herramientas y más: elige entre 16 aplicaciones. Después puedes añadir las apps seleccionadas, instaladas correctamente o ya disponibles, como juegos externos a Steam. Después de guardar, el instalador espera tres segundos y vuelve a iniciar Steam automáticamente.",
+        "note": "Las aplicaciones se instalan como Flatpaks de usuario."
+      },
+      {
+        "label": "Emulación",
+        "title": "Haz sitio a tus clásicos.",
+        "text": "Elige RetroDECK o abre la configuración oficial de EmuDeck. También puedes saltar este paso. La configuración de EmuDeck se completa en su propio asistente. Después también puedes añadir RetroDECK o EmuDeck como juego externo a Steam. Después de guardar, el instalador espera tres segundos y vuelve a iniciar Steam automáticamente.",
+        "note": "No se incluyen ROMs ni archivos BIOS."
+      }
+    ],
+    "installEyebrow": "CUANDO TÚ QUIERAS",
+    "installTitle": "Empieza en tres pasos.",
+    "installIntro": "Cambia al modo escritorio e inicia el Starter Kit con doble clic. El asistente te guía durante la configuración.",
+    "steps": [
+      [
+        "Descarga el lanzador",
+        "Descarga Linux-Handheld-Starter-Kit.desktop. Incluye el instalador completo y las 23 recomendaciones de plugins."
+      ],
+      [
+        "Inicia con doble clic",
+        "Abre el archivo en modo escritorio. Si es necesario, permite su ejecución en Propiedades → Permisos y confirma «Ejecutar». La terminal y el asistente se abrirán automáticamente."
+      ],
+      [
+        "Elige tu configuración",
+        "Selecciona idioma y dispositivo. Después elige vídeos, Decky, plugins, apps y emulación. Al terminar puedes reiniciar."
+      ]
+    ],
+    "copy": "Copiar comando",
+    "copied": "¡Copiado!",
+    "copyError": "Selecciona y copia el comando manualmente.",
+    "tryFirst": "¿Quieres probar antes? Simula sin instalar:",
+    "script": "Alternativa: install.sh",
+    "source": "Paquete de código (ZIP)",
+    "testNote": "Versión de prueba: 74 pruebas automatizadas superadas. Falta la validación completa en dispositivos físicos con SteamOS, CachyOS y Bazzite. Cada app y plugin tiene sus propios requisitos.",
+    "tutorialEyebrow": "DE FABIAN. PARA TU CONSOLA.",
+    "tutorialTitle": "Consejos, análisis y más en YouTube.",
+    "tutorialText": "Steam Deck Checker trata sobre juegos en Linux y consolas portátiles. Añadiré aquí el vídeo del Starter Kit más adelante.",
+    "channel": "Visitar el canal de YouTube",
+    "videoSoon": "El tutorial llegará más adelante",
+    "videoSub": "Aquí irá la guía en vídeo del Starter Kit.",
+    "faqTitle": "Algunas respuestas rápidas.",
+    "faqEyebrow": "CONVIENE SABER",
+    "faq": [
+      [
+        "¿Para qué dispositivos está pensado?",
+        "Para Steam Deck LCD y OLED, Steam Machine, MSI Claw, Legion Go y otras consolas Linux. Está diseñado para SteamOS, CachyOS y Bazzite. En otros dispositivos utiliza la carpeta personal del usuario real."
+      ],
+      [
+        "¿Necesito una contraseña sudo?",
+        "Sí, para acciones de administrador como instalar Decky. Si no tienes contraseña, el asistente ofrece crear una y la solicita otra vez para autorizar las acciones. No se guarda."
+      ],
+      [
+        "¿Tengo que instalarlo todo?",
+        "No. Los vídeos, Decky, plugins, aplicaciones y emulación son opcionales. Tú decides en cada etapa. Descargas, extracción e instalaciones se ejecutan de una en una."
+      ],
+      [
+        "¿Qué pasa con mis aplicaciones actuales?",
+        "Los Flatpaks de usuario y del sistema se detectan y reutilizan. Steam se cierra de forma normal antes de actualizar la biblioteca. Los accesos existentes se conservan y se respaldan. Después de guardar, el instalador espera tres segundos y vuelve a iniciar Steam automáticamente."
+      ],
+      [
+        "¿Cómo activo los vídeos de inicio?",
+        "Después de instalar, abre los ajustes en modo juego y elige Personalización → Vídeo de inicio. Los nombres pueden variar según el idioma y la versión de Steam."
+      ],
+      [
+        "¿Puedo probar el proceso antes?",
+        "Sí. Ejecuta bash install.sh --dry-run. La simulación no instala nada, no cambia contraseñas ni reinicia el dispositivo. Puede consultar el catálogo de plugins."
+      ]
+    ],
+    "ctaTitle": "Haz que tu consola sea más tuya.",
+    "ctaText": "Descarga el Starter Kit y elige tu configuración.",
+    "footer": "Un proyecto comunitario de Steam Deck Checker.",
+    "footerNote": "Proyecto independiente, sin afiliación con Valve, los fabricantes mencionados, Decky Loader, RetroDECK ni EmuDeck.",
+    "recommend": "Plugins recomendados",
+    "videoPlay": "Reproducir tutorial",
+    "project": "Proyecto en GitHub",
+    "videoNote": "Los vídeos de inicio existentes con el mismo nombre de archivo se sobrescriben.",
+    "embeddedNote": "Las 23 recomendaciones están incluidas en install.sh.",
+    "progressNote": "El progreso y el estado se muestran en la terminal. Cada operación termina antes de empezar la siguiente.",
+    "latestEyebrow": "NOVEDADES EN STEAM DECK CHECKER",
+    "latestTitle": "Los últimos vídeos del canal.",
+    "latestText": "Los nueve vídeos más recientes se consultan automáticamente al abrir la página. Haz clic para verlos en YouTube.",
+    "latestLoading": "Buscando los últimos vídeos …",
+    "latestUnavailable": "No se han podido cargar los vídeos. Visita el canal de YouTube.",
+    "latestSnapshot": "Última actualización disponible:",
+    "latestUpdated": "Actualizado:",
+    "latestWatch": "Ver en YouTube",
+    "latestChannel": "Todos los vídeos en YouTube",
+    "terminalAlternative": "También puedes usar una terminal",
+    "terminalAlternativeText": "Descarga install.sh desde el enlace y abre su carpeta en una terminal. Ejecútalo como usuario normal, sin sudo."
+  },
+  "fr": {
+    "language": "Langue",
+    "skip": "Aller au contenu",
+    "nav": [
+      "Le Starter Kit",
+      "Installation",
+      "Tutoriel"
+    ],
+    "release": "v0.1.0 · Version de test",
+    "eyebrow": "PAR STEAM DECK CHECKER",
+    "hero": [
+      "Votre console Linux.",
+      "Simplement configurée."
+    ],
+    "intro": "Vidéos de démarrage, plugins Decky et applications préférées. Un seul installateur vous accompagne, étape par étape, pour préparer votre console Linux.",
+    "download": "Télécharger le Starter Kit",
+    "how": "Comment ça marche",
+    "zipNote": "Un fichier .desktop · 23 recommandations incluses · Gratuit",
+    "platform": "Conçu pour",
+    "preview": "Aperçu du parcours",
+    "previewStep": "ÉTAPE 01 / 09",
+    "previewTitle": "Quel appareil utilisez-vous ?",
+    "previewSub": "Votre appareil. Les vidéos adaptées.",
+    "other": "Autre console",
+    "selectedVideo": "Pack vidéo adapté",
+    "previewNext": "Ensuite : mot de passe et autorisation",
+    "previewHint": "Un aperçu. Faites vos vrais choix dans l’installateur.",
+    "stats": [
+      "profils d’appareils",
+      "plugins Decky recommandés",
+      "langues"
+    ],
+    "kitEyebrow": "VOTRE CONFIGURATION. VOTRE CHOIX.",
+    "kitTitle": "Tout pour bien commencer.",
+    "kitIntro": "Choisissez ce dont vous avez besoin. Le Starter Kit vous guide et attend la fin de chaque opération avant de poursuivre. La progression et l’état restent visibles dans le terminal. Chaque opération se termine avant de passer à la suivante.",
+    "tabs": [
+      {
+        "label": "Vidéos de démarrage",
+        "title": "Un démarrage adapté à votre appareil.",
+        "text": "Choisissez un pack vidéo. Les dossiers manquants sont créés et les vidéos sont placées dans le bon répertoire Steam. Activez-les ensuite dans Personnalisation, en mode jeu. Les vidéos de démarrage existantes portant le même nom de fichier sont remplacées.",
+        "note": "Six profils, dont Steam Machine."
+      },
+      {
+        "label": "Decky et plugins",
+        "title": "Vos plugins sont de la partie.",
+        "text": "Installez Decky Loader puis les 23 recommandations de Steam Deck Checker. Ou cherchez dans Decky Plugins Explorer, avec des descriptions courtes et un tri par étoiles GitHub.",
+        "note": "Les 23 recommandations sont incluses dans install.sh."
+      },
+      {
+        "label": "Apps et streaming",
+        "title": "Vos jeux, même au-delà de Steam.",
+        "text": "Lanceurs, streaming, outils et plus : choisissez parmi 16 applications. Ajoutez ensuite les applications sélectionnées déjà présentes ou correctement installées comme jeux non-Steam. Après l’enregistrement, l’installateur attend trois secondes et relance automatiquement Steam.",
+        "note": "Les applications sont installées en Flatpak utilisateur."
+      },
+      {
+        "label": "Émulation",
+        "title": "Une place pour vos classiques.",
+        "text": "Choisissez RetroDECK ou lancez la configuration officielle d’EmuDeck. Vous pouvez aussi passer cette étape. La configuration d’EmuDeck se termine dans son propre assistant. Vous pouvez ensuite ajouter RetroDECK ou EmuDeck comme jeu non-Steam. Après l’enregistrement, l’installateur attend trois secondes et relance automatiquement Steam.",
+        "note": "Les ROM et les fichiers BIOS ne sont pas inclus."
+      }
+    ],
+    "installEyebrow": "QUAND VOUS LE VOULEZ",
+    "installTitle": "Trois étapes pour commencer.",
+    "installIntro": "Passez en mode bureau et lancez le Starter Kit par double-clic. L’assistant vous accompagne dans la configuration.",
+    "steps": [
+      [
+        "Télécharger le lanceur",
+        "Téléchargez Linux-Handheld-Starter-Kit.desktop. Le fichier contient l’installateur complet et les 23 recommandations de plugins."
+      ],
+      [
+        "Démarrer par double-clic",
+        "Ouvrez le fichier en mode bureau. Au besoin, autorisez son exécution dans Propriétés → Permissions et confirmez « Exécuter ». Le terminal et l’assistant s’ouvrent automatiquement."
+      ],
+      [
+        "Composer votre configuration",
+        "Choisissez la langue et l’appareil, puis les vidéos, Decky, plugins, applications et émulation. Vous pourrez redémarrer à la fin."
+      ]
+    ],
+    "copy": "Copier la commande",
+    "copied": "Copié !",
+    "copyError": "Veuillez sélectionner et copier la commande manuellement.",
+    "tryFirst": "Envie d’essayer ? Simulation sans installation :",
+    "script": "Alternative : install.sh",
+    "source": "Archive du code (ZIP)",
+    "testNote": "Version de test : 74 tests automatisés réussis. La validation complète sur des appareils SteamOS, CachyOS et Bazzite reste à faire. Les applications et plugins ont leurs propres prérequis.",
+    "tutorialEyebrow": "PAR FABIAN. POUR VOTRE CONSOLE.",
+    "tutorialTitle": "Conseils, tests et plus sur YouTube.",
+    "tutorialText": "Steam Deck Checker parle de jeux Linux et de consoles portables. J’ajouterai ici la vidéo du Starter Kit plus tard.",
+    "channel": "Voir la chaîne YouTube",
+    "videoSoon": "Le tutoriel arrivera plus tard",
+    "videoSub": "La vidéo du Starter Kit trouvera sa place ici.",
+    "faqTitle": "Quelques réponses utiles.",
+    "faqEyebrow": "BON À SAVOIR",
+    "faq": [
+      [
+        "Pour quels appareils est-il conçu ?",
+        "Pour Steam Deck LCD et OLED, Steam Machine, MSI Claw, Legion Go et d’autres consoles Linux. Il cible SteamOS, CachyOS et Bazzite et utilise le vrai répertoire personnel de l’utilisateur."
+      ],
+      [
+        "Ai-je besoin d’un mot de passe sudo ?",
+        "Oui, pour les opérations administrateur comme l’installation de Decky. L’assistant propose d’en créer un s’il manque, puis le demande à nouveau pour autoriser les actions. Il n’est pas enregistré."
+      ],
+      [
+        "Faut-il tout installer ?",
+        "Non. Vidéos, Decky, plugins, applications et émulation sont facultatifs. Vous choisissez à chaque étape. Téléchargements, extractions et installations se font l’un après l’autre."
+      ],
+      [
+        "Que deviennent les applications déjà présentes ?",
+        "Les Flatpaks utilisateur et système sont détectés et réutilisés. Steam est fermé normalement avant la mise à jour de sa bibliothèque. Les raccourcis existants sont conservés et sauvegardés. Après l’enregistrement, l’installateur attend trois secondes et relance automatiquement Steam."
+      ],
+      [
+        "Comment activer les vidéos de démarrage ?",
+        "Après l’installation, ouvrez les paramètres en mode jeu puis Personnalisation → Vidéo de démarrage. Les noms peuvent varier selon la langue et la version de Steam."
+      ],
+      [
+        "Puis-je essayer le parcours d’abord ?",
+        "Oui. Lancez bash install.sh --dry-run. La simulation n’installe rien, ne change aucun mot de passe et ne redémarre pas l’appareil. Elle peut consulter le catalogue de plugins."
+      ]
+    ],
+    "ctaTitle": "Une console qui vous ressemble.",
+    "ctaText": "Téléchargez le Starter Kit et choisissez votre configuration.",
+    "footer": "Un projet communautaire de Steam Deck Checker.",
+    "footerNote": "Projet indépendant, sans affiliation avec Valve, les fabricants cités, Decky Loader, RetroDECK ou EmuDeck.",
+    "recommend": "Plugins recommandés",
+    "videoPlay": "Lire le tutoriel",
+    "project": "Projet GitHub",
+    "videoNote": "Les vidéos de démarrage existantes portant le même nom de fichier sont remplacées.",
+    "embeddedNote": "Les 23 recommandations sont incluses dans install.sh.",
+    "progressNote": "La progression et l’état restent visibles dans le terminal. Chaque opération se termine avant de passer à la suivante.",
+    "latestEyebrow": "NOUVEAU SUR STEAM DECK CHECKER",
+    "latestTitle": "Les dernières vidéos de la chaîne.",
+    "latestText": "Les neuf dernières vidéos sont récupérées automatiquement à l’ouverture de la page. Cliquez pour les regarder sur YouTube.",
+    "latestLoading": "Chargement des dernières vidéos …",
+    "latestUnavailable": "Impossible de charger les vidéos pour le moment. Consultez la chaîne YouTube.",
+    "latestSnapshot": "Dernière mise à jour disponible :",
+    "latestUpdated": "Mis à jour :",
+    "latestWatch": "Regarder sur YouTube",
+    "latestChannel": "Toutes les vidéos sur YouTube",
+    "terminalAlternative": "Autre possibilité : le terminal",
+    "terminalAlternativeText": "Téléchargez install.sh via le lien et ouvrez son dossier dans un terminal. Lancez-le avec votre utilisateur habituel, sans sudo."
+  },
+  "ru": {
+    "language": "Язык",
+    "skip": "К содержимому",
+    "nav": [
+      "О Starter Kit",
+      "Установка",
+      "Видео"
+    ],
+    "release": "v0.1.0 · Тестовая версия",
+    "eyebrow": "ОТ STEAM DECK CHECKER",
+    "hero": [
+      "Ваша консоль с Linux.",
+      "Простая настройка."
+    ],
+    "intro": "Стартовые видео, плагины Decky и любимые приложения. Один установщик поможет подготовить портативную консоль с Linux шаг за шагом.",
+    "download": "Скачать Starter Kit",
+    "how": "Как это работает",
+    "zipNote": "Один файл .desktop · 23 рекомендации внутри · Бесплатно",
+    "platform": "Разработано для",
+    "preview": "Предпросмотр процесса",
+    "previewStep": "ШАГ 01 / 09",
+    "previewTitle": "Какое у вас устройство?",
+    "previewSub": "Ваше устройство. Подходящие стартовые видео.",
+    "other": "Другая консоль",
+    "selectedVideo": "Подходящий набор видео",
+    "previewNext": "Далее: пароль и разрешения",
+    "previewHint": "Это предпросмотр. Настоящий выбор вы сделаете в установщике.",
+    "stats": [
+      "профилей устройств",
+      "рекомендуемых плагина Decky",
+      "языков"
+    ],
+    "kitEyebrow": "ВАША НАСТРОЙКА. ВАШ ВЫБОР.",
+    "kitTitle": "Всё для удобного начала.",
+    "kitIntro": "Выбирайте нужное. Starter Kit проведёт вас через настройку и дождётся завершения каждой операции перед следующей. Ход выполнения и статус видны в терминале. Каждая операция завершается до начала следующей.",
+    "tabs": [
+      {
+        "label": "Стартовые видео",
+        "title": "Запуск в стиле вашего устройства.",
+        "text": "Выберите набор видео для своей консоли. Нужные папки будут созданы, а видео сохранены в подходящую папку Steam. Затем включите их в разделе персонализации игрового режима. Существующие стартовые видео с таким же именем файла будут перезаписаны.",
+        "note": "Шесть профилей, включая Steam Machine."
+      },
+      {
+        "label": "Decky и плагины",
+        "title": "Любимые плагины — сразу с вами.",
+        "text": "Установите Decky Loader и 23 плагина из рекомендаций Steam Deck Checker. Или найдите нужные в Decky Plugins Explorer: с краткими описаниями и сортировкой по звёздам GitHub.",
+        "note": "Все 23 рекомендации включены в install.sh."
+      },
+      {
+        "label": "Приложения",
+        "title": "Ваши игры. И за пределами Steam.",
+        "text": "Лаунчеры, стриминг, утилиты и другое: выберите из 16 приложений. Затем выбранные установленные или уже доступные приложения можно добавить в Steam как сторонние игры. После сохранения установщик ждёт три секунды и автоматически запускает Steam снова.",
+        "note": "Приложения устанавливаются как пользовательские Flatpak."
+      },
+      {
+        "label": "Эмуляция",
+        "title": "Место для любимой классики.",
+        "text": "Выберите RetroDECK или запустите официальную настройку EmuDeck. Этот шаг тоже можно пропустить. Настройка EmuDeck завершается в его собственном мастере. После этого можно добавить RetroDECK или EmuDeck как стороннюю игру в Steam. После сохранения установщик ждёт три секунды и автоматически запускает Steam снова.",
+        "note": "ROM и файлы BIOS не включены."
+      }
+    ],
+    "installEyebrow": "КОГДА БУДЕТЕ ГОТОВЫ",
+    "installTitle": "Начните с трёх шагов.",
+    "installIntro": "Перейдите в режим рабочего стола и запустите Starter Kit двойным щелчком. Мастер поможет с настройкой.",
+    "steps": [
+      [
+        "Скачайте файл запуска",
+        "Скачайте Linux-Handheld-Starter-Kit.desktop. Внутри уже есть полный установщик и все 23 рекомендации плагинов."
+      ],
+      [
+        "Запустите двойным щелчком",
+        "Откройте файл в режиме рабочего стола. При необходимости разрешите выполнение в Свойства → Права доступа и подтвердите запуск. Терминал и мастер откроются автоматически."
+      ],
+      [
+        "Выберите свою настройку",
+        "Укажите язык и устройство. Затем выберите видео, Decky, плагины, приложения и эмуляцию. В конце можно перезагрузить устройство."
+      ]
+    ],
+    "copy": "Скопировать команду",
+    "copied": "Скопировано!",
+    "copyError": "Выделите и скопируйте команду вручную.",
+    "tryFirst": "Хотите попробовать? Симуляция без установки:",
+    "script": "Альтернатива: install.sh",
+    "source": "Архив исходного кода (ZIP)",
+    "testNote": "Тестовая версия: пройдено 74 автоматических тестов. Полная проверка на физических устройствах со SteamOS, CachyOS и Bazzite ещё предстоит. У приложений и плагинов есть собственные требования.",
+    "tutorialEyebrow": "ОТ ФАБИАНА. ДЛЯ ВАШЕЙ КОНСОЛИ.",
+    "tutorialTitle": "Советы, обзоры и больше на YouTube.",
+    "tutorialText": "На Steam Deck Checker выходят видео о Linux-гейминге и портативных консолях. Видео о Starter Kit я добавлю сюда позже.",
+    "channel": "Перейти на YouTube-канал",
+    "videoSoon": "Видеоинструкция появится позже",
+    "videoSub": "Здесь будет руководство по Starter Kit.",
+    "faqTitle": "Несколько важных ответов.",
+    "faqEyebrow": "ПОЛЕЗНО ЗНАТЬ",
+    "faq": [
+      [
+        "Для каких устройств подходит Starter Kit?",
+        "Он разработан для Steam Deck LCD и OLED, Steam Machine, MSI Claw, Legion Go и других портативных Linux-устройств со SteamOS, CachyOS и Bazzite. Используется настоящий домашний каталог пользователя."
+      ],
+      [
+        "Нужен ли пароль sudo?",
+        "Да, для действий администратора, например установки Decky. Если пароль не задан, мастер предложит создать его, а затем запросит снова для разрешения действий. Пароль не сохраняется."
+      ],
+      [
+        "Обязательно устанавливать всё?",
+        "Нет. Видео, Decky, плагины, приложения и эмуляция необязательны. Вы выбираете на каждом этапе. Загрузка, распаковка и установка выполняются по очереди."
+      ],
+      [
+        "Что будет с установленными приложениями?",
+        "Пользовательские и системные Flatpak распознаются и используются повторно. Перед изменением библиотеки Steam штатно закрывается. Старые ярлыки сохраняются, создаётся резервная копия. После сохранения установщик ждёт три секунды и автоматически запускает Steam снова."
+      ],
+      [
+        "Как включить стартовые видео?",
+        "После установки откройте настройки игрового режима и выберите Персонализация → Стартовое видео. Названия могут отличаться в разных языках и версиях Steam."
+      ],
+      [
+        "Можно ли сначала попробовать процесс?",
+        "Да. Запустите bash install.sh --dry-run. Симуляция ничего не устанавливает, не меняет пароль и не перезагружает устройство. Каталог плагинов может загружаться для просмотра."
+      ]
+    ],
+    "ctaTitle": "Настройте консоль под себя.",
+    "ctaText": "Скачайте Starter Kit и выберите свою конфигурацию.",
+    "footer": "Общественный проект Steam Deck Checker.",
+    "footerNote": "Независимый проект. Не связан с Valve, упомянутыми производителями, Decky Loader, RetroDECK или EmuDeck.",
+    "recommend": "Рекомендации плагинов",
+    "videoPlay": "Смотреть инструкцию",
+    "project": "Проект на GitHub",
+    "videoNote": "Существующие стартовые видео с таким же именем файла будут перезаписаны.",
+    "embeddedNote": "Все 23 рекомендации включены в install.sh.",
+    "progressNote": "Ход выполнения и статус видны в терминале. Каждая операция завершается до начала следующей.",
+    "latestEyebrow": "НОВОЕ НА STEAM DECK CHECKER",
+    "latestTitle": "Последние видео с канала.",
+    "latestText": "Девять последних видео автоматически загружаются при открытии страницы. Нажмите, чтобы посмотреть их на YouTube.",
+    "latestLoading": "Загрузка последних видео …",
+    "latestUnavailable": "Не удалось загрузить видео. Откройте канал YouTube.",
+    "latestSnapshot": "Последнее доступное обновление:",
+    "latestUpdated": "Обновлено:",
+    "latestWatch": "Смотреть на YouTube",
+    "latestChannel": "Все видео на YouTube",
+    "terminalAlternative": "Также можно запустить через терминал",
+    "terminalAlternativeText": "Скачайте install.sh по ссылке и откройте его папку в терминале. Запускайте от обычного пользователя, без sudo."
+  },
+  "zh": {
+    "language": "语言",
+    "skip": "跳转到正文",
+    "nav": [
+      "了解 Starter Kit",
+      "安装方法",
+      "视频教程"
+    ],
+    "release": "v0.1.0 · 早期测试版",
+    "eyebrow": "由 STEAM DECK CHECKER 制作",
+    "hero": [
+      "你的 Linux 掌机。",
+      "轻松完成设置。"
+    ],
+    "intro": "启动视频、Decky 插件和你喜欢的应用。一个安装向导，带你一步步设置好 Linux 掌机。",
+    "download": "下载 Starter Kit",
+    "how": "了解使用方法",
+    "zipNote": "只需一个 .desktop 文件 · 内置 23 项插件推荐 · 免费",
+    "platform": "专为以下系统开发",
+    "preview": "操作流程预览",
+    "previewStep": "第 01 / 09 步",
+    "previewTitle": "你使用哪款设备？",
+    "previewSub": "选择设备，匹配启动视频。",
+    "other": "其他掌机",
+    "selectedVideo": "对应的启动视频包",
+    "previewNext": "下一步：密码与授权",
+    "previewHint": "这里只是预览，请在安装程序中进行实际选择。",
+    "stats": [
+      "种设备配置",
+      "款推荐 Decky 插件",
+      "种语言"
+    ],
+    "kitEyebrow": "你的配置，由你决定。",
+    "kitTitle": "轻松开始，需要的都在这里。",
+    "kitIntro": "选择你需要的内容。Starter Kit 会引导你完成设置，并等待每个操作结束后再进行下一项。 终端会显示进度和状态。每项操作完成后才会开始下一项。",
+    "tabs": [
+      {
+        "label": "启动视频",
+        "title": "让开机画面更适合你的设备。",
+        "text": "选择适合设备的视频包。程序会创建缺少的文件夹，并将视频放到正确的 Steam 目录。随后在游戏模式的“自定义”设置中启用。 同名的现有启动视频将被覆盖。",
+        "note": "提供六种设备配置，包括 Steam Machine。"
+      },
+      {
+        "label": "Decky 与插件",
+        "title": "喜欢的插件，一起装好。",
+        "text": "安装 Decky Loader，再安装 Steam Deck Checker 推荐的 23 款插件。也可以在 Decky Plugins Explorer 中自行搜索，查看简短说明并按 GitHub 星标排序。",
+        "note": "全部 23 项插件推荐均已内置于 install.sh。"
+      },
+      {
+        "label": "应用与串流",
+        "title": "你的游戏，不止于 Steam。",
+        "text": "启动器、串流、实用工具等，共 16 款应用可选。随后可将成功安装或已经存在的所选应用添加为非 Steam 游戏。 保存后，安装程序会等待三秒并自动重新启动 Steam。",
+        "note": "应用以用户级 Flatpak 形式安装。"
+      },
+      {
+        "label": "模拟器",
+        "title": "也为经典游戏留个位置。",
+        "text": "选择 RetroDECK，或启动官方 EmuDeck 安装向导。也可以跳过。EmuDeck 的具体设置需要在其自己的向导中完成。 随后也可以将 RetroDECK 或 EmuDeck 添加为非 Steam 游戏。 保存后，安装程序会等待三秒并自动重新启动 Steam。",
+        "note": "不包含 ROM 和 BIOS 文件。"
+      }
+    ],
+    "installEyebrow": "准备好，就开始。",
+    "installTitle": "三步开始使用。",
+    "installIntro": "切换到桌面模式，双击启动 Starter Kit，向导将引导你完成设置。",
+    "steps": [
+      [
+        "下载启动文件",
+        "下载 Linux-Handheld-Starter-Kit.desktop，其中已包含完整安装程序和全部 23 项插件推荐。"
+      ],
+      [
+        "双击启动",
+        "在桌面模式下打开文件。如有需要，在“属性 → 权限”中允许执行，并确认“运行”。终端和设置向导将自动打开。"
+      ],
+      [
+        "选择你的配置",
+        "选择语言和设备，然后选择视频、Decky、插件、应用和模拟器。最后可以选择重启。"
+      ]
+    ],
+    "copy": "复制命令",
+    "copied": "已复制！",
+    "copyError": "请选中命令并手动复制。",
+    "tryFirst": "想先试一试？可模拟流程而不进行安装：",
+    "script": "备选：install.sh",
+    "source": "源代码压缩包（ZIP）",
+    "testNote": "早期测试版：已通过 74 项自动化测试。尚未完成 SteamOS、CachyOS 和 Bazzite 实机上的全面验证。各应用和插件也有自己的使用要求。",
+    "tutorialEyebrow": "来自 FABIAN，为你的掌机而做。",
+    "tutorialTitle": "在 YouTube 了解技巧、评测和更多内容。",
+    "tutorialText": "Steam Deck Checker 分享 Linux 游戏和掌机相关视频。Starter Kit 的视频教程稍后会添加到这里。",
+    "channel": "访问 YouTube 频道",
+    "videoSoon": "Starter Kit 视频教程稍后推出",
+    "videoSub": "这里将放置视频使用指南。",
+    "faqTitle": "你可能还想了解。",
+    "faqEyebrow": "常见问题",
+    "faq": [
+      [
+        "Starter Kit 适用于哪些设备？",
+        "面向 Steam Deck LCD 和 OLED、Steam Machine、MSI Claw、Legion Go 以及其他 Linux 掌机，针对 SteamOS、CachyOS 和 Bazzite 开发，并使用实际用户的主目录。"
+      ],
+      [
+        "需要 sudo 密码吗？",
+        "安装 Decky 等管理员操作需要密码。如果尚未设置，向导会提供创建密码的选项，随后再次请求密码以授权操作。密码不会保存。"
+      ],
+      [
+        "必须安装全部内容吗？",
+        "不需要。视频、Decky、插件、应用和模拟器均可选，每个阶段由你决定。下载、解压和安装会按顺序执行。"
+      ],
+      [
+        "已有的应用会怎样？",
+        "程序会识别并使用已安装的用户级或系统级 Flatpak。修改游戏库前会正常关闭 Steam，保留现有快捷方式并进行备份。 保存后，安装程序会等待三秒并自动重新启动 Steam。"
+      ],
+      [
+        "如何启用启动视频？",
+        "安装后，在游戏模式中打开设置，选择“自定义 → 启动视频”。实际名称可能随 Steam 语言和版本而变化。"
+      ],
+      [
+        "可以先试运行吗？",
+        "可以。运行 bash install.sh --dry-run 即可模拟流程，不会安装软件、修改密码或重启设备。此模式可能读取插件目录。"
+      ]
+    ],
+    "ctaTitle": "把掌机设置成你喜欢的样子。",
+    "ctaText": "下载 Starter Kit，选择适合你的配置。",
+    "footer": "Steam Deck Checker 的社区项目。",
+    "footerNote": "本项目独立运营，与 Valve、所提及的制造商、Decky Loader、RetroDECK 或 EmuDeck 无关联。",
+    "recommend": "推荐插件列表",
+    "videoPlay": "播放教程",
+    "project": "GitHub 项目",
+    "videoNote": "同名的现有启动视频将被覆盖。",
+    "embeddedNote": "全部 23 项插件推荐均已内置于 install.sh。",
+    "progressNote": "终端会显示进度和状态。每项操作完成后才会开始下一项。",
+    "latestEyebrow": "STEAM DECK CHECKER 最新内容",
+    "latestTitle": "频道最新视频。",
+    "latestText": "每次打开本页面时，将自动获取最新的九个视频。点击即可在 YouTube 上观看。",
+    "latestLoading": "正在获取最新视频……",
+    "latestUnavailable": "暂时无法加载视频，请访问 YouTube 频道。",
+    "latestSnapshot": "上次可用更新：",
+    "latestUpdated": "更新时间：",
+    "latestWatch": "在 YouTube 上观看",
+    "latestChannel": "在 YouTube 上查看所有视频",
+    "terminalAlternative": "也可以通过终端启动",
+    "terminalAlternativeText": "通过链接下载 install.sh，然后在终端中打开其文件夹。以普通用户运行，不要使用 sudo。"
+  },
+  "ja": {
+    "language": "言語",
+    "skip": "本文へ移動",
+    "nav": [
+      "Starter Kit について",
+      "インストール",
+      "動画ガイド"
+    ],
+    "release": "v0.1.0 · 初期テスト版",
+    "eyebrow": "STEAM DECK CHECKER 制作",
+    "hero": [
+      "Linux ハンドヘルドを。",
+      "かんたんにセットアップ。"
+    ],
+    "intro": "起動動画、Decky プラグイン、お気に入りのアプリ。ひとつのインストーラーが、Linux ハンドヘルドの設定を順番に案内します。",
+    "download": "Starter Kit をダウンロード",
+    "how": "使い方を見る",
+    "zipNote": ".desktop ファイル1つだけ · おすすめ23件を内蔵 · 無料",
+    "platform": "対応を目指すシステム",
+    "preview": "設定の流れをプレビュー",
+    "previewStep": "ステップ 01 / 09",
+    "previewTitle": "お使いの機種は？",
+    "previewSub": "機種に合った起動動画を選べます。",
+    "other": "その他の機種",
+    "selectedVideo": "機種に合う動画パック",
+    "previewNext": "次へ：パスワードと権限",
+    "previewHint": "これはプレビューです。実際の設定はインストーラーで選択してください。",
+    "stats": [
+      "種類の機種設定",
+      "種類のおすすめ Decky プラグイン",
+      "言語"
+    ],
+    "kitEyebrow": "自分の設定を、自分で選ぶ。",
+    "kitTitle": "はじめの一歩を、もっと手軽に。",
+    "kitIntro": "必要なものを選ぶだけ。Starter Kit が設定を案内し、それぞれの処理が終わってから次に進みます。 進行状況とステータスをターミナルに表示します。各処理の完了を待ってから次に進みます。",
+    "tabs": [
+      {
+        "label": "起動動画",
+        "title": "お使いの機種に合う起動画面を。",
+        "text": "機種に合う動画パックを選択します。必要なフォルダーを作成し、適切な Steam フォルダーに動画を保存します。その後、ゲームモードのカスタマイズ設定で有効にしてください。 同じファイル名の既存の起動動画は上書きされます。",
+        "note": "Steam Machine を含む6種類の機種設定。"
+      },
+      {
+        "label": "Decky とプラグイン",
+        "title": "お気に入りのプラグインも一緒に。",
+        "text": "Decky Loader をインストールし、Steam Deck Checker おすすめの23種類のプラグインを追加できます。Decky Plugins Explorer で説明を読み、GitHub のスター数順に探すこともできます。",
+        "note": "おすすめ23件はすべて install.sh に内蔵されています。"
+      },
+      {
+        "label": "アプリと配信",
+        "title": "Steam の外にも、遊びを広げる。",
+        "text": "ランチャー、ストリーミング、ツールなど16種類のアプリから選べます。インストールに成功したアプリや既存の選択済みアプリを、非 Steam ゲームとして追加できます。 保存後、インストーラーは3秒待ってから Steam を自動的に再起動します。",
+        "note": "アプリはユーザー用 Flatpak としてインストールします。"
+      },
+      {
+        "label": "エミュレーション",
+        "title": "懐かしのゲームのための場所も。",
+        "text": "RetroDECK を選ぶか、EmuDeck 公式のセットアップを起動できます。スキップも可能です。EmuDeck の設定は、専用ウィザードで完了させてください。 その後、RetroDECK または EmuDeck を非 Steam ゲームとして追加することもできます。 保存後、インストーラーは3秒待ってから Steam を自動的に再起動します。",
+        "note": "ROM や BIOS ファイルは含まれません。"
+      }
+    ],
+    "installEyebrow": "準備ができたら、はじめよう。",
+    "installTitle": "3つのステップでスタート。",
+    "installIntro": "デスクトップモードに切り替え、Starter Kit をダブルクリックで起動してください。ウィザードに沿って設定できます。",
+    "steps": [
+      [
+        "起動ファイルをダウンロード",
+        "Linux-Handheld-Starter-Kit.desktop をダウンロードしてください。インストーラー本体とおすすめプラグイン23件を内蔵しています。"
+      ],
+      [
+        "ダブルクリックで起動",
+        "デスクトップモードでファイルを開きます。必要に応じて「プロパティ → 権限」で実行を許可し、起動を確認してください。ターミナルとウィザードが自動的に開きます。"
+      ],
+      [
+        "自分の構成を選ぶ",
+        "言語と機種を選び、動画、Decky、プラグイン、アプリ、エミュレーションを選択します。最後に再起動も選べます。"
+      ]
+    ],
+    "copy": "コマンドをコピー",
+    "copied": "コピーしました！",
+    "copyError": "コマンドを選択して手動でコピーしてください。",
+    "tryFirst": "まず試すなら、インストールしないシミュレーション：",
+    "script": "別の方法：install.sh",
+    "source": "ソースコード（ZIP）",
+    "testNote": "初期テスト版：74項目の自動テストに合格しています。SteamOS、CachyOS、Bazzite 実機での全面的な検証は未完了です。各アプリやプラグインには独自の動作要件があります。",
+    "tutorialEyebrow": "FABIAN から、あなたのハンドヘルドへ。",
+    "tutorialTitle": "YouTube でヒントやレビューを。",
+    "tutorialText": "Steam Deck Checker では Linux ゲームやハンドヘルドの動画を公開しています。Starter Kit の解説動画は後日ここに追加します。",
+    "channel": "YouTube チャンネルへ",
+    "videoSoon": "Starter Kit の解説動画は後日公開",
+    "videoSub": "ここに動画ガイドを追加する予定です。",
+    "faqTitle": "よくある質問。",
+    "faqEyebrow": "知っておきたいこと",
+    "faq": [
+      [
+        "どの機種向けですか？",
+        "Steam Deck LCD・OLED、Steam Machine、MSI Claw、Legion Go、その他の Linux ハンドヘルド向けです。SteamOS、CachyOS、Bazzite を対象に開発し、実際のユーザーのホームフォルダーを使用します。"
+      ],
+      [
+        "sudo のパスワードは必要ですか？",
+        "Decky のインストールなどの管理者操作には必要です。未設定の場合、作成する手順を案内し、その後、権限を確認するため再入力を求めます。パスワードは保存しません。"
+      ],
+      [
+        "すべてインストールする必要がありますか？",
+        "いいえ。動画、Decky、プラグイン、アプリ、エミュレーションは任意です。各ステップで選択できます。ダウンロード、展開、インストールは順番に実行されます。"
+      ],
+      [
+        "インストール済みのアプリはどうなりますか？",
+        "ユーザー用・システム用の既存 Flatpak を検出し、そのまま利用します。ライブラリーを変更する前に Steam を通常の手順で終了し、既存のショートカットを保存してバックアップします。 保存後、インストーラーは3秒待ってから Steam を自動的に再起動します。"
+      ],
+      [
+        "起動動画を有効にするには？",
+        "インストール後、ゲームモードの設定で「カスタマイズ → 起動動画」を選択してください。表示名は Steam の言語やバージョンによって異なる場合があります。"
+      ],
+      [
+        "設定の流れを試せますか？",
+        "はい。bash install.sh --dry-run を実行してください。ソフトのインストール、パスワードの変更、再起動は行いません。プラグイン一覧を読み込むことはあります。"
+      ]
+    ],
+    "ctaTitle": "あなたらしいハンドヘルドに。",
+    "ctaText": "Starter Kit をダウンロードして、自分に合う設定を選ぼう。",
+    "footer": "Steam Deck Checker のコミュニティプロジェクト。",
+    "footerNote": "独立したプロジェクトです。Valve、記載のメーカー、Decky Loader、RetroDECK、EmuDeck とは関係ありません。",
+    "recommend": "おすすめプラグイン",
+    "videoPlay": "解説動画を再生",
+    "project": "GitHub プロジェクト",
+    "videoNote": "同じファイル名の既存の起動動画は上書きされます。",
+    "embeddedNote": "おすすめ23件はすべて install.sh に内蔵されています。",
+    "progressNote": "進行状況とステータスをターミナルに表示します。各処理の完了を待ってから次に進みます。",
+    "latestEyebrow": "STEAM DECK CHECKER の新着",
+    "latestTitle": "チャンネルの最新動画。",
+    "latestText": "ページを開くと最新の動画9本を自動で取得します。クリックすると YouTube で視聴できます。",
+    "latestLoading": "最新の動画を取得しています…",
+    "latestUnavailable": "現在、動画を読み込めません。YouTube チャンネルをご覧ください。",
+    "latestSnapshot": "最後に取得した情報：",
+    "latestUpdated": "更新日時：",
+    "latestWatch": "YouTube で見る",
+    "latestChannel": "YouTube ですべての動画を見る",
+    "terminalAlternative": "ターミナルから起動する場合",
+    "terminalAlternativeText": "リンクから install.sh をダウンロードし、そのフォルダーをターミナルで開きます。sudo を付けず、通常のユーザーで実行してください。"
+  }
+}
