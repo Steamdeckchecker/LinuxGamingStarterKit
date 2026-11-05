@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://www.youtube.com/@SteamDeckChecker/"><img src="assets/steam-deck-checker.png" width="180" alt="Steam Deck Checker"></a></p>
 
-# Linux Handheld Starter Kit · 0.1.0
+# Linux Handheld Starter Kit · 0.2.1
 
 Geführte Ersteinrichtung für Linux-Handhelds mit
 **[SteamOS](https://store.steampowered.com/steamos/), [CachyOS](https://cachyos.org/)
@@ -14,8 +14,10 @@ Die Oberfläche nutzt **Zenity** oder **KDialog**, die Installationen laufen
 einzeln und synchron. Die `install.sh` enthält den vollständigen Programmcode.
 Ein Klonen des Projekts oder das Installieren von Python-Paketen ist nicht nötig.
 
-**Veröffentlichung:** v0.1.0 ist die erste reguläre Veröffentlichung. Die Kernabläufe sind automatisiert
-mit simulierten Systembefehlen geprüft. Tests wurden auf SteamOS, CachyOS und Bazzite durchgeführt. Die Funktion einzelner
+**Veröffentlichung:** v0.2.1 ergänzt LiveWallpaper, 28 Plugin-Empfehlungen und automatische Desktop-Links.
+85 automatisierte Installer-Tests bestehen, darunter die Erstinstallation und Aktualisierung des
+Wallpaper-Pakets mit isolierten KDE-Werkzeugen. Die neue Integration muss noch auf einem vollständigen
+Plasma-6-Desktop unter SteamOS, CachyOS beziehungsweise Bazzite geprüft werden. Die Funktion einzelner
 Decky-Plugins und externer Apps hängt zusätzlich von deren eigener Unterstützung
 für die jeweilige Steam-Version, Distribution und Hardware ab.
 
@@ -29,10 +31,10 @@ für die jeweilige Steam-Version, Distribution und Hardware ab.
 
 | Datei | Zweck |
 | --- | --- |
-| [Linux-Handheld-Starter-Kit.desktop](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/Linux-Handheld-Starter-Kit.desktop) | Empfohlen: eigenständiger Starter per Doppelklick. |
-| [install.sh](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh) | Alternative für den Start im Terminal. |
-| [Quellcode-ZIP](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/Linux-Handheld-Starter-Kit-v0.1.0.zip) | Beide Starter, bearbeitbarer Quellcode, Webseite, Dokumentation und Tests. |
-| [SHA256SUMS](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/SHA256SUMS) | SHA-256-Prüfsummen für beide Starter und das ZIP. |
+| [Linux-Handheld-Starter-Kit.desktop](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit.desktop) | Empfohlen: eigenständiger Starter per Doppelklick. |
+| [install.sh](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh) | Alternative für den Start im Terminal. |
+| [Quellcode-ZIP](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit-v0.2.1.zip) | Beide Starter, bearbeitbarer Quellcode, Webseite, Dokumentation und Tests. |
+| [SHA256SUMS](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/SHA256SUMS) | SHA-256-Prüfsummen für beide Starter und das ZIP. |
 
 Nur **eine** der beiden Startdateien herunterladen.
 
@@ -60,10 +62,10 @@ In den **Desktop-Modus** wechseln und diesen Befehl als normalen Benutzer
 ausführen. Über das Kopiersymbol am Codeblock lässt er sich vollständig kopieren:
 
 ```bash
-curl -fL --retry 3 -o install.sh "https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh" && bash install.sh
+curl -fL --retry 3 -o install.sh "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh" && bash install.sh
 ```
 
-Der Befehl speichert Version **0.1.0** als `install.sh` im aktuellen Ordner
+Der Befehl speichert Version **0.2.1** als `install.sh` im aktuellen Ordner
 und startet sie erst nach erfolgreichem Download. **Kein sudo voranstellen**;
 die benötigte Administratorberechtigung wird innerhalb des Assistenten angefragt.
 Wenn `install.sh` bereits heruntergeladen wurde, genügt `bash install.sh`.
@@ -97,11 +99,13 @@ Die Systemsprache wird nicht verändert.
 | 3. Autorisierung | Das Benutzerpasswort erneut für `sudo` abfragen. Wird die Autorisierung abgelehnt, bleiben Video- und Benutzer-Flatpak-Installationen möglich. |
 | 4. Startvideos | Passendes Gerät vorauswählen; alle sechs Pakete und „Keine Startvideos“ anbieten. |
 | 5. Decky Loader | Aktuelle stabile Version mit dem offiziellen CLI-Installer installieren. Bei vorhandenem Decky kann direkt zur Plugin-Auswahl gewechselt werden. „Nein“ führt zu Schritt 7. |
-| 6. Plugins | Alle 23 eingebetteten Empfehlungen, Auswahl aus dem Explorer oder keine Plugins. |
+| 6. Plugins | Alle 28 eingebetteten Empfehlungen, Auswahl aus dem Explorer oder keine Plugins. |
 | 7. Apps | Gewünschte Anwendungen anhaken und einzeln installieren. Danach optional die erfolgreichen/bereits vorhandenen ausgewählten Apps zur Steam-Bibliothek hinzufügen. |
-| 8. Emulation | RetroDECK, EmuDeck oder keine Emulationslösung. Danach optional die installierte Lösung als steamfremdes Spiel hinzufügen. |
-| 9. Abschluss | Ergebnisse anzeigen und einen Neustart mit Ja/Nein anbieten. |
-| 10. Ende | Beenden; ein Neustart erfolgt nur bei „Ja“. |
+| Desktop-Links | Linux Starterkit und Steam Deck Checker mit den Original-Projektlogos automatisch anlegen, ohne Abfrage. |
+| 8. LiveWallpaper | Ja/Nein-Abfrage; bei Ja Version 0.3.2 installieren und Neon-Emblem mit dem mitgelieferten Logo aktivieren. |
+| 9. Emulation | RetroDECK, EmuDeck oder keine Emulationslösung. Danach optional die installierte Lösung als steamfremdes Spiel hinzufügen. |
+| 10. Abschluss | Ergebnisse anzeigen und einen Neustart mit Ja/Nein anbieten. |
+| Ende | Beenden; ein Neustart erfolgt nur bei „Ja“. |
 
 Im Terminal erscheinen die aktuellen Arbeitsschritte und Ergebnisse. Downloads
 und ZIP-Entpackvorgänge zeigen ihren tatsächlichen Fortschritt; bei bekannter
@@ -161,9 +165,58 @@ Der Installer lädt aus dem jeweils ausgewählten Repository. Für Steam Machine
 ist `Steamdeckchecker/SVSM` hinterlegt und nach der Geräteauswahl vorausgewählt.
 Der Release-Dateiname muss dafür nicht dem Gerätenamen entsprechen.
 
+## LiveWallpaper und Desktop-Verknüpfungen
+
+Der neue Schritt **vor EmuDeck/RetroDECK** fragt mit **Ja/Nein**, ob
+[LiveWallpaper](https://github.com/Steamdeckchecker/LiveWallpaper) installiert werden soll.
+Bei **Ja** wird das bereitgestellte **KDE-Paket 0.3.2** als normaler Benutzer
+installiert beziehungsweise aktualisiert. **Neon-Emblem-SDC** und das enthaltene
+Steam-Deck-Checker-Logo werden über die laufende Plasma-Sitzung aktiviert:
+24 FPS, 60 % Renderauflösung, manuelle Pause aus, Vollbild-Pause an.
+Neon wird auch als Vorgabe für neu angelegte Desktopflächen gesetzt.
+Bei **Nein** bleiben Wallpaper-Paket und Hintergrundauswahl unverändert.
+
+Voraussetzungen: **KDE Plasma 6**, **QtWebEngine**, `kpackagetool6` und
+`qdbus6`, `qdbus-qt6` oder `qdbus`. Plasma 5 und GNOME unterstützen dieses Paket
+nicht. Fehlende Voraussetzungen werden gemeldet; anschließend geht es mit der
+Emulation weiter. Systempakete werden für diesen Schritt nicht automatisch
+nachinstalliert. Unter Bazzite kann für fehlendes QtWebEngine
+`sudo rpm-ostree install qt6-qtwebengine` mit anschließendem Neustart nötig sein.
+
+Das genaue Archiv liegt unter
+[assets/Live_Background_KDE_v0.3.2.zip](assets/Live_Background_KDE_v0.3.2.zip).
+Das Quellcode-Paket verwendet die lokale Kopie; die eigenständigen Starter laden
+sie von der Projektwebseite. Beide Wege prüfen vor dem Entpacken SHA-256:
+
+```text
+b67ce8339ff079784dfdfdbb3e9565da43999a75334d2d9de1ddd2e107aa150d
+```
+
+Vor der Aktivierung wird die vorhandene Plasma-Konfiguration unter
+`~/.local/state/linux-handheld-starter-kit/backups/` gesichert (beziehungsweise
+unter `XDG_STATE_HOME`). Die Einstellung gilt für vorhandene Desktopflächen und
+Aktivitäten und wird über Plasma zurückgelesen. Scheitert nur die Aktivierung,
+bleibt das Modul installiert; manuell lässt sich **Live Background (KDE) →
+Neon-Emblem-SDC** auswählen. Nach dem Update eines bereits laufenden Moduls einmal
+ab- und wieder anmelden, damit dessen QML-Code vollständig neu geladen wird.
+
+Ohne zusätzliche Abfrage werden zwei Desktop-Links angelegt:
+
+| Link | Ziel |
+| --- | --- |
+| Linux Starterkit | https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/ |
+| Steam Deck Checker | https://www.youtube.com/@SteamDeckChecker |
+
+Beide nutzen die Original-Projektlogos, die auch in den eigenständigen
+Startdateien enthalten sind. Der tatsächliche Desktop-Ordner wird über XDG
+erkannt, einschließlich lokalisierter Ordner wie `Schreibtisch`. Die Dateien
+heißen `Linux-Starterkit.desktop` und `Steam-Deck-Checker.desktop`. Erneutes
+Ausführen erzeugt keine Duplikate; abweichende vorhandene Dateien werden mit
+`.starter-kit-backup` gesichert. Der Probelauf legt weder Links noch Wallpaper an.
+
 ## Decky-Plugins
 
-Alle **23 Repository-Links aus `recommend.txt` sind in beiden Startdateien integriert**.
+Alle **28 Repository-Links aus `recommend.txt` sind in beiden Startdateien integriert**.
 Für die empfohlene Auswahl ist keine zusätzliche Datei erforderlich. Die Datei
 im Quellcode-Paket dient der Pflege: `python3 build.py` übernimmt ihren Inhalt
 beim Erstellen des Installers. Für eigene Empfehlungen werden auch dieses

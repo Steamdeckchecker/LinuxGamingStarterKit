@@ -49,10 +49,17 @@ with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED, compresslev
         info.create_system = 3
         mode = 0o755 if path.suffix in {".sh", ".desktop"} else 0o644
         info.external_attr = (stat.S_IFREG | mode) << 16
-        info.compress_type = zipfile.ZIP_DEFLATED
-        target.writestr(info, path.read_bytes(), compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
+        # Preserve already-compressed archives verbatim, so the website can
+        # serve the bundled wallpaper without embedding a second full copy.
+        shared = relative in launchers or relative == "recommend.txt" or relative.startswith("assets/")
+        compression = zipfile.ZIP_STORED if shared else zipfile.ZIP_DEFLATED
+        info.compress_type = compression
+        target.writestr(info, path.read_bytes(), compress_type=compression, compresslevel=9)
 
 assets = [out / name for name in launchers] + [archive]
+wallpaper = ROOT / "assets/Live_Background_KDE_v0.3.2.zip"
+shutil.copy2(wallpaper, out / wallpaper.name)
+assets.append(out / wallpaper.name)
 (out / "SHA256SUMS").write_text("".join(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.name}\n" for path in assets), encoding="ascii")
 downloads = ROOT / "website/public/downloads"
 downloads.mkdir(parents=True, exist_ok=True)

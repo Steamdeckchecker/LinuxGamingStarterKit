@@ -2,17 +2,22 @@
 """Build the standalone shell installer and desktop launcher."""
 from pathlib import Path
 import hashlib
+import base64
 import re
 import subprocess
+import zlib
 from desktop_launcher import build_desktop, FILENAME
 
 BASE = Path(__file__).resolve().parent
 source = (BASE / "starterkit.py").read_text(encoding="utf-8")
 recommend = (BASE / "recommend.txt").read_text(encoding="utf-8-sig")
 source = re.sub(r"# BEGIN EMBEDDED RECOMMENDATIONS\n.*?\n# END EMBEDDED RECOMMENDATIONS", lambda match: "# BEGIN EMBEDDED RECOMMENDATIONS\nEMBEDDED_RECOMMENDATIONS = " + repr(recommend) + "\n# END EMBEDDED RECOMMENDATIONS", source, flags=re.S)
+icons = {name: base64.b64encode(zlib.compress((BASE / "assets" / name).read_bytes(), 9)).decode("ascii")
+         for name in ("linux-handheld-starter-kit-logo.png", "steam-deck-checker.png")}
+source = re.sub(r"# BEGIN EMBEDDED DESKTOP ICONS\n.*?\n# END EMBEDDED DESKTOP ICONS", lambda match: "# BEGIN EMBEDDED DESKTOP ICONS\nEMBEDDED_DESKTOP_ICONS = " + repr(icons) + "\n# END EMBEDDED DESKTOP ICONS", source, flags=re.S)
 compile(source, "starterkit.py", "exec")
 header = r'''#!/usr/bin/env bash
-# Linux Handheld Starter Kit — Steam Deck Checker — 0.1.0
+# Linux Handheld Starter Kit — Steam Deck Checker — 0.2.1
 # Run as your normal desktop user: bash install.sh
 # The embedded Python code uses only the standard library.
 set -euo pipefail

@@ -78,6 +78,23 @@ test('all seven pages contain nine cards, official links and standalone download
   }
 });
 
+test('all languages expose exactly 28 plugin links and wallpaper before emulation', async () => {
+  const recommendations = (await readFile(new URL('../public/downloads/recommend.txt', import.meta.url), 'utf8'))
+    .trim().split(/\r?\n/).filter(Boolean);
+  assert.equal(recommendations.length, 28);
+  for (const lang of ['de','en','es','fr','ru','zh','ja']) {
+    const page = await readFile(new URL('../public/' + lang + '/index.html', import.meta.url), 'utf8');
+    for (const url of recommendations) assert.ok(page.includes('href="' + url + '"'), lang + ': ' + url);
+    assert.equal((page.match(/role="tab"/g) || []).length, 5, lang);
+    assert.ok(page.includes('href="https://github.com/Steamdeckchecker/LiveWallpaper"'), lang);
+    assert.ok(page.includes('KDE Plasma 6') && page.includes('QtWebEngine'), lang);
+    assert.ok(page.includes('v0.2.1') && !page.includes('v0.1.0'), lang);
+    const content = JSON.parse(await readFile(new URL('../content.json', import.meta.url), 'utf8'));
+    assert.equal(content[lang].tabs[3].label.includes('LiveWallpaper') || ['zh','ja'].includes(lang), true);
+    assert.ok(content[lang].kitIntro.includes('Steam Deck Checker'), lang);
+  }
+});
+
 test('final deployment artifact serves pages, original logo and correct installer bytes', async () => {
   const source = await readFile(new URL('../dist/server/index.js', import.meta.url), 'utf8');
   const {default: worker} = await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'));
@@ -97,6 +114,14 @@ test('final deployment artifact serves pages, original logo and correct installe
   assert.deepEqual(Buffer.from(await desktop.arrayBuffer()), await readFile(new URL('../public/downloads/Linux-Handheld-Starter-Kit.desktop', import.meta.url)));
   const logo = await worker.fetch(request('/assets/steam-deck-checker.png'));
   assert.deepEqual(Buffer.from(await logo.arrayBuffer()), await readFile(new URL('../public/assets/steam-deck-checker.png', import.meta.url)));
+  const wallpaperPath = '/downloads/Live_Background_KDE_v0.3.2.zip';
+  const wallpaper = await worker.fetch(request(wallpaperPath));
+  assert.equal(wallpaper.status, 200);
+  assert.deepEqual(Buffer.from(await wallpaper.arrayBuffer()), await readFile(new URL('../public' + wallpaperPath, import.meta.url)));
+  assert.match(wallpaper.headers.get('content-type'), /application\/zip/);
+  const wallpaperHead = await worker.fetch(request(wallpaperPath, 'HEAD'));
+  assert.equal(wallpaperHead.status, 200);
+  assert.equal(await wallpaperHead.text(), '');
   assert.equal((await worker.fetch(request('/en'))).status, 308);
   assert.equal((await worker.fetch(request('/missing'))).status, 404);
   assert.equal((await worker.fetch(request('/api/latest-videos', 'POST'))).status, 405);

@@ -95,13 +95,13 @@ class RecommendationTests(Base):
 
     def test_supplied_recommendations_are_all_preserved(self):
         path = Path(__file__).resolve().parents[1] / "recommend.txt"
-        self.assertEqual(len(kit.read_recommend(path)), 23)
+        self.assertEqual(len(kit.read_recommend(path)), 28)
 
     def test_recommended_choice_works_without_any_external_file(self):
         self.ui.choices = ["recommended"]
         with patch.object(kit, "read_recommend", side_effect=AssertionError("No separate file needed")):
             selected = self.wizard.plugin_selection()
-        self.assertEqual(len(selected), 23)
+        self.assertEqual(len(selected), 28)
         self.assertEqual(selected, kit.parse_recommend(kit.EMBEDDED_RECOMMENDATIONS))
 
     def test_explicit_recommendation_override_is_used(self):
@@ -473,22 +473,22 @@ class EmulationShortcutTests(Base):
 class FlowTests(Base):
     def test_order_and_no_decky_skips_plugin_step(self):
         events = []
-        for name in ("devices", "passwords", "videos", "applications", "emulation", "finish"):
+        for name in ("devices", "passwords", "videos", "applications", "desktop_links", "live_wallpaper", "emulation", "finish"):
             setattr(self.wizard, name, lambda name=name: events.append(name))
         self.wizard.decky = lambda: events.append("decky") or False
         self.wizard.plugin_selection = lambda: self.fail("Plugins must be skipped")
         self.wizard.run()
-        self.assertEqual(events, ["devices", "passwords", "videos", "decky", "applications", "emulation", "finish"])
+        self.assertEqual(events, ["devices", "passwords", "videos", "decky", "applications", "desktop_links", "live_wallpaper", "emulation", "finish"])
 
     def test_order_with_plugins(self):
         events = []
-        for name in ("devices", "passwords", "videos", "applications", "emulation", "finish"):
+        for name in ("devices", "passwords", "videos", "applications", "desktop_links", "live_wallpaper", "emulation", "finish"):
             setattr(self.wizard, name, lambda name=name: events.append(name))
         self.wizard.decky = lambda: events.append("decky") or True
         self.wizard.plugin_selection = lambda: events.append("selection") or [("x/y", "")]
         self.wizard.install_plugins = lambda x: events.append("plugins")
         self.wizard.run()
-        self.assertEqual(events, ["devices", "passwords", "videos", "decky", "selection", "plugins", "applications", "emulation", "finish"])
+        self.assertEqual(events, ["devices", "passwords", "videos", "decky", "selection", "plugins", "applications", "desktop_links", "live_wallpaper", "emulation", "finish"])
 
     def test_flatpaks_install_sequentially_and_only_successes_added(self):
         self.ui.choices = [[kit.APPS[0][1], kit.APPS[1][1], kit.APPS[2][1]]]
@@ -601,7 +601,7 @@ class FlowTests(Base):
             with self.subTest(lang=lang):
                 ui = FakeGui()
                 ui.choices = [lang, "oled", "none", ["com.discordapp.Discord"], "none"]
-                ui.answers = [False, True, False]  # no Decky, add shortcuts, no reboot
+                ui.answers = [False, True, False, False]  # no Decky, add shortcuts, no wallpaper, no reboot
                 def gui_factory(translator):
                     ui.tr = translator
                     return ui

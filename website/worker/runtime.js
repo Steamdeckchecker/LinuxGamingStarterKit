@@ -93,7 +93,16 @@ export function createWorker(assets, snapshot, fetchFeed = fetch) {
         'referrer-policy': 'strict-origin-when-cross-origin'
       };
       if (assetPath.startsWith('/downloads/')) headers['content-disposition'] = 'attachment; filename="' + assetPath.split('/').pop() + '"';
-      return new Response(request.method === 'HEAD' ? null : Uint8Array.from(atob(asset.data), c => c.charCodeAt(0)), {headers});
+      let body = null;
+      if (request.method !== 'HEAD') {
+        const source = asset.archive ? assets[asset.archive] : asset;
+        // Decode only the base64 range containing a stored archive member.
+        const start = asset.archive ? Math.floor(asset.offset / 3) * 4 : 0;
+        const end = asset.archive ? Math.ceil((asset.offset + asset.length) / 3) * 4 : source.data.length;
+        body = Uint8Array.from(atob(source.data.slice(start, end)), c => c.charCodeAt(0));
+        if (asset.archive) body = body.subarray(asset.offset % 3, asset.offset % 3 + asset.length);
+      }
+      return new Response(body, {headers});
     }
   };
 }

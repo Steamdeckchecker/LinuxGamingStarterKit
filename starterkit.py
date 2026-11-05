@@ -33,7 +33,15 @@ import uuid
 import zipfile
 import zlib
 
-VERSION = "0.1.0"
+VERSION = "0.2.1"
+LIVE_WALLPAPER_ID = "org.steamdeckchecker.livebackground"
+LIVE_WALLPAPER_ARCHIVE = "Live_Background_KDE_v0.3.2.zip"
+LIVE_WALLPAPER_SHA256 = "b67ce8339ff079784dfdfdbb3e9565da43999a75334d2d9de1ddd2e107aa150d"
+LIVE_WALLPAPER_URL = "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/" + LIVE_WALLPAPER_ARCHIVE
+# The standalone launchers receive the original project logos during build.
+# BEGIN EMBEDDED DESKTOP ICONS
+EMBEDDED_DESKTOP_ICONS = {}
+# END EMBEDDED DESKTOP ICONS
 LANGUAGES = {"de": "Deutsch", "en": "English", "es": "Español", "fr": "Français",
              "ru": "Русский", "zh": "中文（简体）", "ja": "日本語"}
 LANG_ORDER = ("en", "de", "es", "fr", "ru", "zh", "ja")
@@ -81,12 +89,12 @@ TEXT = {
     "close_steam": L("Steam will now close. Finish any game or download first. Continue?", "Steam wird jetzt beendet. Bitte vorher Spiele und Downloads abschließen. Fortfahren?", "Steam se cerrará. Termina tus juegos y descargas. ¿Continuar?", "Steam va se fermer. Terminez vos jeux et téléchargements. Continuer ?", "Steam будет закрыт. Сначала завершите игры и загрузки. Продолжить?", "即将关闭 Steam。请先结束游戏和下载。继续吗？", "Steam を終了します。ゲームやダウンロードを終えてから続行してください。続行しますか？"),
     "profile": L("Select the Steam account to receive the shortcuts.", "Steam-Konto auswählen, dem die Verknüpfungen hinzugefügt werden sollen.", "Elige la cuenta de Steam para los accesos directos.", "Choisissez le compte Steam pour les raccourcis.", "Выберите учётную запись Steam для ярлыков.", "选择用于添加快捷方式的 Steam 账户。", "ショートカットを追加する Steam アカウントを選択してください。"),
     "steam_done": L("Steam shortcuts saved. Steam is running again.", "Steam-Verknüpfungen gespeichert. Steam wurde wieder gestartet.", "Accesos directos guardados. Steam está en ejecución de nuevo.", "Raccourcis enregistrés. Steam a été relancé.", "Ярлыки сохранены. Steam снова запущен.", "Steam 快捷方式已保存，Steam 已重新启动。", "Steam ショートカットを保存し、Steam を再起動しました。"),
-    "emulation": L("8 · Emulation", "8 · Emulation", "8 · Emulación", "8 · Émulation", "8 · Эмуляция", "8 · 模拟器", "8 · エミュレーション"),
+    "emulation": L("9 · Emulation", "9 · Emulation", "9 · Emulación", "9 · Émulation", "9 · Эмуляция", "9 · 模拟器", "9 · エミュレーション"),
     "emu_q": L("Choose an emulation setup, or skip.", "Emulationslösung auswählen oder überspringen.", "Elige una solución de emulación o salta este paso.", "Choisissez une solution d'émulation ou ignorez cette étape.", "Выберите решение для эмуляции или пропустите.", "选择模拟器方案，或跳过此步骤。", "エミュレーション環境を選択するか、スキップしてください。"),
     "retro_desc": L("All-in-one Flatpak emulation suite", "Emulationspaket als Flatpak", "Suite de emulación Flatpak", "Suite d'émulation Flatpak", "Комплект эмуляторов Flatpak", "一体化 Flatpak 模拟器套件", "Flatpak 形式の統合エミュレーター"),
     "emu_desc": L("Official EmuDeck setup; finish its wizard and close it to continue", "Offizielle EmuDeck-Einrichtung; Assistent abschließen und zum Fortfahren schließen", "Configuración oficial; completa y cierra su asistente para continuar", "Configuration officielle ; terminez et fermez l'assistant pour continuer", "Официальная настройка; завершите и закройте мастер для продолжения", "官方 EmuDeck 安装；完成并关闭其向导后继续", "公式 EmuDeck セットアップ。ウィザードを完了して閉じると続行します"),
     "emu_wait": L("The official EmuDeck application will open. Complete its setup and close the application. The Starter Kit waits until it exits.", "Die offizielle EmuDeck-Anwendung öffnet sich. Bitte die Einrichtung abschließen und die Anwendung schließen. Das Starter Kit wartet bis zum Beenden.", "Se abrirá EmuDeck oficial. Completa su configuración y ciérralo. El Starter Kit esperará.", "EmuDeck officiel va s'ouvrir. Terminez la configuration puis fermez-le. Le Starter Kit attend sa fermeture.", "Откроется официальный EmuDeck. Завершите настройку и закройте его. Starter Kit будет ждать.", "即将打开官方 EmuDeck 应用。请完成设置并关闭应用。Starter Kit 会等待其退出。", "公式 EmuDeck が開きます。セットアップを完了し、アプリを閉じてください。Starter Kit は終了まで待機します。"),
-    "finish": L("9 · Finished", "9 · Abgeschlossen", "9 · Finalizado", "9 · Terminé", "9 · Завершено", "9 · 完成", "9 · 完了"),
+    "finish": L("10 · Finished", "10 · Abgeschlossen", "10 · Finalizado", "10 · Terminé", "10 · Завершено", "10 · 完成", "10 · 完了"),
     "reboot": L("Setup is finished. Restart now to activate the changes?", "Die Einrichtung ist abgeschlossen. Jetzt neu starten, um die Änderungen zu aktivieren?", "Configuración terminada. ¿Reiniciar ahora para activar los cambios?", "Configuration terminée. Redémarrer maintenant pour activer les changements ?", "Настройка завершена. Перезагрузить сейчас для применения изменений?", "设置已完成。现在重启以应用更改吗？", "セットアップが完了しました。変更を有効にするため、今すぐ再起動しますか？"),
     "summary": L("Completed: {ok}\nFailed: {failed}\nSkipped: {skipped}\n\nLog: {log}", "Erfolgreich: {ok}\nFehlgeschlagen: {failed}\nÜbersprungen: {skipped}\n\nProtokoll: {log}", "Completado: {ok}\nFallido: {failed}\nOmitido: {skipped}\n\nRegistro: {log}", "Réussi : {ok}\nÉchec : {failed}\nIgnoré : {skipped}\n\nJournal : {log}", "Успешно: {ok}\nОшибок: {failed}\nПропущено: {skipped}\n\nЖурнал: {log}", "成功：{ok}\n失败：{failed}\n跳过：{skipped}\n\n日志：{log}", "成功：{ok}\n失敗：{failed}\nスキップ：{skipped}\n\nログ：{log}"),
     "failed": L("{item} failed.\n{error}\n\nThe next step will only start after this message is closed.", "{item} ist fehlgeschlagen.\n{error}\n\nDer nächste Schritt beginnt erst nach dem Schließen dieser Meldung.", "Falló {item}.\n{error}\n\nEl siguiente paso esperará a que cierres este mensaje.", "Échec : {item}.\n{error}\n\nL'étape suivante attend la fermeture de ce message.", "Ошибка: {item}.\n{error}\n\nСледующий шаг начнётся после закрытия сообщения.", "{item} 失败。\n{error}\n\n关闭此消息后才会开始下一步。", "{item} に失敗しました。\n{error}\n\nこのメッセージを閉じるまで、次の処理は始まりません。"),
@@ -131,8 +139,41 @@ TEXT.update({
     "steam_launcher_missing": L("The Steam launcher was not found. Start Steam once and try again.", "Das Steam-Startprogramm wurde nicht gefunden. Bitte Steam einmal starten und erneut versuchen.", "No se encontró el lanzador de Steam. Inicia Steam una vez y vuelve a intentarlo.", "Le lanceur Steam est introuvable. Lancez Steam une fois, puis réessayez.", "Программа запуска Steam не найдена. Запустите Steam один раз и повторите попытку.", "未找到 Steam 启动程序。请先启动一次 Steam，然后重试。", "Steam の起動プログラムが見つかりません。一度 Steam を起動してから再試行してください。"),
 })
 
+TEXT.update({
+    "desktop_links": L("Desktop links", "Desktop-Verknüpfungen", "Accesos del escritorio", "Liens du bureau", "Ссылки на рабочем столе", "桌面链接", "デスクトップリンク"),
+    "live_wallpaper": L("8 · LiveWallpaper", "8 · LiveWallpaper", "8 · LiveWallpaper", "8 · LiveWallpaper", "8 · LiveWallpaper", "8 · 动态壁纸", "8 · ライブ壁紙"),
+    "live_wallpaper_q": L("Install LiveWallpaper 0.3.2 and activate Neon Emblem with the Steam Deck Checker logo? Requires KDE Plasma 6 and QtWebEngine. Applies to the desktop, before EmuDeck/RetroDECK.",
+        "LiveWallpaper 0.3.2 installieren und Neon-Emblem-SDC mit dem Steam-Deck-Checker-Logo aktivieren? Benötigt KDE Plasma 6 und QtWebEngine. Gilt für den Desktop-Modus, vor EmuDeck/RetroDECK.",
+        "¿Instalar LiveWallpaper 0.3.2 y activar Emblema neón con el logo de Steam Deck Checker? Requiere KDE Plasma 6 y QtWebEngine. Para el escritorio, antes de EmuDeck/RetroDECK.",
+        "Installer LiveWallpaper 0.3.2 et activer Emblème néon avec le logo Steam Deck Checker ? Nécessite KDE Plasma 6 et QtWebEngine. Pour le bureau, avant EmuDeck/RetroDECK.",
+        "Установить LiveWallpaper 0.3.2 и включить неоновую эмблему с логотипом Steam Deck Checker? Нужны KDE Plasma 6 и QtWebEngine. Для рабочего стола, перед EmuDeck/RetroDECK.",
+        "安装 LiveWallpaper 0.3.2 并启用带 Steam Deck Checker 标志的霓虹徽章吗？需要 KDE Plasma 6 和 QtWebEngine。用于桌面模式，此步骤位于 EmuDeck/RetroDECK 之前。",
+        "LiveWallpaper 0.3.2 をインストールし、Steam Deck Checker ロゴのネオンエンブレムを有効にしますか？KDE Plasma 6 と QtWebEngine が必要です。デスクトップ用で、EmuDeck/RetroDECK の前に実行します。"),
+    "live_wallpaper_requirements": L("LiveWallpaper needs a running KDE Plasma 6 desktop, kpackagetool6, QtWebEngine and qdbus6 (or qdbus). Missing system packages must be installed separately.",
+        "LiveWallpaper benötigt einen laufenden KDE-Plasma-6-Desktop, kpackagetool6, QtWebEngine und qdbus6 (oder qdbus). Fehlende Systempakete bitte separat installieren.",
+        "LiveWallpaper requiere un escritorio KDE Plasma 6 activo, kpackagetool6, QtWebEngine y qdbus6 (o qdbus). Instala por separado los paquetes que falten.",
+        "LiveWallpaper nécessite un bureau KDE Plasma 6 actif, kpackagetool6, QtWebEngine et qdbus6 (ou qdbus). Installez séparément les paquets manquants.",
+        "Для LiveWallpaper нужны работающий KDE Plasma 6, kpackagetool6, QtWebEngine и qdbus6 (или qdbus). Недостающие системные пакеты установите отдельно.",
+        "LiveWallpaper 需要正在运行的 KDE Plasma 6 桌面、kpackagetool6、QtWebEngine 和 qdbus6（或 qdbus）。缺少的系统软件包需单独安装。",
+        "LiveWallpaper には起動中の KDE Plasma 6、kpackagetool6、QtWebEngine、qdbus6（または qdbus）が必要です。不足するシステムパッケージは別途インストールしてください。"),
+    "live_wallpaper_done": L("LiveWallpaper is installed. Neon Emblem is configured with the included logo, 24 FPS and 60% rendering resolution. After upgrading an existing wallpaper, log out and back in to reload its QML code.",
+        "LiveWallpaper ist installiert. Neon-Emblem-SDC ist mit dem mitgelieferten Logo, 24 FPS und 60 % Renderauflösung eingestellt. Nach dem Aktualisieren eines vorhandenen Wallpapers einmal ab- und wieder anmelden, damit der neue QML-Code geladen wird.",
+        "LiveWallpaper instalado. Emblema neón configurado con el logo incluido, 24 FPS y resolución del 60 %. Tras actualizar una versión existente, cierra sesión y vuelve a entrar para recargar el código QML.",
+        "LiveWallpaper est installé. Emblème néon est configuré avec le logo inclus, 24 FPS et une résolution de 60 %. Après une mise à jour, reconnectez-vous pour recharger le code QML.",
+        "LiveWallpaper установлен. Неоновая эмблема настроена со встроенным логотипом, 24 FPS и разрешением 60 %. После обновления выйдите и снова войдите в сеанс для перезагрузки QML.",
+        "LiveWallpaper 已安装。霓虹徽章已设为内置标志、24 FPS 和 60% 渲染分辨率。更新已有壁纸后，请注销并重新登录以加载新的 QML 代码。",
+        "LiveWallpaper をインストールしました。付属ロゴ、24 FPS、描画解像度 60% のネオンエンブレムを設定しました。既存の壁紙を更新した場合は、一度ログアウトして再ログインし QML を読み直してください。"),
+    "live_wallpaper_activation_failed": L("The wallpaper was installed, but automatic activation could not be confirmed. Select Live Background (KDE) → Neon Emblem in the desktop wallpaper settings. If upgrading, log out and back in first.",
+        "Das Wallpaper wurde installiert, die automatische Aktivierung konnte aber nicht bestätigt werden. In den Hintergrund-Einstellungen Live Background (KDE) → Neon-Emblem-SDC auswählen. Nach einer Aktualisierung zuvor ab- und wieder anmelden.",
+        "El fondo está instalado, pero no se pudo confirmar la activación automática. Selecciona Live Background (KDE) → Emblema neón en los ajustes. Tras actualizar, vuelve a iniciar sesión.",
+        "Le fond est installé, mais l’activation automatique n’a pas été confirmée. Sélectionnez Live Background (KDE) → Emblème néon dans les réglages. Après une mise à jour, reconnectez-vous d’abord.",
+        "Обои установлены, но автоматическое включение не подтверждено. В настройках выберите Live Background (KDE) → неоновая эмблема. После обновления сначала перезапустите сеанс.",
+        "壁纸已安装，但无法确认自动启用。请在桌面壁纸设置中选择 Live Background (KDE) → 霓虹徽章。更新后请先重新登录。",
+        "壁紙はインストール済みですが、自動有効化を確認できませんでした。壁紙設定で Live Background (KDE) → ネオンエンブレムを選択してください。更新後は先に再ログインしてください。"),
+})
+
 # BEGIN EMBEDDED RECOMMENDATIONS
-EMBEDDED_RECOMMENDATIONS = 'https://github.com/Steamdeckchecker/SDC-Benchmark-\nhttps://github.com/Steamdeckchecker/TrailerHero-SteamOS-Bazzite-\nhttps://github.com/Steamdeckchecker/Steam-Deck-Checker-Video-Checker\nhttps://github.com/Ciphay/Decky-File-Manager\nhttps://github.com/BrenticusMaximus/ThemeDeck\nhttps://github.com/Hooandee/panel-de-control\nhttps://github.com/eugeniosegala/MAKO\nhttps://github.com/LoZazaMastro/Quick-Settings\nhttps://github.com/LoZazaMastro/Shortcuts\nhttps://github.com/Steamdeckchecker/Github-Decky-Plugins-Updater\nhttps://github.com/Steamdeckchecker/Quest-Compendium-Decky\nhttps://github.com/PeroTuncay/DeckyHelixSRManager\nhttps://github.com/xXJSONDeruloXx/decky-lsfg-vk\nhttps://github.com/xXJSONDeruloXx/Decky-Framegen\nhttps://github.com/mubaraknumann/unifideck\nhttps://github.com/SteamGridDB/decky-steamgriddb\nhttps://github.com/DeckThemes/SDH-CssLoader\nhttps://github.com/cat-in-a-box/Decky-Translator\nhttps://github.com/TheLogicMaster/SDH-AnimationChanger\nhttps://github.com/hulkrelax/hltb-for-deck\nhttps://github.com/jurassicplayer/decky-autoflatpaks\nhttps://github.com/DeckThemes/SDH-AudioLoader\nhttps://github.com/FlashyReese/decky-wine-cellar\n'
+EMBEDDED_RECOMMENDATIONS = 'https://github.com/Steamdeckchecker/SDC-Benchmark-\nhttps://github.com/Steamdeckchecker/TrailerHero-SteamOS-Bazzite-\nhttps://github.com/Steamdeckchecker/Steam-Deck-Checker-Video-Checker\nhttps://github.com/Ciphay/Decky-File-Manager\nhttps://github.com/BrenticusMaximus/ThemeDeck\nhttps://github.com/Hooandee/panel-de-control\nhttps://github.com/eugeniosegala/MAKO\nhttps://github.com/LoZazaMastro/Quick-Settings\nhttps://github.com/LoZazaMastro/Shortcuts\nhttps://github.com/Steamdeckchecker/Github-Decky-Plugins-Updater\nhttps://github.com/Steamdeckchecker/Quest-Compendium-Decky\nhttps://github.com/PeroTuncay/DeckyHelixSRManager\nhttps://github.com/xXJSONDeruloXx/decky-lsfg-vk\nhttps://github.com/xXJSONDeruloXx/Decky-Framegen\nhttps://github.com/mubaraknumann/unifideck\nhttps://github.com/SteamGridDB/decky-steamgriddb\nhttps://github.com/DeckThemes/SDH-CssLoader\nhttps://github.com/cat-in-a-box/Decky-Translator\nhttps://github.com/TheLogicMaster/SDH-AnimationChanger\nhttps://github.com/hulkrelax/hltb-for-deck\nhttps://github.com/jurassicplayer/decky-autoflatpaks\nhttps://github.com/DeckThemes/SDH-AudioLoader\nhttps://github.com/FlashyReese/decky-wine-cellar\nhttps://github.com/mazillka/deckyhub-plugin\nhttps://github.com/Hooandee/decky-colores\nhttps://github.com/sauliiin/Jedi-ReFrameShade4All\nhttps://github.com/Hector2242/decky-plugin\nhttps://github.com/TLin-Y/SteamAnyAspectRatioMods\n'
 # END EMBEDDED RECOMMENDATIONS
 
 
@@ -1499,6 +1540,156 @@ class Wizard:
         if successful:
             self.offer_steam_shortcuts(successful)
 
+    def xdg_directory(self, variable, fallback):
+        value = os.environ.get(variable, "")
+        return Path(value) if value and Path(value).is_absolute() else self.home / fallback
+
+    def desktop_directory(self):
+        if shutil.which("xdg-user-dir"):
+            value = self.runner.run(["xdg-user-dir", "DESKTOP"], check=False, timeout=10)
+            desktop = Path((value.stdout or "").strip())
+            if value.returncode == 0 and desktop.is_absolute() and desktop != self.home:
+                return desktop
+        config = self.xdg_directory("XDG_CONFIG_HOME", ".config") / "user-dirs.dirs"
+        if config.is_file():
+            match = re.search(r'^XDG_DESKTOP_DIR="([^"\n]+)"', config.read_text(), re.M)
+            if match:
+                desktop = Path(match[1].replace("$" + "{HOME}", str(self.home)).replace("$HOME", str(self.home)))
+                if desktop.is_absolute() and desktop != self.home:
+                    return desktop
+        return self.home / "Desktop"
+
+    def create_desktop_links(self):
+        if self.dry:
+            self.log.info("SIMULATION: create Linux Starterkit and Steam Deck Checker desktop links with project logos")
+            return
+        desktop = self.desktop_directory()
+        icons = self.xdg_directory("XDG_DATA_HOME", ".local/share") / "linux-handheld-starter-kit/icons"
+        links = [
+            ("Linux-Starterkit.desktop", "Linux Starterkit", "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/", "linux-handheld-starter-kit-logo.png"),
+            ("Steam-Deck-Checker.desktop", "Steam Deck Checker", "https://www.youtube.com/@SteamDeckChecker", "steam-deck-checker.png"),
+        ]
+        for filename, name, url, logo in links:
+            original = self.base / "assets" / logo
+            data = original.read_bytes() if original.is_file() else zlib.decompress(base64.b64decode(EMBEDDED_DESKTOP_ICONS[logo], validate=True))
+            if not data.startswith(b"\x89PNG\r\n\x1a\n"):
+                raise ValueError("Invalid desktop icon: " + logo)
+            icon = icons / logo
+            atomic_write(icon, data, 0o644)
+            icon_value = str(icon).replace("\\", "\\\\").replace("\n", "\\n").replace("\r", "\\r")
+            content = ("[Desktop Entry]\nVersion=1.0\nType=Link\n"
+                       f"Name={name}\nURL={url}\nIcon={icon_value}\n"
+                       "X-Linux-Handheld-Starter-Kit=true\n").encode("utf-8")
+            target = desktop / filename
+            if target.exists() and target.read_bytes() != content:
+                shutil.copy2(target, target.with_name(filename + ".starter-kit-backup"))
+            atomic_write(target, content, 0o755)
+            self.log.info("Desktop link: %s -> %s", target, url)
+
+    def desktop_links(self):
+        self.attempt(self.tr("desktop_links"), self.create_desktop_links)
+
+    def wallpaper_dbus(self):
+        for name in ("qdbus6", "qdbus-qt6", "qdbus"):
+            executable = shutil.which(name)
+            if executable:
+                return executable
+        for path in ("/usr/lib/qt6/bin/qdbus", "/usr/lib64/qt6/bin/qdbus"):
+            if os.access(path, os.X_OK):
+                return path
+        raise RuntimeError(self.tr("live_wallpaper_requirements"))
+
+    def install_live_wallpaper(self):
+        if self.dry:
+            self.log.info("SIMULATION: verify and install LiveWallpaper 0.3.2 as the desktop user")
+            return
+        if not shutil.which("plasmashell") or not shutil.which("kpackagetool6"):
+            raise RuntimeError(self.tr("live_wallpaper_requirements"))
+        version = self.runner.run(["plasmashell", "--version"], timeout=15).stdout or ""
+        if not re.search(r"\b6\.\d+", version):
+            raise RuntimeError(self.tr("live_wallpaper_requirements") + "\n" + version)
+        self.wallpaper_dbus()
+        archive = self.base / "assets" / LIVE_WALLPAPER_ARCHIVE
+        if not archive.is_file():
+            archive = self.network.download(LIVE_WALLPAPER_URL, self.work / LIVE_WALLPAPER_ARCHIVE,
+                                            digest=LIVE_WALLPAPER_SHA256, limit=64 * 1024**2)
+        if hashlib.sha256(archive.read_bytes()).hexdigest() != LIVE_WALLPAPER_SHA256:
+            raise ValueError("LiveWallpaper SHA-256 mismatch")
+        stage = extract_archive(archive, Path(tempfile.mkdtemp(prefix="wallpaper-", dir=self.work)),
+                                limit=64 * 1024**2, progress=self.progress)
+        package = stage / "Live_Background_KDE"
+        plugin = package / LIVE_WALLPAPER_ID
+        metadata = json.loads((plugin / "metadata.json").read_text())
+        if metadata.get("KPlugin", {}).get("Id") != LIVE_WALLPAPER_ID or metadata["KPlugin"].get("Version") != "0.3.2":
+            raise ValueError("Unexpected LiveWallpaper package")
+        config = plugin / "contents/config/main.xml"
+        config.write_text(config.read_text().replace("<default>matrix</default>", "<default>neon</default>", 1))
+        data_home = self.xdg_directory("XDG_DATA_HOME", ".local/share")
+        self.runner.run(["bash", str(package / "install.sh")], timeout=180,
+                        env={**os.environ, "XDG_DATA_HOME": str(data_home)})
+        installed = data_home / "plasma/wallpapers" / LIVE_WALLPAPER_ID
+        if not (installed / "metadata.json").is_file() or not (installed / "contents/ui/main.qml").is_file():
+            raise RuntimeError("LiveWallpaper installation was not found: " + str(installed))
+
+    def activate_live_wallpaper(self):
+        if self.dry:
+            self.log.info("SIMULATION: activate Neon Emblem, included logo, 24 FPS, 60% quality")
+            return
+        config = self.xdg_directory("XDG_CONFIG_HOME", ".config") / "plasma-org.kde.plasma.desktop-appletsrc"
+        if config.is_file():
+            backup = self.xdg_directory("XDG_STATE_HOME", ".local/state") / "linux-handheld-starter-kit/backups" / (
+                "plasma-desktop-" + dt.datetime.now().strftime("%Y%m%d-%H%M%S-%f") + ".conf")
+            backup.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(config, backup)
+            self.log.info("Plasma configuration backup: %s", backup)
+        # Use Plasma's live scripting API; its process owns persistence.
+        script = """
+var allDesktops = desktops();
+if (allDesktops.length === 0) { throw new Error("No Plasma desktops"); }
+for (var i = 0; i < allDesktops.length; i++) {
+    var desktop = allDesktops[i];
+    desktop.currentConfigGroup = ["Wallpaper", "org.steamdeckchecker.livebackground", "General"];
+    desktop.writeConfig("Theme", "neon");
+    desktop.writeConfig("LogoPath", "");
+    desktop.writeConfig("Paused", false);
+    desktop.writeConfig("Fps", 24);
+    desktop.writeConfig("Quality", 60);
+    desktop.writeConfig("PauseFullscreen", true);
+    desktop.wallpaperPlugin = "org.steamdeckchecker.livebackground";
+    desktop.reloadConfig();
+}
+"""
+        command = [self.wallpaper_dbus(), "org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell.evaluateScript"]
+        self.runner.run(command + [script], timeout=30)
+        verify = """
+var configured = 0;
+var allDesktops = desktops();
+for (var i = 0; i < allDesktops.length; i++) {
+    var desktop = allDesktops[i];
+    desktop.currentConfigGroup = ["Wallpaper", "org.steamdeckchecker.livebackground", "General"];
+    if (desktop.wallpaperPlugin === "org.steamdeckchecker.livebackground" &&
+        String(desktop.readConfig("Theme", "")) === "neon" &&
+        String(desktop.readConfig("LogoPath", "")) === "" &&
+        String(desktop.readConfig("Paused", true)) === "false") { configured++; }
+}
+if (configured === 0 || configured !== allDesktops.length) { throw new Error("Wallpaper verification failed"); }
+print("STARTER_KIT_NEON_ACTIVE:" + configured);
+"""
+        response = self.runner.run(command + [verify], timeout=30)
+        if not re.search(r"STARTER_KIT_NEON_ACTIVE:[1-9]\d*", response.stdout or ""):
+            raise RuntimeError(self.tr("live_wallpaper_activation_failed"))
+
+    def live_wallpaper(self):
+        if not self.ui.question(self.tr("live_wallpaper"), self.tr("live_wallpaper_q")):
+            self.result(self.tr("live_wallpaper"), "skipped")
+            return
+        ok, _ = self.attempt("LiveWallpaper 0.3.2", self.install_live_wallpaper)
+        if not ok:
+            return
+        ok, _ = self.attempt("Neon-Emblem", self.activate_live_wallpaper)
+        if ok:
+            self.ui.info(self.tr("live_wallpaper"), self.tr("live_wallpaper_done"))
+
     def install_emudeck(self):
         if self.dry:
             self.log.info("SIMULATION: download and run official EmuDeck AppImage; wait for process exit")
@@ -1565,6 +1756,9 @@ class Wizard:
                 self.install_plugins(self.plugin_selection())
             self.log.info(self.tr("apps"))
             self.applications()
+            self.desktop_links()
+            self.log.info(self.tr("live_wallpaper"))
+            self.live_wallpaper()
             self.log.info(self.tr("emulation"))
             self.emulation()
             self.log.info(self.tr("finish"))
@@ -1589,8 +1783,9 @@ def main(argv=None):
     tr = Translator(lang)
     if args.check:
         print(json.dumps({"version": VERSION, "os": read_os_release(), "user": pwd.getpwuid(os.getuid()).pw_name, "home": str(home),
-                          "steam": str(discover_steam(home) or ""), "tools": {x: shutil.which(x) for x in ("python3", "zenity", "kdialog", "sudo", "passwd", "flatpak", "curl", "jq", "systemctl")},
-                          "languages": LANGUAGES, "included_recommendations": len(parse_recommend(EMBEDDED_RECOMMENDATIONS))}, ensure_ascii=False, indent=2))
+                          "steam": str(discover_steam(home) or ""), "tools": {x: shutil.which(x) for x in ("python3", "zenity", "kdialog", "sudo", "passwd", "flatpak", "curl", "jq", "systemctl", "plasmashell", "kpackagetool6", "qdbus6", "qdbus-qt6", "qdbus")},
+                          "languages": LANGUAGES, "included_recommendations": len(parse_recommend(EMBEDDED_RECOMMENDATIONS)),
+                          "live_wallpaper": {"version": "0.3.2", "default_theme": "neon", "sha256": LIVE_WALLPAPER_SHA256}}, ensure_ascii=False, indent=2))
         return 0
     if os.geteuid() == 0:
         print(tr("root"), file=sys.stderr)

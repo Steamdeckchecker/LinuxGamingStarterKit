@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — 2026-11-05
+
+- LiveWallpaper auf das bereitgestellte Paket 0.3.2 aktualisiert; Neon-Emblem-SDC als Vorgabe.
+- 28 Plugin-Empfehlungen, automatische Desktop-Links und Wallpaper vor Emulation integriert.
+- Eigenständige Installer und Wallpaper-Downloads auf der Projektwebseite verfügbar.
+
 ## v0.1.0 — 2026-10-24
 
 First public test release / erste öffentliche Testversion.

@@ -10,8 +10,10 @@ Guided first-time setup for Linux handhelds running
 
 [Deutsch](README.md) · [Website](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/en/) · [Releases](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases) · [YouTube](https://www.youtube.com/@SteamDeckChecker/) · [Changelog](CHANGELOG.md)
 
-**v0.1.0 is the first regular release.** Automated tests cover the core
-logic with simulated system commands. Tests have been carried out on SteamOS, CachyOS and Bazzite. Third-party apps and
+**v0.2.1 adds LiveWallpaper, 28 plugin recommendations and automatic desktop links.**
+85 automated installer tests pass, including the supplied wallpaper installer's
+fresh-install and upgrade paths against isolated KDE tools. The new integration
+still requires testing on a complete Plasma 6 desktop. Third-party apps and
 plugins have their own Steam, distribution and hardware requirements.
 
 ## Video tutorial
@@ -24,10 +26,10 @@ plugins have their own Steam, distribution and hardware requirements.
 
 | Download | Use |
 | --- | --- |
-| [Linux-Handheld-Starter-Kit.desktop](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/Linux-Handheld-Starter-Kit.desktop) | Recommended: a single double-click launcher containing the complete installer. |
-| [install.sh](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh) | Alternative standalone terminal installer. |
-| [Source ZIP](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/Linux-Handheld-Starter-Kit-v0.1.0.zip) | Both launchers, editable sources, website, documentation and tests. |
-| [SHA256SUMS](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/SHA256SUMS) | SHA-256 checksums for the three downloads above. |
+| [Linux-Handheld-Starter-Kit.desktop](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit.desktop) | Recommended: a single double-click launcher containing the complete installer. |
+| [install.sh](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh) | Alternative standalone terminal installer. |
+| [Source ZIP](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit-v0.2.1.zip) | Both launchers, editable sources, website, documentation and tests. |
+| [SHA256SUMS](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/SHA256SUMS) | SHA-256 checksums for the three downloads above. |
 
 Switch to **Desktop Mode**, download the `.desktop` file and double-click it.
 KDE may require a one-time permission: right-click → Properties → Permissions
@@ -45,10 +47,10 @@ In **Desktop Mode**, run the following as your normal user. Use the code block's
 copy button to copy the complete command:
 
 ```bash
-curl -fL --retry 3 -o install.sh "https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh" && bash install.sh
+curl -fL --retry 3 -o install.sh "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh" && bash install.sh
 ```
 
-This saves version **0.1.0** as `install.sh` in the current directory and starts
+This saves version **0.2.1** as `install.sh` in the current directory and starts
 it only after the download succeeds. **Do not prefix it with sudo**; the wizard
 asks for administrator authorization when needed. If you have already downloaded
 the script, simply run `bash install.sh`.
@@ -79,10 +81,12 @@ original language. The system language is unchanged.
 | 3. Authorization | Ask for the password again to authorize sudo operations. |
 | 4. Startup movies | Preselect the matching device pack; choose any of the six packs or skip. |
 | 5. Decky | Offer the official stable Decky Loader; declining skips plugins. |
-| 6. Plugins | Install the 23 built-in recommendations, choose from a searchable catalogue sorted by GitHub stars, or skip. |
+| 6. Plugins | Install the 28 built-in recommendations, choose from a searchable catalogue sorted by GitHub stars, or skip. |
 | 7. Apps | Select optional Flatpaks, install them sequentially and offer Steam shortcuts. |
-| 8. Emulation | Choose RetroDECK, EmuDeck or neither; offer a Steam shortcut afterward. |
-| 9–10. Finish | Show results, offer reboot and exit. Reboot happens only after choosing Yes. |
+| Desktop links | Automatically add Linux Starterkit and Steam Deck Checker with the original project logos; no prompt. |
+| 8. LiveWallpaper | Ask Yes/No; Yes installs version 0.3.2 and activates Neon Emblem with the included logo. |
+| 9. Emulation | Choose RetroDECK, EmuDeck or neither; offer a Steam shortcut afterward. |
+| 10. Finish | Show results, offer reboot and exit. Reboot happens only after choosing Yes. |
 
 Every download, extraction and installation completes before the next task
 starts. The terminal shows progress, transfer rates where known, elapsed time
@@ -93,6 +97,54 @@ Passwords are passed to `sudo` through standard input, never written to logs or
 retained for later commands. Sudo's temporary authorization is refreshed during
 the run and revoked on exit. The Decky authorization fix uses separate
 `sudo -k` and `sudo -S -v` operations.
+
+## LiveWallpaper and desktop links
+
+**Before EmuDeck/RetroDECK**, a **Yes/No** prompt offers
+[LiveWallpaper](https://github.com/Steamdeckchecker/LiveWallpaper). Yes installs
+or upgrades the supplied KDE package **0.3.2** as the normal desktop user, then
+activates **Neon Emblem** with the included Steam Deck Checker logo through the
+running Plasma session: 24 FPS, 60% rendering resolution, manual pause off and
+fullscreen pause on. Neon also becomes the module default for new desktops.
+No leaves the wallpaper package and selection unchanged.
+
+Requires **KDE Plasma 6**, **QtWebEngine**, `kpackagetool6` and `qdbus6`,
+`qdbus-qt6` or `qdbus`. Plasma 5 and GNOME cannot use this package. Missing
+requirements are reported and emulation setup can continue. System packages
+are not installed automatically; Bazzite may require
+`sudo rpm-ostree install qt6-qtwebengine` and a reboot before trying again.
+
+The exact supplied archive is included at
+[assets/Live_Background_KDE_v0.3.2.zip](assets/Live_Background_KDE_v0.3.2.zip).
+Source packages use this local copy; standalone launchers download it from this
+repository. Both paths verify this SHA-256 before extraction:
+
+```text
+b67ce8339ff079784dfdfdbb3e9565da43999a75334d2d9de1ddd2e107aa150d
+```
+
+The previous Plasma configuration is backed up in
+`~/.local/state/linux-handheld-starter-kit/backups/` (or `XDG_STATE_HOME`).
+Settings apply to existing desktops and activities and are read back through
+Plasma. If activation fails, the installed module remains available; select
+**Live Background (KDE) → Neon Emblem** manually. After upgrading an already
+running module, log out and back in to reload its QML code completely.
+
+Two desktop links are created automatically, without a prompt:
+
+| Link | Destination |
+| --- | --- |
+| Linux Starterkit | https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/ |
+| Steam Deck Checker | https://www.youtube.com/@SteamDeckChecker |
+
+The original project logos are embedded in both standalone launchers. The XDG
+desktop directory is detected, including localized names. Repeated setup does
+not create duplicates; different existing files receive a `.starter-kit-backup`.
+Dry-run mode creates neither links nor wallpaper files.
+
+85 automated installer tests pass, including fresh installation and upgrades of
+the supplied wallpaper installer with isolated KDE tools. The new integration
+still requires verification on a complete Plasma 6 desktop.
 
 ## Startup movies
 
@@ -118,7 +170,7 @@ Startup Movie**. Exact menu wording depends on Steam language/version.
 
 ## Decky plugins
 
-[Decky Loader](https://decky.xyz/) uses its official CLI installer. All 23
+[Decky Loader](https://decky.xyz/) uses its official CLI installer. All 28
 repository recommendations are embedded in both launchers; `recommend.txt`
 exists for source maintenance. Rebuild with `python3 build.py` after editing it.
 Use `--recommend /path/recommend.txt` to override the list for one run.

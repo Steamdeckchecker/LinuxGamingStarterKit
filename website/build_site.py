@@ -20,12 +20,14 @@ CONTENT = json.loads((BASE / "content.json").read_text())
 LATEST = json.loads((BASE / "latest-videos.json").read_text())
 ORIGIN = "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site"
 CHANNEL = "https://www.youtube.com/@SteamDeckChecker/"
-PACKAGE = "/downloads/Linux-Handheld-Starter-Kit-v0.1.0.zip"
+PACKAGE = "/downloads/Linux-Handheld-Starter-Kit-v0.2.1.zip"
 SCRIPT = "/downloads/install.sh"
 LAUNCHER = "/downloads/Linux-Handheld-Starter-Kit.desktop"
 GITHUB = "https://github.com/Steamdeckchecker/LinuxGamingStarterKit"
-TERMINAL_COMMAND = 'curl -fL --retry 3 -o install.sh "https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases/download/v0.1.0/install.sh" && bash install.sh'
-OFFICIAL = {"SteamOS": "https://store.steampowered.com/steamos/", "CachyOS": "https://cachyos.org/", "Bazzite": "https://bazzite.gg/", "Decky Loader": "https://decky.xyz/", "RetroDECK": "https://retrodeck.net/", "EmuDeck": "https://www.emudeck.com/", "steamdeckrepo.com": "https://steamdeckrepo.com/"}
+TERMINAL_COMMAND = 'curl -fL --retry 3 -o install.sh "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh" && bash install.sh'
+OFFICIAL = {"SteamOS": "https://store.steampowered.com/steamos/", "CachyOS": "https://cachyos.org/", "Bazzite": "https://bazzite.gg/", "Decky Loader": "https://decky.xyz/", "RetroDECK": "https://retrodeck.net/", "EmuDeck": "https://www.emudeck.com/", "LiveWallpaper": "https://github.com/Steamdeckchecker/LiveWallpaper", "steamdeckrepo.com": "https://steamdeckrepo.com/"}
+RECOMMENDATIONS = [line.strip() for line in (DIST / "downloads/recommend.txt").read_text().splitlines()
+                   if line.strip().startswith("https://github.com/")]
 LANGUAGES = {"de": "Deutsch", "en": "English", "es": "Español", "fr": "Français", "ru": "Русский", "zh": "中文", "ja": "日本語"}
 E = lambda value: html.escape(str(value), quote=True)
 
@@ -44,6 +46,7 @@ PATHS = {
     "globe": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c6 5 6 13 0 18-6-5-6-13 0-18Z"/>',
     "terminal": '<rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 9 3 3-3 3m6 0h4"/>',
     "movie": '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4m-4 6h4M17 9h4m-4 6h4"/>',
+    "wallpaper": '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 5-4 4 3 4-6 5 5"/>',
     "plugins": '<path d="M8 3v4H4v6h4v4h6v-4h4V7h-4V3Z"/><path d="M14 17v4h6v-6h-2"/>',
     "apps": '<rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/>',
     "game": '<path d="M7 7h10c4 0 6 12 3 12-2 0-3-4-5-4H9c-2 0-3 4-5 4C1 19 3 7 7 7Z"/><path d="M8 9v5m-2-2h4m6-2h.1m2 3h.1"/>',
@@ -81,19 +84,21 @@ def page(lang):
     alternates = "\n".join(f'<link rel="alternate" hreflang="{"zh-Hans" if key == "zh" else key}" href="{ORIGIN}/{key}/">' for key in LANGUAGES)
     devices = ["Steam Deck LCD", "Steam Deck OLED", "Steam Machine", "MSI Claw", "Legion Go", t["other"]]
     device_buttons = "".join(f'<button class="device" type="button" data-device="{E(name)}" aria-pressed="{"true" if i == 0 else "false"}">{icon("check", "selected-check")}{device_icon(i == 2)}<span>{E(name)}</span></button>' for i, name in enumerate(devices))
-    stats = "".join(f'<div class="stat"><b>{number}</b><span>{E(label)}</span></div>' for number, label in zip([6,23,7], t["stats"]))
-    tab_icons = ["movie", "plugins", "apps", "game"]
+    stats = "".join(f'<div class="stat"><b>{number}</b><span>{E(label)}</span></div>' for number, label in zip([6,len(RECOMMENDATIONS),7], t["stats"]))
+    tab_icons = ["movie", "plugins", "apps", "wallpaper", "game"]
     tabs = "".join(f'<button class="tab" id="tab-{i}" type="button" role="tab" aria-controls="panel-{i}" aria-selected="{"true" if i == 0 else "false"}" tabindex="{0 if i == 0 else -1}">{icon(tab_icons[i])}{E(tab["label"])}</button>' for i, tab in enumerate(t["tabs"]))
     tags = [
         devices,
         ["SDC Benchmark", "TrailerHero", "ThemeDeck", "SteamGridDB", "CSS Loader", "MAKO", "HelixSR Manager", "Decky LSFG-VK"],
         ["Heroic", "ProtonUp-Qt", "Proton Plus", "VacuumTube", "Lutris", "Moonlight", "chiaki-ng", "GeForce NOW", "XStreaming", "Flatseal", "Filelight", "Discord", "Google Chrome", "LibreOffice", "SuperTuxKart", "Ring Racers"],
+        ["LiveWallpaper", "Neon-Emblem", "KDE Plasma 6", "QtWebEngine", "24 FPS", "60%"],
         ["RetroDECK", "EmuDeck"]
     ]
     panels = []
     for i, tab in enumerate(t["tabs"]):
         cloud = "".join(f'<span class="tag{" tag-featured" if n < 2 else ""}">{linked_text(name)}</span>' for n, name in enumerate(tags[i]))
         if i == 1:
+            cloud = "".join(f'<a class="tag" href="{E(url)}" target="_blank" rel="noopener noreferrer">{E(url.rsplit("/", 1)[-1].rstrip("-"))}</a>' for url in RECOMMENDATIONS)
             cloud += f'<a class="text-link tag-foot" href="/downloads/recommend.txt" download>{E(t["recommend"])} {icon("download")}</a>'
         credit = f'<p class="video-credit">{linked_text(t["videoCredit"])}</p>' if i == 0 else ""
         panels.append(f'<section class="tab-panel" id="panel-{i}" role="tabpanel" aria-labelledby="tab-{i}" tabindex="0"{" hidden" if i else ""}><div><h3>{E(tab["title"])}</h3><p>{linked_text(tab["text"])}</p><p class="tab-note">{icon("check")}{E(tab["note"])}</p>{credit}</div><div class="tag-cloud">{cloud}</div></section>')
@@ -145,7 +150,7 @@ def page(lang):
   </section>
   <section class="closing"><div class="wrap"><h2>{E(t['ctaTitle'])}</h2><p>{E(t['ctaText'])}</p>{button(t)}</div></section>
 </main>
-<footer class="footer wrap"><div class="footer-top"><div class="footer-identity"><a href="{CHANNEL}" target="_blank" rel="noopener noreferrer" aria-label="Steam Deck Checker · YouTube"><img src="/assets/steam-deck-checker.png" alt="Steam Deck Checker" width="391" height="166" loading="lazy"></a><p>{E(t['footer'])}</p></div><nav class="footer-links" aria-label="Steam Deck Checker"><a href="{CHANNEL}" target="_blank" rel="noopener noreferrer">{icon('youtube')}YouTube</a><a href="{GITHUB}" target="_blank" rel="noopener noreferrer">{icon('github')}GitHub</a><a href="{PACKAGE}" download>{E(t['source'])}{icon('download')}</a></nav></div><div class="footer-bottom"><p>{E(t['footerNote'])}</p><span>Linux Handheld Starter Kit · v0.1.0</span></div><nav class="language-links" aria-label="{E(t['language'])}">{language_links}</nav></footer>
+<footer class="footer wrap"><div class="footer-top"><div class="footer-identity"><a href="{CHANNEL}" target="_blank" rel="noopener noreferrer" aria-label="Steam Deck Checker · YouTube"><img src="/assets/steam-deck-checker.png" alt="Steam Deck Checker" width="391" height="166" loading="lazy"></a><p>{E(t['footer'])}</p></div><nav class="footer-links" aria-label="Steam Deck Checker"><a href="{CHANNEL}" target="_blank" rel="noopener noreferrer">{icon('youtube')}YouTube</a><a href="{GITHUB}" target="_blank" rel="noopener noreferrer">{icon('github')}GitHub</a><a href="{PACKAGE}" download>{E(t['source'])}{icon('download')}</a></nav></div><div class="footer-bottom"><p>{E(t['footerNote'])}</p><span>Linux Handheld Starter Kit · v0.2.1</span></div><nav class="language-links" aria-label="{E(t['language'])}">{language_links}</nav></footer>
 </body></html>'''
 
 
