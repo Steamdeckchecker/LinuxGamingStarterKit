@@ -97,7 +97,7 @@ jobs:
           git diff --cached --stat
           python3 - <<'PY'
           from pathlib import Path
-          import base64, json, os, subprocess, urllib.request
+          import base64, json, os, subprocess, time, urllib.error, urllib.request
           repo = os.environ["GH_REPO"]
           def github(method, path, payload=None):
               data = None if payload is None else json.dumps(payload).encode()
@@ -107,8 +107,15 @@ jobs:
                       "Accept": "application/vnd.github+json",
                       "Content-Type": "application/json",
                       "User-Agent": "StarterKit-v0.2.1-import"})
-              with urllib.request.urlopen(request, timeout=120) as response:
-                  return json.load(response)
+              for attempt in range(4):
+                  try:
+                      with urllib.request.urlopen(request, timeout=120) as response:
+                          return json.load(response)
+                  except urllib.error.HTTPError as error:
+                      if error.code < 500 or attempt == 3:
+                          raise
+                      print("Retrying GitHub API " + method + " " + path + " after HTTP " + str(error.code), flush=True)
+                      time.sleep(3 * (attempt + 1))
           head = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
           if github("GET", "/git/ref/heads/main")["object"]["sha"] != head:
               raise SystemExit("Main changed during verification; refusing to overwrite it")
@@ -118,6 +125,7 @@ jobs:
           for name in filter(None, paths):
               if name.startswith(".github/"):
                   raise SystemExit("This import must not modify workflows")
+              print("Uploading verified file: " + name, flush=True)
               staged = subprocess.check_output(["git", "ls-files", "--stage", "--", name], text=True)
               mode, expected_sha = staged.split()[:2]
               blob = github("POST", "/git/blobs", {
