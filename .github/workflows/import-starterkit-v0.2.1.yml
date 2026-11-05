@@ -95,10 +95,47 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- VERSION starterkit.py recommend.txt build.py install.sh Linux-Handheld-Starter-Kit.desktop SHA256SUMS README.md README.en.md CHANGELOG.md assets docs tests scripts website
           git diff --cached --stat
-          git commit -m "Release v0.2.1: 28 plugins, LiveWallpaper 0.3.2 and desktop links"
-          gh auth setup-git
-          git push origin HEAD:main
-          git rev-parse HEAD > "$RUNNER_TEMP/imported-commit"
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, json, os, subprocess, urllib.request
+          repo = os.environ["GH_REPO"]
+          def github(method, path, payload=None):
+              data = None if payload is None else json.dumps(payload).encode()
+              request = urllib.request.Request("https://api.github.com/repos/" + repo + path,
+                  data=data, method=method, headers={
+                      "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                      "Accept": "application/vnd.github+json",
+                      "Content-Type": "application/json",
+                      "User-Agent": "StarterKit-v0.2.1-import"})
+              with urllib.request.urlopen(request, timeout=120) as response:
+                  return json.load(response)
+          head = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+          if github("GET", "/git/ref/heads/main")["object"]["sha"] != head:
+              raise SystemExit("Main changed during verification; refusing to overwrite it")
+          base_tree = github("GET", "/git/commits/" + head)["tree"]["sha"]
+          paths = subprocess.check_output(["git", "diff", "--cached", "--name-only", "-z"]).decode().split("\0")
+          entries = []
+          for name in filter(None, paths):
+              if name.startswith(".github/"):
+                  raise SystemExit("This import must not modify workflows")
+              staged = subprocess.check_output(["git", "ls-files", "--stage", "--", name], text=True)
+              mode, expected_sha = staged.split()[:2]
+              blob = github("POST", "/git/blobs", {
+                  "encoding": "base64", "content": base64.b64encode(Path(name).read_bytes()).decode()})
+              if blob["sha"] != expected_sha:
+                  raise SystemExit("Blob mismatch: " + name)
+              entries.append({"path": name, "mode": mode, "type": "blob", "sha": blob["sha"]})
+          tree = github("POST", "/git/trees", {"base_tree": base_tree, "tree": entries})
+          commit = github("POST", "/git/commits", {
+              "message": "Release v0.2.1: 28 plugins, LiveWallpaper 0.3.2 and desktop links",
+              "tree": tree["sha"], "parents": [head]})
+          print("Prepared verified commit: " + commit["sha"], flush=True)
+          (Path(os.environ["RUNNER_TEMP"]) / "imported-commit").write_text(commit["sha"])
+          if github("GET", "/git/ref/heads/main")["object"]["sha"] != head:
+              raise SystemExit("Main changed before publication; refusing to overwrite it")
+          github("PATCH", "/git/refs/heads/main", {"sha": commit["sha"], "force": False})
+          print("Main now points to the verified source")
+          PY
       - name: Publish the verified v0.2.1 release
         env:
           GH_TOKEN: ${{ github.token }}
