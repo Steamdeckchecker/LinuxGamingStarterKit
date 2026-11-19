@@ -10,8 +10,8 @@ Guided first-time setup for Linux handhelds running
 
 [Deutsch](README.md) · [Website](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/en/) · [Releases](https://github.com/Steamdeckchecker/LinuxGamingStarterKit/releases) · [YouTube](https://www.youtube.com/@SteamDeckChecker/) · [Changelog](CHANGELOG.md)
 
-**v0.2.1 adds LiveWallpaper, 28 plugin recommendations and automatic desktop links.**
-85 automated installer tests pass, including the supplied wallpaper installer's
+**v0.3.0 adds the German Backlog screensaver; LiveWallpaper, 28 plugin recommendations and automatic desktop links remain included.**
+92 automated installer tests pass, including the supplied wallpaper installer's
 fresh-install and upgrade paths against isolated KDE tools. The new integration
 still requires testing on a complete Plasma 6 desktop. Third-party apps and
 plugins have their own Steam, distribution and hardware requirements.
@@ -28,7 +28,7 @@ plugins have their own Steam, distribution and hardware requirements.
 | --- | --- |
 | [Linux-Handheld-Starter-Kit.desktop](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit.desktop) | Recommended: a single double-click launcher containing the complete installer. |
 | [install.sh](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh) | Alternative standalone terminal installer. |
-| [Source ZIP](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit-v0.2.1.zip) | Both launchers, editable sources, website, documentation and tests. |
+| [Source ZIP](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit-v0.3.0.zip) | Both launchers, editable sources, website, documentation and tests. |
 | [SHA256SUMS](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/SHA256SUMS) | SHA-256 checksums for the three downloads above. |
 
 Switch to **Desktop Mode**, download the `.desktop` file and double-click it.
@@ -50,7 +50,7 @@ copy button to copy the complete command:
 curl -fL --retry 3 -o install.sh "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh" && bash install.sh
 ```
 
-This saves version **0.2.1** as `install.sh` in the current directory and starts
+This saves version **0.3.0** as `install.sh` in the current directory and starts
 it only after the download succeeds. **Do not prefix it with sudo**; the wizard
 asks for administrator authorization when needed. If you have already downloaded
 the script, simply run `bash install.sh`.
@@ -85,8 +85,9 @@ original language. The system language is unchanged.
 | 7. Apps | Select optional Flatpaks, install them sequentially and offer Steam shortcuts. |
 | Desktop links | Automatically add Linux Starterkit and Steam Deck Checker with the original project logos; no prompt. |
 | 8. LiveWallpaper | Ask Yes/No; Yes installs version 0.3.2 and activates Neon Emblem with the included logo. |
-| 9. Emulation | Choose RetroDECK, EmuDeck or neither; offer a Steam shortcut afterward. |
-| 10. Finish | Show results, offer reboot and exit. Reboot happens only after choosing Yes. |
+| 9. Backlog | Optionally install the German screensaver; new installs shuffle all four scenes every 5 minutes. |
+| 10. Emulation | Choose RetroDECK, EmuDeck or neither; offer a Steam shortcut afterward. |
+| 11. Finish | Show results, offer reboot and exit. Reboot happens only after choosing Yes. |
 
 Every download, extraction and installation completes before the next task
 starts. The terminal shows progress, transfer rates where known, elapsed time
@@ -142,7 +143,7 @@ desktop directory is detected, including localized names. Repeated setup does
 not create duplicates; different existing files receive a `.starter-kit-backup`.
 Dry-run mode creates neither links nor wallpaper files.
 
-85 automated installer tests pass, including fresh installation and upgrades of
+92 automated installer tests pass, including fresh installation and upgrades of
 the supplied wallpaper installer with isolated KDE tools. The new integration
 still requires verification on a complete Plasma 6 desktop.
 
@@ -245,3 +246,13 @@ assets retain their respective licenses.
 
 Independent project. Not affiliated with Valve, the named manufacturers,
 Decky Loader, RetroDECK or EmuDeck.
+
+## Backlog screensaver (German edition)
+
+The optional Yes/No step after LiveWallpaper installs **Backlog 1.0.2-DE1** with German dates, playtime, last played and achievements. The original project is [Backlog by Glidian](https://github.com/glidiandev/backlog), under MIT; font licenses are included.
+
+New installations use all four scenes (Mosaic, Drift, Flip, Ripple), shuffle enabled, five minutes per scene and a 24-hour clock. Updates preserve your existing `config.js`, including any different shuffle or timing settings. Change `scenes`, `shuffle` and `minutesPerScene` in `<Steam>/config/uioverrides/screensavers/backlog/config.js`. The included standalone Backlog installer also provides scene, timing and clock dialogs.
+
+Select **backlog** in Steam Game Mode / Big Picture under **Settings → Customization → Screensaver**. No system package installation or administrator rights are needed. A user timer refreshes local library data every 15 minutes; disable it using `python3 ~/.local/share/backlog/sync.py --unschedule` (default data directory).
+
+The complete source ZIP includes `assets/Backlog-v1.0.2-DE1-runtime.zip`. Standalone Starter Kit launchers download that exact checksum-pinned package. Runtime files are unchanged from the supplied DE1 archive; only large documentation preview images are omitted. A real Game Mode test of this new integration is pending.

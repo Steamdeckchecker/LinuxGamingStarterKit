@@ -473,22 +473,22 @@ class EmulationShortcutTests(Base):
 class FlowTests(Base):
     def test_order_and_no_decky_skips_plugin_step(self):
         events = []
-        for name in ("devices", "passwords", "videos", "applications", "desktop_links", "live_wallpaper", "emulation", "finish"):
+        for name in ("devices", "passwords", "videos", "applications", "desktop_links", "live_wallpaper", "backlog", "emulation", "finish"):
             setattr(self.wizard, name, lambda name=name: events.append(name))
         self.wizard.decky = lambda: events.append("decky") or False
         self.wizard.plugin_selection = lambda: self.fail("Plugins must be skipped")
         self.wizard.run()
-        self.assertEqual(events, ["devices", "passwords", "videos", "decky", "applications", "desktop_links", "live_wallpaper", "emulation", "finish"])
+        self.assertEqual(events, ["devices", "passwords", "videos", "decky", "applications", "desktop_links", "live_wallpaper", "backlog", "emulation", "finish"])
 
     def test_order_with_plugins(self):
         events = []
-        for name in ("devices", "passwords", "videos", "applications", "desktop_links", "live_wallpaper", "emulation", "finish"):
+        for name in ("devices", "passwords", "videos", "applications", "desktop_links", "live_wallpaper", "backlog", "emulation", "finish"):
             setattr(self.wizard, name, lambda name=name: events.append(name))
         self.wizard.decky = lambda: events.append("decky") or True
         self.wizard.plugin_selection = lambda: events.append("selection") or [("x/y", "")]
         self.wizard.install_plugins = lambda x: events.append("plugins")
         self.wizard.run()
-        self.assertEqual(events, ["devices", "passwords", "videos", "decky", "selection", "plugins", "applications", "desktop_links", "live_wallpaper", "emulation", "finish"])
+        self.assertEqual(events, ["devices", "passwords", "videos", "decky", "selection", "plugins", "applications", "desktop_links", "live_wallpaper", "backlog", "emulation", "finish"])
 
     def test_flatpaks_install_sequentially_and_only_successes_added(self):
         self.ui.choices = [[kit.APPS[0][1], kit.APPS[1][1], kit.APPS[2][1]]]

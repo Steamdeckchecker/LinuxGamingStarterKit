@@ -60,6 +60,9 @@ assets = [out / name for name in launchers] + [archive]
 wallpaper = ROOT / "assets/Live_Background_KDE_v0.3.2.zip"
 shutil.copy2(wallpaper, out / wallpaper.name)
 assets.append(out / wallpaper.name)
+backlog = ROOT / "assets/Backlog-v1.0.2-DE1-runtime.zip"
+shutil.copy2(backlog, out / backlog.name)
+assets.append(out / backlog.name)
 (out / "SHA256SUMS").write_text("".join(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.name}\n" for path in assets), encoding="ascii")
 downloads = ROOT / "website/public/downloads"
 downloads.mkdir(parents=True, exist_ok=True)

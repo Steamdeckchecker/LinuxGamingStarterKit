@@ -7,7 +7,7 @@
       "Installation",
       "Tutorial"
     ],
-    "release": "v0.2.1 · LiveWallpaper & 28 Plugins",
+    "release": "v0.3.0 · Backlog + LiveWallpaper",
     "eyebrow": "VON STEAM DECK CHECKER",
     "hero": [
       "Dein Linux-Handheld.",
@@ -19,7 +19,7 @@
     "zipNote": "Eine .desktop-Datei · 28 Plugin-Empfehlungen integriert · Kostenlos",
     "platform": "Entwickelt für",
     "preview": "Ablaufvorschau",
-    "previewStep": "SCHRITT 01 / 10",
+    "previewStep": "SCHRITT 01 / 11",
     "previewTitle": "Welches Gerät nutzt du?",
     "previewSub": "Dein Gerät. Die passenden Startvideos.",
     "other": "Anderer Handheld",
@@ -33,7 +33,7 @@
     ],
     "kitEyebrow": "DEIN SETUP. DEINE ENTSCHEIDUNG.",
     "kitTitle": "Alles dabei, was den Start leichter macht.",
-    "kitIntro": "Du wählst aus, was du brauchst. Das Starter Kit führt dich durch die Einrichtung und wartet nach jedem Vorgang auf dessen Abschluss. Fortschritt und Status bleiben im Terminal sichtbar. Jeder Vorgang wird vollständig abgeschlossen, bevor der nächste beginnt. Die Links zu Linux Starterkit und Steam Deck Checker werden mit den Projektlogos automatisch auf dem Desktop angelegt, ohne zusätzliche Abfrage.",
+    "kitIntro": "Du wählst aus, was du brauchst. Das Starter Kit führt dich durch die Einrichtung und wartet nach jedem Vorgang auf dessen Abschluss. Fortschritt und Status bleiben im Terminal sichtbar. Jeder Vorgang wird vollständig abgeschlossen, bevor der nächste beginnt. Die Links zu Linux Starterkit und Steam Deck Checker werden mit den Projektlogos automatisch auf dem Desktop angelegt, ohne zusätzliche Abfrage. Den deutschen Backlog-Bildschirmschoner kannst du zusätzlich installieren.",
     "tabs": [
       {
         "label": "Startvideos",
@@ -60,6 +60,12 @@
         "note": "Für KDE Plasma 6 mit QtWebEngine. Nur im Desktop-Modus."
       },
       {
+        "label": "Backlog",
+        "title": "Deine Spielebibliothek als Bildschirmschoner.",
+        "text": "Optional nach LiveWallpaper und vor der Emulation: Backlog 1.0.2-DE1 zeigt Datum, Spielstunden, zuletzt gespielte Spiele und Erfolge auf Deutsch. Bei einer neuen Installation wechseln Mosaik, Drift, Flip und Wellen per Shuffle alle 5 Minuten. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten.",
+        "note": "In Steam im Spielmodus / Big Picture unter Einstellungen → Anpassung → Bildschirmschoner „backlog“ auswählen."
+      },
+      {
         "label": "Emulation",
         "title": "Platz für deine Klassiker.",
         "text": "Entscheide dich für RetroDECK oder starte die offizielle EmuDeck-Einrichtung. Oder lass den Schritt aus. Die Einrichtung von EmuDeck schließt du in dessen eigenem Assistenten ab. Anschließend kannst du auch RetroDECK oder EmuDeck als steamfremdes Spiel hinzufügen. Nach dem Speichern wartet der Installer drei Sekunden und startet Steam automatisch wieder.",
@@ -80,7 +86,7 @@
       ],
       [
         "Dein Setup zusammenstellen",
-        "Wähle Sprache und Gerät, dann Videos, Decky, Plugins und Apps. Vor EmuDeck/RetroDECK entscheidest du mit Ja oder Nein über LiveWallpaper. Die Links zu Linux Starterkit und Steam Deck Checker werden mit den Projektlogos automatisch auf dem Desktop angelegt, ohne zusätzliche Abfrage. Zum Schluss kannst du neu starten."
+        "Wähle Sprache und Gerät, dann Videos, Decky, Plugins und Apps. Vor EmuDeck/RetroDECK entscheidest du mit Ja oder Nein über LiveWallpaper. Die Links zu Linux Starterkit und Steam Deck Checker werden mit den Projektlogos automatisch auf dem Desktop angelegt, ohne zusätzliche Abfrage. Zum Schluss kannst du neu starten. In Steam im Spielmodus / Big Picture unter Einstellungen → Anpassung → Bildschirmschoner „backlog“ auswählen."
       ]
     ],
     "copy": "Befehl kopieren",
@@ -89,7 +95,7 @@
     "tryFirst": "Erst ausprobieren? Lade install.sh separat über den Downloadlink herunter und starte stattdessen diesen Probelauf ohne Installationen:",
     "script": "Alternativ: install.sh",
     "source": "Quellcode-Paket (ZIP)",
-    "testNote": "v0.2.1: 85 automatisierte Installer-Tests bestanden, einschließlich der Wallpaper-Erstinstallation und Aktualisierung mit isolierten KDE-Werkzeugen. Die neue Integration muss noch auf einem vollständigen Plasma-6-Desktop geprüft werden.",
+    "testNote": "Backlog, Installer und Downloads wurden automatisiert geprüft. Ein Test der neuen Integration im Steam-Spielmodus auf echter Hardware steht noch aus.",
     "tutorialEyebrow": "VON FABIAN. FÜR DEINEN HANDHELD.",
     "tutorialTitle": "Das Starter Kit im Video erklärt.",
     "tutorialText": "Schau dir mein Video-Tutorial zum Linux Handheld Starter Kit auf Steam Deck Checker an. Du kannst es hier abspielen oder direkt auf YouTube öffnen.",
@@ -126,6 +132,10 @@
       [
         "Kann ich das LiveWallpaper überspringen?",
         "Ja. Vor der Emulation erscheint eine Ja/Nein-Abfrage. Nein lässt dein Hintergrundbild unverändert. Bei Ja wird LiveWallpaper mit Neon-Emblem aktiviert. Bei fehlenden Voraussetzungen erscheint eine Meldung; danach geht die Einrichtung weiter."
+      ],
+      [
+        "Kann ich Backlog überspringen?",
+        "Optional nach LiveWallpaper und vor der Emulation: Backlog 1.0.2-DE1 zeigt Datum, Spielstunden, zuletzt gespielte Spiele und Erfolge auf Deutsch. Bei einer neuen Installation wechseln Mosaik, Drift, Flip und Wellen per Shuffle alle 5 Minuten. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten. In Steam im Spielmodus / Big Picture unter Einstellungen → Anpassung → Bildschirmschoner „backlog“ auswählen."
       ]
     ],
     "ctaTitle": "Mach deinen Handheld zu deinem.",
@@ -148,7 +158,7 @@
     "latestWatch": "Auf YouTube ansehen",
     "latestChannel": "Alle Videos auf YouTube",
     "terminalAlternative": "Alternativ im Terminal starten",
-    "terminalAlternativeText": "Kopiere diesen Befehl in ein Terminal im Desktop-Modus. Er lädt Version 0.2.1 herunter und startet den Installer erst nach erfolgreichem Download. Als normaler Benutzer ausführen, ohne sudo.",
+    "terminalAlternativeText": "Kopiere diesen Befehl in ein Terminal im Desktop-Modus. Er lädt Version 0.3.0 herunter und startet den Installer erst nach erfolgreichem Download. Als normaler Benutzer ausführen, ohne sudo.",
     "videoCredit": "Die Startvideos stammen sowohl aus eigener Hand als auch von steamdeckrepo.com.",
     "tutorialWatch": "Tutorial auf YouTube ansehen"
   },
@@ -160,7 +170,7 @@
       "Installation",
       "Tutorial"
     ],
-    "release": "v0.2.1 · LiveWallpaper & 28 plugins",
+    "release": "v0.3.0 · Backlog + LiveWallpaper",
     "eyebrow": "BY STEAM DECK CHECKER",
     "hero": [
       "Your Linux handheld.",
@@ -172,7 +182,7 @@
     "zipNote": "One .desktop file · 28 plugin recommendations included · Free",
     "platform": "Built for",
     "preview": "Workflow preview",
-    "previewStep": "STEP 01 / 10",
+    "previewStep": "STEP 01 / 11",
     "previewTitle": "Which device do you use?",
     "previewSub": "Your device. The matching startup movies.",
     "other": "Other handheld",
@@ -186,7 +196,7 @@
     ],
     "kitEyebrow": "YOUR SETUP. YOUR CHOICE.",
     "kitTitle": "A better place to start.",
-    "kitIntro": "Choose what you need. The Starter Kit guides you through setup and waits for every operation to finish before moving on. Progress and status stay visible in the terminal. Every operation finishes before the next one starts. Links to Linux Starterkit and Steam Deck Checker are added to the desktop automatically with the project logos, without another question.",
+    "kitIntro": "Choose what you need. The Starter Kit guides you through setup and waits for every operation to finish before moving on. Progress and status stay visible in the terminal. Every operation finishes before the next one starts. Links to Linux Starterkit and Steam Deck Checker are added to the desktop automatically with the project logos, without another question. You can also install the German Backlog screensaver.",
     "tabs": [
       {
         "label": "Startup movies",
@@ -213,6 +223,12 @@
         "note": "Requires KDE Plasma 6 and QtWebEngine. Desktop Mode only."
       },
       {
+        "label": "Backlog",
+        "title": "Your Steam library as a screensaver.",
+        "text": "Optional after LiveWallpaper and before emulation: Backlog 1.0.2-DE1 displays dates, playtime, last played and achievements in German. New installs shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes local Steam library data every 15 minutes.",
+        "note": "In Steam Game Mode / Big Picture, choose Settings → Customization → Screensaver → backlog."
+      },
+      {
         "label": "Emulation",
         "title": "Make room for your classics.",
         "text": "Choose RetroDECK or launch the official EmuDeck setup. Or skip this step. Complete EmuDeck configuration in its own wizard. You can then add RetroDECK or EmuDeck as a non-Steam game, too. After saving, the installer waits three seconds and automatically starts Steam again.",
@@ -233,7 +249,7 @@
       ],
       [
         "Build your setup",
-        "Choose your language and device, then movies, Decky, plugins and apps. Before EmuDeck/RetroDECK, choose Yes or No for LiveWallpaper. Links to Linux Starterkit and Steam Deck Checker are added to the desktop automatically with the project logos, without another question. Finally, you can reboot."
+        "Choose your language and device, then movies, Decky, plugins and apps. Before EmuDeck/RetroDECK, choose Yes or No for LiveWallpaper. Links to Linux Starterkit and Steam Deck Checker are added to the desktop automatically with the project logos, without another question. Finally, you can reboot. In Steam Game Mode / Big Picture, choose Settings → Customization → Screensaver → backlog."
       ]
     ],
     "copy": "Copy command",
@@ -242,7 +258,7 @@
     "tryFirst": "Prefer to try it first? Download install.sh separately using the download link, then run this simulation instead of the command above:",
     "script": "Alternative: install.sh",
     "source": "Source package (ZIP)",
-    "testNote": "v0.2.1: 85 automated installer tests pass, including wallpaper installation and upgrades using isolated KDE tools. The new integration still needs testing on a complete Plasma 6 desktop.",
+    "testNote": "Backlog, the installer and downloads were checked automatically. The new integration still needs a real Steam Game Mode hardware test.",
     "tutorialEyebrow": "FROM FABIAN. FOR YOUR HANDHELD.",
     "tutorialTitle": "Watch the Starter Kit tutorial.",
     "tutorialText": "Watch my Linux Handheld Starter Kit video tutorial on Steam Deck Checker. Play it here or open it directly on YouTube.",
@@ -279,6 +295,10 @@
       [
         "Can I skip the live wallpaper?",
         "Yes. A Yes/No question appears before emulation. No preserves your wallpaper. Yes installs LiveWallpaper and activates Neon Emblem. Missing prerequisites are reported and setup can continue."
+      ],
+      [
+        "Can I skip Backlog?",
+        "Optional after LiveWallpaper and before emulation: Backlog 1.0.2-DE1 displays dates, playtime, last played and achievements in German. New installs shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes local Steam library data every 15 minutes. In Steam Game Mode / Big Picture, choose Settings → Customization → Screensaver → backlog."
       ]
     ],
     "ctaTitle": "Make your handheld your own.",
@@ -301,7 +321,7 @@
     "latestWatch": "Watch on YouTube",
     "latestChannel": "All videos on YouTube",
     "terminalAlternative": "Alternatively, use a terminal",
-    "terminalAlternativeText": "Copy this command into a terminal in Desktop Mode. It downloads version 0.2.1 and starts the installer only after the download succeeds. Run as your normal user, without sudo.",
+    "terminalAlternativeText": "Copy this command into a terminal in Desktop Mode. It downloads version 0.3.0 and starts the installer only after the download succeeds. Run as your normal user, without sudo.",
     "videoCredit": "The startup movies include our own creations as well as videos from steamdeckrepo.com.",
     "tutorialWatch": "Watch the tutorial on YouTube"
   },
@@ -313,7 +333,7 @@
       "Instalación",
       "Tutorial"
     ],
-    "release": "v0.2.1 · LiveWallpaper y 28 plugins",
+    "release": "v0.3.0 · Backlog + LiveWallpaper",
     "eyebrow": "POR STEAM DECK CHECKER",
     "hero": [
       "Tu consola Linux.",
@@ -325,7 +345,7 @@
     "zipNote": "Un archivo .desktop · 28 recomendaciones incluidas · Gratis",
     "platform": "Creado para",
     "preview": "Vista previa del proceso",
-    "previewStep": "PASO 01 / 10",
+    "previewStep": "PASO 01 / 11",
     "previewTitle": "¿Qué dispositivo usas?",
     "previewSub": "Tu dispositivo. Sus vídeos de inicio.",
     "other": "Otra consola",
@@ -339,7 +359,7 @@
     ],
     "kitEyebrow": "TU CONFIGURACIÓN. TU DECISIÓN.",
     "kitTitle": "Todo para empezar con buen pie.",
-    "kitIntro": "Elige lo que necesitas. El Starter Kit te guía y espera a que termine cada operación antes de continuar. El progreso y el estado se muestran en la terminal. Cada operación termina antes de empezar la siguiente. Los enlaces a Linux Starterkit y Steam Deck Checker se crean automáticamente en el escritorio con los logos del proyecto, sin otra pregunta.",
+    "kitIntro": "Elige lo que necesitas. El Starter Kit te guía y espera a que termine cada operación antes de continuar. El progreso y el estado se muestran en la terminal. Cada operación termina antes de empezar la siguiente. Los enlaces a Linux Starterkit y Steam Deck Checker se crean automáticamente en el escritorio con los logos del proyecto, sin otra pregunta. También puedes instalar el salvapantallas Backlog en alemán.",
     "tabs": [
       {
         "label": "Vídeos de inicio",
@@ -366,6 +386,12 @@
         "note": "Requiere KDE Plasma 6 y QtWebEngine. Solo en modo escritorio."
       },
       {
+        "label": "Backlog",
+        "title": "Tu biblioteca de Steam como salvapantallas.",
+        "text": "Opcional después de LiveWallpaper y antes de la emulación: Backlog 1.0.2-DE1 muestra fechas, horas, última partida y logros en alemán. Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Conserva los ajustes existentes y actualiza los datos locales de Steam cada 15 minutos mediante un temporizador de usuario.",
+        "note": "En modo juego / Big Picture, elige Ajustes → Personalización → Salvapantallas → backlog."
+      },
+      {
         "label": "Emulación",
         "title": "Haz sitio a tus clásicos.",
         "text": "Elige RetroDECK o abre la configuración oficial de EmuDeck. También puedes saltar este paso. La configuración de EmuDeck se completa en su propio asistente. Después también puedes añadir RetroDECK o EmuDeck como juego externo a Steam. Después de guardar, el instalador espera tres segundos y vuelve a iniciar Steam automáticamente.",
@@ -386,7 +412,7 @@
       ],
       [
         "Elige tu configuración",
-        "Elige idioma y dispositivo, luego vídeos, Decky, plugins y aplicaciones. Antes de EmuDeck/RetroDECK, decide Sí o No para LiveWallpaper. Los dos enlaces del escritorio se crean automáticamente. Al final puedes reiniciar."
+        "Elige idioma y dispositivo, luego vídeos, Decky, plugins y aplicaciones. Antes de EmuDeck/RetroDECK, decide Sí o No para LiveWallpaper. Los dos enlaces del escritorio se crean automáticamente. Al final puedes reiniciar. En modo juego / Big Picture, elige Ajustes → Personalización → Salvapantallas → backlog."
       ]
     ],
     "copy": "Copiar comando",
@@ -395,7 +421,7 @@
     "tryFirst": "¿Prefieres probar primero? Descarga install.sh por separado mediante el enlace y ejecuta esta simulación en lugar del comando anterior:",
     "script": "Alternativa: install.sh",
     "source": "Paquete de código (ZIP)",
-    "testNote": "v0.2.1: 85 pruebas automáticas del instalador superadas, incluidas instalación y actualización del fondo con herramientas KDE aisladas. Falta probar la nueva integración en un escritorio Plasma 6 completo.",
+    "testNote": "Backlog, el instalador y las descargas tienen verificaciones automáticas. Falta probar la nueva integración en modo juego de Steam con hardware real.",
     "tutorialEyebrow": "DE FABIAN. PARA TU CONSOLA.",
     "tutorialTitle": "El Starter Kit explicado en vídeo.",
     "tutorialText": "Mira mi tutorial del Linux Handheld Starter Kit en Steam Deck Checker. Puedes reproducirlo aquí o abrirlo directamente en YouTube.",
@@ -432,6 +458,10 @@
       [
         "¿Puedo omitir el fondo animado?",
         "Sí. Antes de la emulación aparece una pregunta Sí/No. No conserva tu fondo. Sí instala LiveWallpaper y activa Emblema neón. Se informa de los requisitos que falten y la configuración puede continuar."
+      ],
+      [
+        "¿Puedo omitir Backlog?",
+        "Opcional después de LiveWallpaper y antes de la emulación: Backlog 1.0.2-DE1 muestra fechas, horas, última partida y logros en alemán. Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Conserva los ajustes existentes y actualiza los datos locales de Steam cada 15 minutos mediante un temporizador de usuario. En modo juego / Big Picture, elige Ajustes → Personalización → Salvapantallas → backlog."
       ]
     ],
     "ctaTitle": "Haz que tu consola sea más tuya.",
@@ -454,7 +484,7 @@
     "latestWatch": "Ver en YouTube",
     "latestChannel": "Todos los vídeos en YouTube",
     "terminalAlternative": "También puedes usar una terminal",
-    "terminalAlternativeText": "Copia este comando en una terminal en modo escritorio. Descarga la versión 0.2.1 e inicia el instalador solo si la descarga se completa correctamente. Ejecútalo como usuario normal, sin sudo.",
+    "terminalAlternativeText": "Copia este comando en una terminal en modo escritorio. Descarga la versión 0.3.0 e inicia el instalador solo si la descarga se completa correctamente. Ejecútalo como usuario normal, sin sudo.",
     "videoCredit": "Los vídeos de inicio incluyen creaciones propias y vídeos de steamdeckrepo.com.",
     "tutorialWatch": "Ver el tutorial en YouTube"
   },
@@ -466,7 +496,7 @@
       "Installation",
       "Tutoriel"
     ],
-    "release": "v0.2.1 · LiveWallpaper et 28 plugins",
+    "release": "v0.3.0 · Backlog + LiveWallpaper",
     "eyebrow": "PAR STEAM DECK CHECKER",
     "hero": [
       "Votre console Linux.",
@@ -478,7 +508,7 @@
     "zipNote": "Un fichier .desktop · 28 recommandations incluses · Gratuit",
     "platform": "Conçu pour",
     "preview": "Aperçu du parcours",
-    "previewStep": "ÉTAPE 01 / 10",
+    "previewStep": "ÉTAPE 01 / 11",
     "previewTitle": "Quel appareil utilisez-vous ?",
     "previewSub": "Votre appareil. Les vidéos adaptées.",
     "other": "Autre console",
@@ -492,7 +522,7 @@
     ],
     "kitEyebrow": "VOTRE CONFIGURATION. VOTRE CHOIX.",
     "kitTitle": "Tout pour bien commencer.",
-    "kitIntro": "Choisissez ce dont vous avez besoin. Le Starter Kit vous guide et attend la fin de chaque opération avant de poursuivre. La progression et l’état restent visibles dans le terminal. Chaque opération se termine avant de passer à la suivante. Les liens Linux Starterkit et Steam Deck Checker sont ajoutés automatiquement au bureau avec les logos du projet, sans autre question.",
+    "kitIntro": "Choisissez ce dont vous avez besoin. Le Starter Kit vous guide et attend la fin de chaque opération avant de poursuivre. La progression et l’état restent visibles dans le terminal. Chaque opération se termine avant de passer à la suivante. Les liens Linux Starterkit et Steam Deck Checker sont ajoutés automatiquement au bureau avec les logos du projet, sans autre question. Vous pouvez aussi installer l’économiseur Backlog en allemand.",
     "tabs": [
       {
         "label": "Vidéos de démarrage",
@@ -519,6 +549,12 @@
         "note": "Nécessite KDE Plasma 6 et QtWebEngine. Bureau uniquement."
       },
       {
+        "label": "Backlog",
+        "title": "Votre bibliothèque Steam en économiseur d’écran.",
+        "text": "En option après LiveWallpaper et avant l’émulation : Backlog 1.0.2-DE1 affiche les dates, heures jouées, dernières parties et succès en allemand. Une nouvelle installation alterne aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés et un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes.",
+        "note": "Dans Steam en mode jeu / Big Picture : Paramètres → Personnalisation → Économiseur d’écran → backlog."
+      },
+      {
         "label": "Émulation",
         "title": "Une place pour vos classiques.",
         "text": "Choisissez RetroDECK ou lancez la configuration officielle d’EmuDeck. Vous pouvez aussi passer cette étape. La configuration d’EmuDeck se termine dans son propre assistant. Vous pouvez ensuite ajouter RetroDECK ou EmuDeck comme jeu non-Steam. Après l’enregistrement, l’installateur attend trois secondes et relance automatiquement Steam.",
@@ -539,7 +575,7 @@
       ],
       [
         "Composer votre configuration",
-        "Choisissez langue et appareil, puis vidéos, Decky, plugins et applications. Avant EmuDeck/RetroDECK, répondez Oui ou Non pour LiveWallpaper. Les deux liens du bureau sont créés automatiquement. Vous pouvez redémarrer à la fin."
+        "Choisissez langue et appareil, puis vidéos, Decky, plugins et applications. Avant EmuDeck/RetroDECK, répondez Oui ou Non pour LiveWallpaper. Les deux liens du bureau sont créés automatiquement. Vous pouvez redémarrer à la fin. Dans Steam en mode jeu / Big Picture : Paramètres → Personnalisation → Économiseur d’écran → backlog."
       ]
     ],
     "copy": "Copier la commande",
@@ -548,7 +584,7 @@
     "tryFirst": "Vous préférez essayer d’abord ? Téléchargez install.sh séparément via le lien, puis lancez cette simulation à la place de la commande ci-dessus :",
     "script": "Alternative : install.sh",
     "source": "Archive du code (ZIP)",
-    "testNote": "v0.2.1 : 85 tests automatiques réussis, dont installation et mise à jour du fond avec des outils KDE isolés. La nouvelle intégration reste à tester sur un bureau Plasma 6 complet.",
+    "testNote": "Backlog, l’installateur et les téléchargements sont vérifiés automatiquement. La nouvelle intégration reste à tester en mode jeu Steam sur un vrai appareil.",
     "tutorialEyebrow": "PAR FABIAN. POUR VOTRE CONSOLE.",
     "tutorialTitle": "Le Starter Kit expliqué en vidéo.",
     "tutorialText": "Regardez mon tutoriel vidéo du Linux Handheld Starter Kit sur Steam Deck Checker. Lancez-le ici ou ouvrez-le directement sur YouTube.",
@@ -585,6 +621,10 @@
       [
         "Puis-je ignorer le fond animé ?",
         "Oui. Une question Oui/Non précède l’émulation. Non conserve votre fond. Oui installe LiveWallpaper et active Emblème néon. Les prérequis manquants sont signalés et la configuration peut continuer."
+      ],
+      [
+        "Puis-je ignorer Backlog ?",
+        "En option après LiveWallpaper et avant l’émulation : Backlog 1.0.2-DE1 affiche les dates, heures jouées, dernières parties et succès en allemand. Une nouvelle installation alterne aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés et un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes. Dans Steam en mode jeu / Big Picture : Paramètres → Personnalisation → Économiseur d’écran → backlog."
       ]
     ],
     "ctaTitle": "Une console qui vous ressemble.",
@@ -607,7 +647,7 @@
     "latestWatch": "Regarder sur YouTube",
     "latestChannel": "Toutes les vidéos sur YouTube",
     "terminalAlternative": "Autre possibilité : le terminal",
-    "terminalAlternativeText": "Copiez cette commande dans un terminal en mode Bureau. Elle télécharge la version 0.2.1 et lance l’installateur uniquement si le téléchargement réussit. Utilisez votre compte habituel, sans sudo.",
+    "terminalAlternativeText": "Copiez cette commande dans un terminal en mode Bureau. Elle télécharge la version 0.3.0 et lance l’installateur uniquement si le téléchargement réussit. Utilisez votre compte habituel, sans sudo.",
     "videoCredit": "Les vidéos de démarrage comprennent des créations personnelles ainsi que des vidéos provenant de steamdeckrepo.com.",
     "tutorialWatch": "Voir le tutoriel sur YouTube"
   },
@@ -619,7 +659,7 @@
       "Установка",
       "Видео"
     ],
-    "release": "v0.2.1 · LiveWallpaper и 28 плагинов",
+    "release": "v0.3.0 · Backlog + LiveWallpaper",
     "eyebrow": "ОТ STEAM DECK CHECKER",
     "hero": [
       "Ваша консоль с Linux.",
@@ -631,7 +671,7 @@
     "zipNote": "Один файл .desktop · 28 рекомендации внутри · Бесплатно",
     "platform": "Разработано для",
     "preview": "Предпросмотр процесса",
-    "previewStep": "ШАГ 01 / 10",
+    "previewStep": "ШАГ 01 / 11",
     "previewTitle": "Какое у вас устройство?",
     "previewSub": "Ваше устройство. Подходящие стартовые видео.",
     "other": "Другая консоль",
@@ -645,7 +685,7 @@
     ],
     "kitEyebrow": "ВАША НАСТРОЙКА. ВАШ ВЫБОР.",
     "kitTitle": "Всё для удобного начала.",
-    "kitIntro": "Выбирайте нужное. Starter Kit проведёт вас через настройку и дождётся завершения каждой операции перед следующей. Ход выполнения и статус видны в терминале. Каждая операция завершается до начала следующей. Ссылки на Linux Starterkit и Steam Deck Checker с логотипами проектов создаются на рабочем столе автоматически, без дополнительного вопроса.",
+    "kitIntro": "Выбирайте нужное. Starter Kit проведёт вас через настройку и дождётся завершения каждой операции перед следующей. Ход выполнения и статус видны в терминале. Каждая операция завершается до начала следующей. Ссылки на Linux Starterkit и Steam Deck Checker с логотипами проектов создаются на рабочем столе автоматически, без дополнительного вопроса. Также можно установить заставку Backlog с немецкими надписями.",
     "tabs": [
       {
         "label": "Стартовые видео",
@@ -672,6 +712,12 @@
         "note": "Нужны KDE Plasma 6 и QtWebEngine. Только рабочий стол."
       },
       {
+        "label": "Backlog",
+        "title": "Ваша библиотека Steam как заставка.",
+        "text": "По желанию после LiveWallpaper и перед эмуляцией: Backlog 1.0.2-DE1 показывает даты, время в играх и достижения на немецком языке. При новой установке Mosaic, Drift, Flip и Ripple случайно сменяются каждые 5 минут. Существующие настройки сохраняются; пользовательский таймер обновляет локальные данные Steam каждые 15 минут.",
+        "note": "В игровом режиме Steam / Big Picture выберите заставку backlog в настройках оформления."
+      },
+      {
         "label": "Эмуляция",
         "title": "Место для любимой классики.",
         "text": "Выберите RetroDECK или запустите официальную настройку EmuDeck. Этот шаг тоже можно пропустить. Настройка EmuDeck завершается в его собственном мастере. После этого можно добавить RetroDECK или EmuDeck как стороннюю игру в Steam. После сохранения установщик ждёт три секунды и автоматически запускает Steam снова.",
@@ -692,7 +738,7 @@
       ],
       [
         "Выберите свою настройку",
-        "Выберите язык и устройство, затем видео, Decky, плагины и приложения. Перед EmuDeck/RetroDECK ответьте Да или Нет для LiveWallpaper. Две ссылки на рабочем столе создаются автоматически. В конце можно перезагрузить устройство."
+        "Выберите язык и устройство, затем видео, Decky, плагины и приложения. Перед EmuDeck/RetroDECK ответьте Да или Нет для LiveWallpaper. Две ссылки на рабочем столе создаются автоматически. В конце можно перезагрузить устройство. В игровом режиме Steam / Big Picture выберите заставку backlog в настройках оформления."
       ]
     ],
     "copy": "Скопировать команду",
@@ -701,7 +747,7 @@
     "tryFirst": "Хотите сначала попробовать? Скачайте install.sh отдельно по ссылке и вместо команды выше запустите эту симуляцию без установки:",
     "script": "Альтернатива: install.sh",
     "source": "Архив исходного кода (ZIP)",
-    "testNote": "v0.2.1: пройдено 85 автоматических тестов установщика, включая установку и обновление обоев с изолированными инструментами KDE. Новую интеграцию ещё нужно проверить на полноценном рабочем столе Plasma 6.",
+    "testNote": "Backlog, установщик и загрузки прошли автоматические проверки. Новую интеграцию ещё нужно проверить в игровом режиме Steam на реальном устройстве.",
     "tutorialEyebrow": "ОТ ФАБИАНА. ДЛЯ ВАШЕЙ КОНСОЛИ.",
     "tutorialTitle": "Видеоинструкция по Starter Kit.",
     "tutorialText": "Посмотрите мою видеоинструкцию по Linux Handheld Starter Kit на Steam Deck Checker. Запустите её здесь или откройте прямо на YouTube.",
@@ -738,6 +784,10 @@
       [
         "Можно пропустить живые обои?",
         "Да. Перед эмуляцией появится вопрос Да/Нет. Нет сохраняет текущие обои. Да устанавливает LiveWallpaper и включает неоновую эмблему. При отсутствии компонентов появится сообщение, после чего можно продолжить настройку."
+      ],
+      [
+        "Можно ли пропустить Backlog?",
+        "По желанию после LiveWallpaper и перед эмуляцией: Backlog 1.0.2-DE1 показывает даты, время в играх и достижения на немецком языке. При новой установке Mosaic, Drift, Flip и Ripple случайно сменяются каждые 5 минут. Существующие настройки сохраняются; пользовательский таймер обновляет локальные данные Steam каждые 15 минут. В игровом режиме Steam / Big Picture выберите заставку backlog в настройках оформления."
       ]
     ],
     "ctaTitle": "Настройте консоль под себя.",
@@ -760,7 +810,7 @@
     "latestWatch": "Смотреть на YouTube",
     "latestChannel": "Все видео на YouTube",
     "terminalAlternative": "Также можно запустить через терминал",
-    "terminalAlternativeText": "Скопируйте эту команду в терминал в режиме рабочего стола. Она скачает версию 0.2.1 и запустит установщик только после успешной загрузки. Запускайте от обычного пользователя, без sudo.",
+    "terminalAlternativeText": "Скопируйте эту команду в терминал в режиме рабочего стола. Она скачает версию 0.3.0 и запустит установщик только после успешной загрузки. Запускайте от обычного пользователя, без sudo.",
     "videoCredit": "Среди стартовых видео есть собственные работы и видео с steamdeckrepo.com.",
     "tutorialWatch": "Смотреть инструкцию на YouTube"
   },
@@ -772,7 +822,7 @@
       "安装方法",
       "视频教程"
     ],
-    "release": "v0.2.1 · 动态壁纸和 28 款插件",
+    "release": "v0.3.0 · Backlog + LiveWallpaper",
     "eyebrow": "由 STEAM DECK CHECKER 制作",
     "hero": [
       "你的 Linux 掌机。",
@@ -784,7 +834,7 @@
     "zipNote": "只需一个 .desktop 文件 · 内置 28 项插件推荐 · 免费",
     "platform": "专为以下系统开发",
     "preview": "操作流程预览",
-    "previewStep": "第 01 / 10 步",
+    "previewStep": "第 01 / 11 步",
     "previewTitle": "你使用哪款设备？",
     "previewSub": "选择设备，匹配启动视频。",
     "other": "其他掌机",
@@ -798,7 +848,7 @@
     ],
     "kitEyebrow": "你的配置，由你决定。",
     "kitTitle": "轻松开始，需要的都在这里。",
-    "kitIntro": "选择你需要的内容。Starter Kit 会引导你完成设置，并等待每个操作结束后再进行下一项。 终端会显示进度和状态。每项操作完成后才会开始下一项。 自动在桌面创建带项目标志的 Linux Starterkit 和 Steam Deck Checker 链接，无需额外确认。",
+    "kitIntro": "选择你需要的内容。Starter Kit 会引导你完成设置，并等待每个操作结束后再进行下一项。 终端会显示进度和状态。每项操作完成后才会开始下一项。 自动在桌面创建带项目标志的 Linux Starterkit 和 Steam Deck Checker 链接，无需额外确认。 还可选装德语版 Backlog 屏幕保护程序。",
     "tabs": [
       {
         "label": "启动视频",
@@ -825,6 +875,12 @@
         "note": "需要 KDE Plasma 6 和 QtWebEngine。仅适用于桌面模式。"
       },
       {
+        "label": "Backlog",
+        "title": "将 Steam 游戏库变成屏幕保护程序。",
+        "text": "可在 LiveWallpaper 之后、模拟器之前选择安装 Backlog 1.0.2-DE1。日期、游戏时间、最近游玩和成就显示为德语。新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。保留现有设置，用户定时器每 15 分钟更新本地 Steam 数据。",
+        "note": "在 Steam 游戏模式 / Big Picture 的设置 → 个性化 → 屏幕保护程序中选择 backlog。"
+      },
+      {
         "label": "模拟器",
         "title": "也为经典游戏留个位置。",
         "text": "选择 RetroDECK，或启动官方 EmuDeck 安装向导。也可以跳过。EmuDeck 的具体设置需要在其自己的向导中完成。 随后也可以将 RetroDECK 或 EmuDeck 添加为非 Steam 游戏。 保存后，安装程序会等待三秒并自动重新启动 Steam。",
@@ -845,7 +901,7 @@
       ],
       [
         "选择你的配置",
-        "选择语言和设备，然后选择视频、Decky、插件和应用。在 EmuDeck/RetroDECK 之前选择是否安装 LiveWallpaper。两个桌面链接会自动创建。最后可以重新启动设备。"
+        "选择语言和设备，然后选择视频、Decky、插件和应用。在 EmuDeck/RetroDECK 之前选择是否安装 LiveWallpaper。两个桌面链接会自动创建。最后可以重新启动设备。 在 Steam 游戏模式 / Big Picture 的设置 → 个性化 → 屏幕保护程序中选择 backlog。"
       ]
     ],
     "copy": "复制命令",
@@ -854,7 +910,7 @@
     "tryFirst": "想先试用？请先通过下载链接单独下载 install.sh，然后运行以下模拟命令，而不是上面的启动命令：",
     "script": "备选：install.sh",
     "source": "源代码压缩包（ZIP）",
-    "testNote": "v0.2.1：85 项安装程序自动测试通过，包括使用隔离 KDE 工具测试壁纸安装和更新。新增集成仍需在完整的 Plasma 6 桌面上验证。",
+    "testNote": "Backlog、安装程序和下载文件已完成自动检查；新集成仍需在真实设备的 Steam 游戏模式中测试。",
     "tutorialEyebrow": "来自 FABIAN，为你的掌机而做。",
     "tutorialTitle": "通过视频了解 Starter Kit。",
     "tutorialText": "观看 Steam Deck Checker 的 Linux Handheld Starter Kit 视频教程。你可以在这里播放，也可以直接在 YouTube 上打开。",
@@ -891,6 +947,10 @@
       [
         "可以跳过动态壁纸吗？",
         "可以。模拟器步骤之前会显示是/否选项。选择“否”将保留现有壁纸；选择“是”将安装 LiveWallpaper 并启用霓虹徽章。缺少组件时会显示提示，然后可以继续设置。"
+      ],
+      [
+        "可以跳过 Backlog 吗？",
+        "可在 LiveWallpaper 之后、模拟器之前选择安装 Backlog 1.0.2-DE1。日期、游戏时间、最近游玩和成就显示为德语。新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。保留现有设置，用户定时器每 15 分钟更新本地 Steam 数据。 在 Steam 游戏模式 / Big Picture 的设置 → 个性化 → 屏幕保护程序中选择 backlog。"
       ]
     ],
     "ctaTitle": "把掌机设置成你喜欢的样子。",
@@ -913,7 +973,7 @@
     "latestWatch": "在 YouTube 上观看",
     "latestChannel": "在 YouTube 上查看所有视频",
     "terminalAlternative": "也可以通过终端启动",
-    "terminalAlternativeText": "在桌面模式下，将此命令复制到终端运行。它会下载 0.2.1 版，并且仅在下载成功后启动安装程序。请以普通用户运行，不要使用 sudo。",
+    "terminalAlternativeText": "在桌面模式下，将此命令复制到终端运行。它会下载 0.3.0 版，并且仅在下载成功后启动安装程序。请以普通用户运行，不要使用 sudo。",
     "videoCredit": "启动视频既包含自行制作的作品，也包含来自 steamdeckrepo.com 的视频。",
     "tutorialWatch": "在 YouTube 上观看教程"
   },
@@ -925,7 +985,7 @@
       "インストール",
       "動画ガイド"
     ],
-    "release": "v0.2.1 · ライブ壁紙と 28 プラグイン",
+    "release": "v0.3.0 · Backlog + LiveWallpaper",
     "eyebrow": "STEAM DECK CHECKER 制作",
     "hero": [
       "Linux ハンドヘルドを。",
@@ -937,7 +997,7 @@
     "zipNote": ".desktop ファイル1つだけ · おすすめ28件を内蔵 · 無料",
     "platform": "対応を目指すシステム",
     "preview": "設定の流れをプレビュー",
-    "previewStep": "ステップ 01 / 10",
+    "previewStep": "ステップ 01 / 11",
     "previewTitle": "お使いの機種は？",
     "previewSub": "機種に合った起動動画を選べます。",
     "other": "その他の機種",
@@ -951,7 +1011,7 @@
     ],
     "kitEyebrow": "自分の設定を、自分で選ぶ。",
     "kitTitle": "はじめの一歩を、もっと手軽に。",
-    "kitIntro": "必要なものを選ぶだけ。Starter Kit が設定を案内し、それぞれの処理が終わってから次に進みます。 進行状況とステータスをターミナルに表示します。各処理の完了を待ってから次に進みます。 Linux Starterkit と Steam Deck Checker へのリンクを、プロジェクトのロゴ付きでデスクトップに自動作成します。追加の確認はありません。",
+    "kitIntro": "必要なものを選ぶだけ。Starter Kit が設定を案内し、それぞれの処理が終わってから次に進みます。 進行状況とステータスをターミナルに表示します。各処理の完了を待ってから次に進みます。 Linux Starterkit と Steam Deck Checker へのリンクを、プロジェクトのロゴ付きでデスクトップに自動作成します。追加の確認はありません。 ドイツ語版 Backlog スクリーンセーバーも追加できます。",
     "tabs": [
       {
         "label": "起動動画",
@@ -978,6 +1038,12 @@
         "note": "KDE Plasma 6 と QtWebEngine が必要です。デスクトップモード専用。"
       },
       {
+        "label": "Backlog",
+        "title": "Steam ライブラリをスクリーンセーバーに。",
+        "text": "LiveWallpaper の後、エミュレーターの前に Backlog 1.0.2-DE1 を任意でインストールできます。日付、プレイ時間、最終プレイ、実績はドイツ語表示です。新規インストールでは Mosaic、Drift、Flip、Ripple を 5 分ごとにシャッフル。既存設定は保持され、ユーザータイマーが Steam のローカルデータを 15 分ごとに更新します。",
+        "note": "Steam のゲームモード / Big Picture で設定 → カスタマイズ → スクリーンセーバー → backlog を選択。"
+      },
+      {
         "label": "エミュレーション",
         "title": "懐かしのゲームのための場所も。",
         "text": "RetroDECK を選ぶか、EmuDeck 公式のセットアップを起動できます。スキップも可能です。EmuDeck の設定は、専用ウィザードで完了させてください。 その後、RetroDECK または EmuDeck を非 Steam ゲームとして追加することもできます。 保存後、インストーラーは3秒待ってから Steam を自動的に再起動します。",
@@ -998,7 +1064,7 @@
       ],
       [
         "自分の構成を選ぶ",
-        "言語と機種を選び、動画、Decky、プラグイン、アプリを設定します。EmuDeck/RetroDECK の前に LiveWallpaper を「はい／いいえ」で選びます。2 つのデスクトップリンクは自動作成されます。最後に再起動できます。"
+        "言語と機種を選び、動画、Decky、プラグイン、アプリを設定します。EmuDeck/RetroDECK の前に LiveWallpaper を「はい／いいえ」で選びます。2 つのデスクトップリンクは自動作成されます。最後に再起動できます。 Steam のゲームモード / Big Picture で設定 → カスタマイズ → スクリーンセーバー → backlog を選択。"
       ]
     ],
     "copy": "コマンドをコピー",
@@ -1007,7 +1073,7 @@
     "tryFirst": "まず試したい場合は、ダウンロードリンクから install.sh を個別にダウンロードし、上のコマンドの代わりに次のシミュレーションを実行してください：",
     "script": "別の方法：install.sh",
     "source": "ソースコード（ZIP）",
-    "testNote": "v0.2.1：隔離した KDE ツールによる壁紙のインストールと更新を含む、85 件の自動テストに合格しました。新しい統合は完全な Plasma 6 デスクトップでの検証が必要です。",
+    "testNote": "Backlog、インストーラー、ダウンロードは自動確認済みです。新しい統合は実機の Steam ゲームモードでのテストが必要です。",
     "tutorialEyebrow": "FABIAN から、あなたのハンドヘルドへ。",
     "tutorialTitle": "Starter Kit を動画で解説。",
     "tutorialText": "Steam Deck Checker の Linux Handheld Starter Kit 解説動画をご覧ください。このページで再生するか、YouTube で直接開くことができます。",
@@ -1044,6 +1110,10 @@
       [
         "ライブ壁紙はスキップできますか？",
         "はい。エミュレーションの前に「はい／いいえ」が表示されます。「いいえ」なら現在の壁紙を維持します。「はい」で LiveWallpaper をインストールしネオンエンブレムを有効にします。不足する要件がある場合は通知し、設定を続行できます。"
+      ],
+      [
+        "Backlog はスキップできますか？",
+        "LiveWallpaper の後、エミュレーターの前に Backlog 1.0.2-DE1 を任意でインストールできます。日付、プレイ時間、最終プレイ、実績はドイツ語表示です。新規インストールでは Mosaic、Drift、Flip、Ripple を 5 分ごとにシャッフル。既存設定は保持され、ユーザータイマーが Steam のローカルデータを 15 分ごとに更新します。 Steam のゲームモード / Big Picture で設定 → カスタマイズ → スクリーンセーバー → backlog を選択。"
       ]
     ],
     "ctaTitle": "あなたらしいハンドヘルドに。",
@@ -1066,7 +1136,7 @@
     "latestWatch": "YouTube で見る",
     "latestChannel": "YouTube ですべての動画を見る",
     "terminalAlternative": "ターミナルから起動する場合",
-    "terminalAlternativeText": "デスクトップモードのターミナルにこのコマンドをコピーしてください。バージョン 0.2.1 をダウンロードし、成功した場合のみインストーラーを起動します。sudo を付けず、通常のユーザーで実行してください。",
+    "terminalAlternativeText": "デスクトップモードのターミナルにこのコマンドをコピーしてください。バージョン 0.3.0 をダウンロードし、成功した場合のみインストーラーを起動します。sudo を付けず、通常のユーザーで実行してください。",
     "videoCredit": "起動動画には、自作のものと steamdeckrepo.com からのものが含まれています。",
     "tutorialWatch": "YouTube で解説動画を見る"
   }

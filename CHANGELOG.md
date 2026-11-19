@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 — 2026-11-19
+
+- Deutscher Backlog-Bildschirmschoner optional integriert, nach LiveWallpaper und vor Emulation.
+- Shuffle-Vorgaben bei neuer Installation; vorhandene Einstellungen bleiben erhalten.
+- Runtime-Paket, eigenständige Installer, Dokumentation und Webseite aktualisiert.
+
 ## 0.2.1 — 2026-11-05
 
 - LiveWallpaper auf das bereitgestellte Paket 0.3.2 aktualisiert; Neon-Emblem-SDC als Vorgabe.

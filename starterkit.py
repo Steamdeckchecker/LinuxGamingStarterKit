@@ -33,7 +33,7 @@ import uuid
 import zipfile
 import zlib
 
-VERSION = "0.2.1"
+VERSION = "0.3.0"
 LIVE_WALLPAPER_ID = "org.steamdeckchecker.livebackground"
 LIVE_WALLPAPER_ARCHIVE = "Live_Background_KDE_v0.3.2.zip"
 LIVE_WALLPAPER_SHA256 = "b67ce8339ff079784dfdfdbb3e9565da43999a75334d2d9de1ddd2e107aa150d"
@@ -42,6 +42,10 @@ LIVE_WALLPAPER_URL = "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.s
 # BEGIN EMBEDDED DESKTOP ICONS
 EMBEDDED_DESKTOP_ICONS = {}
 # END EMBEDDED DESKTOP ICONS
+BACKLOG_ARCHIVE = "Backlog-v1.0.2-DE1-runtime.zip"
+BACKLOG_SHA256 = "9ea6c277d68df936e8b81b7b037445642a72ead7ad9b9178e171ced511286674"
+BACKLOG_URL = "https://raw.githubusercontent.com/Steamdeckchecker/LinuxGamingStarterKit/main/assets/" + BACKLOG_ARCHIVE
+
 LANGUAGES = {"de": "Deutsch", "en": "English", "es": "Español", "fr": "Français",
              "ru": "Русский", "zh": "中文（简体）", "ja": "日本語"}
 LANG_ORDER = ("en", "de", "es", "fr", "ru", "zh", "ja")
@@ -89,12 +93,12 @@ TEXT = {
     "close_steam": L("Steam will now close. Finish any game or download first. Continue?", "Steam wird jetzt beendet. Bitte vorher Spiele und Downloads abschließen. Fortfahren?", "Steam se cerrará. Termina tus juegos y descargas. ¿Continuar?", "Steam va se fermer. Terminez vos jeux et téléchargements. Continuer ?", "Steam будет закрыт. Сначала завершите игры и загрузки. Продолжить?", "即将关闭 Steam。请先结束游戏和下载。继续吗？", "Steam を終了します。ゲームやダウンロードを終えてから続行してください。続行しますか？"),
     "profile": L("Select the Steam account to receive the shortcuts.", "Steam-Konto auswählen, dem die Verknüpfungen hinzugefügt werden sollen.", "Elige la cuenta de Steam para los accesos directos.", "Choisissez le compte Steam pour les raccourcis.", "Выберите учётную запись Steam для ярлыков.", "选择用于添加快捷方式的 Steam 账户。", "ショートカットを追加する Steam アカウントを選択してください。"),
     "steam_done": L("Steam shortcuts saved. Steam is running again.", "Steam-Verknüpfungen gespeichert. Steam wurde wieder gestartet.", "Accesos directos guardados. Steam está en ejecución de nuevo.", "Raccourcis enregistrés. Steam a été relancé.", "Ярлыки сохранены. Steam снова запущен.", "Steam 快捷方式已保存，Steam 已重新启动。", "Steam ショートカットを保存し、Steam を再起動しました。"),
-    "emulation": L("9 · Emulation", "9 · Emulation", "9 · Emulación", "9 · Émulation", "9 · Эмуляция", "9 · 模拟器", "9 · エミュレーション"),
+    "emulation": L("10 · Emulation", "10 · Emulation", "10 · Emulación", "10 · Émulation", "10 · Эмуляция", "10 · 模拟器", "10 · エミュレーション"),
     "emu_q": L("Choose an emulation setup, or skip.", "Emulationslösung auswählen oder überspringen.", "Elige una solución de emulación o salta este paso.", "Choisissez une solution d'émulation ou ignorez cette étape.", "Выберите решение для эмуляции или пропустите.", "选择模拟器方案，或跳过此步骤。", "エミュレーション環境を選択するか、スキップしてください。"),
     "retro_desc": L("All-in-one Flatpak emulation suite", "Emulationspaket als Flatpak", "Suite de emulación Flatpak", "Suite d'émulation Flatpak", "Комплект эмуляторов Flatpak", "一体化 Flatpak 模拟器套件", "Flatpak 形式の統合エミュレーター"),
     "emu_desc": L("Official EmuDeck setup; finish its wizard and close it to continue", "Offizielle EmuDeck-Einrichtung; Assistent abschließen und zum Fortfahren schließen", "Configuración oficial; completa y cierra su asistente para continuar", "Configuration officielle ; terminez et fermez l'assistant pour continuer", "Официальная настройка; завершите и закройте мастер для продолжения", "官方 EmuDeck 安装；完成并关闭其向导后继续", "公式 EmuDeck セットアップ。ウィザードを完了して閉じると続行します"),
     "emu_wait": L("The official EmuDeck application will open. Complete its setup and close the application. The Starter Kit waits until it exits.", "Die offizielle EmuDeck-Anwendung öffnet sich. Bitte die Einrichtung abschließen und die Anwendung schließen. Das Starter Kit wartet bis zum Beenden.", "Se abrirá EmuDeck oficial. Completa su configuración y ciérralo. El Starter Kit esperará.", "EmuDeck officiel va s'ouvrir. Terminez la configuration puis fermez-le. Le Starter Kit attend sa fermeture.", "Откроется официальный EmuDeck. Завершите настройку и закройте его. Starter Kit будет ждать.", "即将打开官方 EmuDeck 应用。请完成设置并关闭应用。Starter Kit 会等待其退出。", "公式 EmuDeck が開きます。セットアップを完了し、アプリを閉じてください。Starter Kit は終了まで待機します。"),
-    "finish": L("10 · Finished", "10 · Abgeschlossen", "10 · Finalizado", "10 · Terminé", "10 · Завершено", "10 · 完成", "10 · 完了"),
+    "finish": L("11 · Finished", "11 · Abgeschlossen", "11 · Finalizado", "11 · Terminé", "11 · Завершено", "11 · 完成", "11 · 完了"),
     "reboot": L("Setup is finished. Restart now to activate the changes?", "Die Einrichtung ist abgeschlossen. Jetzt neu starten, um die Änderungen zu aktivieren?", "Configuración terminada. ¿Reiniciar ahora para activar los cambios?", "Configuration terminée. Redémarrer maintenant pour activer les changements ?", "Настройка завершена. Перезагрузить сейчас для применения изменений?", "设置已完成。现在重启以应用更改吗？", "セットアップが完了しました。変更を有効にするため、今すぐ再起動しますか？"),
     "summary": L("Completed: {ok}\nFailed: {failed}\nSkipped: {skipped}\n\nLog: {log}", "Erfolgreich: {ok}\nFehlgeschlagen: {failed}\nÜbersprungen: {skipped}\n\nProtokoll: {log}", "Completado: {ok}\nFallido: {failed}\nOmitido: {skipped}\n\nRegistro: {log}", "Réussi : {ok}\nÉchec : {failed}\nIgnoré : {skipped}\n\nJournal : {log}", "Успешно: {ok}\nОшибок: {failed}\nПропущено: {skipped}\n\nЖурнал: {log}", "成功：{ok}\n失败：{failed}\n跳过：{skipped}\n\n日志：{log}", "成功：{ok}\n失敗：{failed}\nスキップ：{skipped}\n\nログ：{log}"),
     "failed": L("{item} failed.\n{error}\n\nThe next step will only start after this message is closed.", "{item} ist fehlgeschlagen.\n{error}\n\nDer nächste Schritt beginnt erst nach dem Schließen dieser Meldung.", "Falló {item}.\n{error}\n\nEl siguiente paso esperará a que cierres este mensaje.", "Échec : {item}.\n{error}\n\nL'étape suivante attend la fermeture de ce message.", "Ошибка: {item}.\n{error}\n\nСледующий шаг начнётся после закрытия сообщения.", "{item} 失败。\n{error}\n\n关闭此消息后才会开始下一步。", "{item} に失敗しました。\n{error}\n\nこのメッセージを閉じるまで、次の処理は始まりません。"),
@@ -170,6 +174,13 @@ TEXT.update({
         "Обои установлены, но автоматическое включение не подтверждено. В настройках выберите Live Background (KDE) → неоновая эмблема. После обновления сначала перезапустите сеанс.",
         "壁纸已安装，但无法确认自动启用。请在桌面壁纸设置中选择 Live Background (KDE) → 霓虹徽章。更新后请先重新登录。",
         "壁紙はインストール済みですが、自動有効化を確認できませんでした。壁紙設定で Live Background (KDE) → ネオンエンブレムを選択してください。更新後は先に再ログインしてください。"),
+})
+
+
+TEXT.update({
+    'backlog': L('9 · Backlog screensaver', '9 · Backlog-Bildschirmschoner', '9 · Salvapantallas Backlog', '9 · Économiseur Backlog', '9 · Заставка Backlog', '9 · Backlog 屏幕保护程序', '9 · Backlog スクリーンセーバー'),
+    'backlog_q': L('Install Backlog 1.0.2-DE1 with German on-screen text? New installations shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes your local Steam library every 15 minutes. No administrator rights are needed.', 'Backlog 1.0.2-DE1 mit deutschen Bildschirmanzeigen installieren? Neue Installationen wechseln per Shuffle alle 5 Minuten zwischen Mosaik, Drift, Flip und Wellen. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten. Keine Administratorrechte erforderlich.', '¿Instalar Backlog 1.0.2-DE1 con textos en alemán? Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Se conservan los ajustes existentes. Un temporizador de usuario actualiza los datos locales de Steam cada 15 minutos. No requiere permisos de administrador.', 'Installer Backlog 1.0.2-DE1 avec des textes en allemand ? Les nouvelles installations alternent aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés. Un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes. Aucun droit administrateur requis.', 'Установить Backlog 1.0.2-DE1 с немецкими надписями? Новая установка случайно меняет сцены Mosaic, Drift, Flip и Ripple каждые 5 минут. Существующие настройки сохраняются. Пользовательский таймер обновляет локальные данные Steam каждые 15 минут. Права администратора не нужны.', '安装使用德语显示文本的 Backlog 1.0.2-DE1 吗？新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。现有设置保留。用户定时器每 15 分钟更新本地 Steam 游戏数据，无需管理员权限。', 'ドイツ語表示の Backlog 1.0.2-DE1 をインストールしますか？新規インストールでは Mosaic、Drift、Flip、Ripple が 5 分ごとにランダムに切り替わります。既存の設定は保持し、ユーザータイマーで Steam のローカルデータを 15 分ごとに更新します。管理者権限は不要です。'),
+    'backlog_done': L('Backlog is installed. In Steam Game Mode / Big Picture, open Settings → Customization → Screensaver and select backlog. Existing config.js settings were preserved. New installs use shuffle with all four scenes, 5 minutes per scene and a 24-hour clock. Scenes and timing can be changed in the installed config.js. If the entry is missing, restart Steam.', 'Backlog ist installiert. In Steam im Spielmodus / Big Picture unter Einstellungen → Anpassung → Bildschirmschoner den Eintrag backlog auswählen. Eine vorhandene config.js wurde beibehalten. Neue Installationen verwenden Shuffle mit allen vier Szenen, 5 Minuten je Szene und eine 24-Stunden-Uhr. Szenen und Dauer lassen sich in der installierten config.js ändern. Fehlt der Eintrag, Steam neu starten.', 'Backlog instalado. En modo juego / Big Picture abre Ajustes → Personalización → Salvapantallas y elige backlog. Se conserva config.js. Una instalación nueva usa las cuatro escenas aleatorias, 5 minutos por escena y reloj de 24 horas. Edita config.js para cambiar escenas y duración. Si no aparece, reinicia Steam.', 'Backlog est installé. Dans Steam en mode jeu / Big Picture : Paramètres → Personnalisation → Économiseur d’écran → backlog. Le fichier config.js existant est conservé. Par défaut : quatre scènes aléatoires, 5 minutes et horloge sur 24 heures. Modifiez config.js pour changer les scènes et la durée. Redémarrez Steam si nécessaire.', 'Backlog установлен. В игровом режиме / Big Picture откройте настройки оформления и выберите заставку backlog. Существующий config.js сохранён. По умолчанию: четыре случайные сцены, по 5 минут и 24-часовые часы. Сцены и время меняются в config.js. Если заставки нет в списке, перезапустите Steam.', 'Backlog 已安装。在 Steam 游戏模式 / Big Picture 的设置 → 个性化 → 屏幕保护程序中选择 backlog。现有 config.js 已保留。新安装默认随机播放四种场景，每场景 5 分钟，使用 24 小时制。可编辑安装目录内的 config.js 更改场景和时间；如未出现，请重启 Steam。', 'Backlog をインストールしました。Steam のゲームモード / Big Picture の設定 → カスタマイズ → スクリーンセーバーで backlog を選択してください。既存の config.js は保持します。新規の場合は全 4 シーンのシャッフル、各 5 分、24 時間表示です。シーンと時間は config.js で変更できます。一覧にない場合は Steam を再起動してください。'),
 })
 
 # BEGIN EMBEDDED RECOMMENDATIONS
@@ -1690,6 +1701,43 @@ print("STARTER_KIT_NEON_ACTIVE:" + configured);
         if ok:
             self.ui.info(self.tr("live_wallpaper"), self.tr("live_wallpaper_done"))
 
+    def install_backlog(self):
+        if self.dry:
+            self.log.info("SIMULATION: install German Backlog; preserve config.js; enable local library refresh")
+            return
+        if not self.steam:
+            raise RuntimeError(self.tr("no_steam"))
+        archive = self.base / "assets" / BACKLOG_ARCHIVE
+        if not archive.is_file():
+            archive = self.network.download(BACKLOG_URL, self.work / BACKLOG_ARCHIVE,
+                                            digest=BACKLOG_SHA256, limit=16 * 1024**2)
+        if hashlib.sha256(archive.read_bytes()).hexdigest() != BACKLOG_SHA256:
+            raise ValueError("Backlog SHA-256 mismatch")
+        stage = extract_archive(archive, Path(tempfile.mkdtemp(prefix="backlog-", dir=self.work)),
+                                limit=16 * 1024**2, progress=self.progress)
+        package = stage / "backlog-de"
+        script = package / "tools/sync.py"
+        if not script.is_file() or not (package / "LICENSE").is_file():
+            raise ValueError("Incomplete Backlog package")
+        # Use the detected native/Flatpak Steam root. The upstream installer
+        # keeps config.js and installs a persistent user copy for its timer.
+        self.runner.run([sys.executable, str(script), "--install", "--steam", str(self.steam)], timeout=1200)
+        target = self.steam / "config/uioverrides/screensavers/backlog"
+        for name in ("index.html", "core.js", "config.js", "library/library.js"):
+            if not (target / name).is_file():
+                raise RuntimeError("Backlog installation was not found: " + str(target / name))
+        if (target / "core.js").read_bytes() != (package / "backlog/core.js").read_bytes():
+            raise RuntimeError("Backlog installation could not be verified")
+        self.log.info("Backlog settings: %s", target / "config.js")
+
+    def backlog(self):
+        if not self.ui.question(self.tr("backlog"), self.tr("backlog_q")):
+            self.result(self.tr("backlog"), "skipped")
+            return
+        ok, _ = self.attempt("Backlog 1.0.2-DE1", self.install_backlog)
+        if ok:
+            self.ui.info(self.tr("backlog"), self.tr("backlog_done"))
+
     def install_emudeck(self):
         if self.dry:
             self.log.info("SIMULATION: download and run official EmuDeck AppImage; wait for process exit")
@@ -1759,6 +1807,8 @@ print("STARTER_KIT_NEON_ACTIVE:" + configured);
             self.desktop_links()
             self.log.info(self.tr("live_wallpaper"))
             self.live_wallpaper()
+            self.log.info(self.tr("backlog"))
+            self.backlog()
             self.log.info(self.tr("emulation"))
             self.emulation()
             self.log.info(self.tr("finish"))
@@ -1785,6 +1835,7 @@ def main(argv=None):
         print(json.dumps({"version": VERSION, "os": read_os_release(), "user": pwd.getpwuid(os.getuid()).pw_name, "home": str(home),
                           "steam": str(discover_steam(home) or ""), "tools": {x: shutil.which(x) for x in ("python3", "zenity", "kdialog", "sudo", "passwd", "flatpak", "curl", "jq", "systemctl", "plasmashell", "kpackagetool6", "qdbus6", "qdbus-qt6", "qdbus")},
                           "languages": LANGUAGES, "included_recommendations": len(parse_recommend(EMBEDDED_RECOMMENDATIONS)),
+                          "backlog": {"version": "1.0.2-DE1", "language": "de", "shuffle_new_install": True, "minutes_new_install": 5, "sha256": BACKLOG_SHA256},
                           "live_wallpaper": {"version": "0.3.2", "default_theme": "neon", "sha256": LIVE_WALLPAPER_SHA256}}, ensure_ascii=False, indent=2))
         return 0
     if os.geteuid() == 0:
