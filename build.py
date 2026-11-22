@@ -17,7 +17,7 @@ icons = {name: base64.b64encode(zlib.compress((BASE / "assets" / name).read_byte
 source = re.sub(r"# BEGIN EMBEDDED DESKTOP ICONS\n.*?\n# END EMBEDDED DESKTOP ICONS", lambda match: "# BEGIN EMBEDDED DESKTOP ICONS\nEMBEDDED_DESKTOP_ICONS = " + repr(icons) + "\n# END EMBEDDED DESKTOP ICONS", source, flags=re.S)
 compile(source, "starterkit.py", "exec")
 header = r'''#!/usr/bin/env bash
-# Linux Handheld Starter Kit — Steam Deck Checker — 0.3.0
+# Linux Handheld Starter Kit — Steam Deck Checker — 0.3.1
 # Run as your normal desktop user: bash install.sh
 # The embedded Python code uses only the standard library.
 set -euo pipefail

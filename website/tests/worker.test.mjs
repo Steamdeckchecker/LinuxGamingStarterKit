@@ -88,10 +88,10 @@ test('all languages expose exactly 28 plugin links and wallpaper before emulatio
     assert.equal((page.match(/role="tab"/g) || []).length, 6, lang);
     assert.ok(page.includes('href="https://github.com/Steamdeckchecker/LiveWallpaper"'), lang);
     assert.ok(page.includes('KDE Plasma 6') && page.includes('QtWebEngine'), lang);
-    assert.ok(page.includes('v0.3.0') && !page.includes('v0.1.0'), lang);
+    assert.ok(page.includes('v0.3.1') && !page.includes('v0.1.0'), lang);
     const content = JSON.parse(await readFile(new URL('../content.json', import.meta.url), 'utf8'));
     assert.equal(content[lang].tabs[4].label, 'Backlog');
-    assert.ok(page.includes('1.0.2-DE1') && page.includes('glidiandev/backlog'));
+    assert.ok(page.includes('1.0.4-DE1') && page.includes('Steamdeckchecker/backlog-german/releases/tag/v1.0.4-DE1'));
     assert.equal(content[lang].tabs[3].label.includes('LiveWallpaper') || ['zh','ja'].includes(lang), true);
     assert.ok(content[lang].kitIntro.includes('Steam Deck Checker'), lang);
   }
@@ -114,7 +114,7 @@ test('final deployment artifact serves pages, original logo and correct installe
   assert.equal(desktop.headers.get('content-type'), 'application/x-desktop');
   assert.match(desktop.headers.get('content-disposition'), /attachment; filename="Linux-Handheld-Starter-Kit.desktop"/);
   assert.deepEqual(Buffer.from(await desktop.arrayBuffer()), await readFile(new URL('../public/downloads/Linux-Handheld-Starter-Kit.desktop', import.meta.url)));
-  const backlogPath = '/downloads/Backlog-v1.0.2-DE1-runtime.zip';
+  const backlogPath = '/downloads/Backlog-v1.0.4-DE1-runtime.zip';
   const backlog = await worker.fetch(request(backlogPath));
   assert.equal(backlog.status, 200);
   assert.deepEqual(Buffer.from(await backlog.arrayBuffer()), await readFile(new URL('../public' + backlogPath, import.meta.url)));

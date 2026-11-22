@@ -33,7 +33,7 @@ import uuid
 import zipfile
 import zlib
 
-VERSION = "0.3.0"
+VERSION = "0.3.1"
 LIVE_WALLPAPER_ID = "org.steamdeckchecker.livebackground"
 LIVE_WALLPAPER_ARCHIVE = "Live_Background_KDE_v0.3.2.zip"
 LIVE_WALLPAPER_SHA256 = "b67ce8339ff079784dfdfdbb3e9565da43999a75334d2d9de1ddd2e107aa150d"
@@ -42,8 +42,8 @@ LIVE_WALLPAPER_URL = "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.s
 # BEGIN EMBEDDED DESKTOP ICONS
 EMBEDDED_DESKTOP_ICONS = {}
 # END EMBEDDED DESKTOP ICONS
-BACKLOG_ARCHIVE = "Backlog-v1.0.2-DE1-runtime.zip"
-BACKLOG_SHA256 = "9ea6c277d68df936e8b81b7b037445642a72ead7ad9b9178e171ced511286674"
+BACKLOG_ARCHIVE = "Backlog-v1.0.4-DE1-runtime.zip"
+BACKLOG_SHA256 = "c4854ba298d5b4275e964e1862e86fc2eb994a895b40471b57766a34f1966fe3"
 BACKLOG_URL = "https://raw.githubusercontent.com/Steamdeckchecker/LinuxGamingStarterKit/main/assets/" + BACKLOG_ARCHIVE
 
 LANGUAGES = {"de": "Deutsch", "en": "English", "es": "Español", "fr": "Français",
@@ -179,7 +179,7 @@ TEXT.update({
 
 TEXT.update({
     'backlog': L('9 · Backlog screensaver', '9 · Backlog-Bildschirmschoner', '9 · Salvapantallas Backlog', '9 · Économiseur Backlog', '9 · Заставка Backlog', '9 · Backlog 屏幕保护程序', '9 · Backlog スクリーンセーバー'),
-    'backlog_q': L('Install Backlog 1.0.2-DE1 with German on-screen text? New installations shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes your local Steam library every 15 minutes. No administrator rights are needed.', 'Backlog 1.0.2-DE1 mit deutschen Bildschirmanzeigen installieren? Neue Installationen wechseln per Shuffle alle 5 Minuten zwischen Mosaik, Drift, Flip und Wellen. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten. Keine Administratorrechte erforderlich.', '¿Instalar Backlog 1.0.2-DE1 con textos en alemán? Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Se conservan los ajustes existentes. Un temporizador de usuario actualiza los datos locales de Steam cada 15 minutos. No requiere permisos de administrador.', 'Installer Backlog 1.0.2-DE1 avec des textes en allemand ? Les nouvelles installations alternent aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés. Un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes. Aucun droit administrateur requis.', 'Установить Backlog 1.0.2-DE1 с немецкими надписями? Новая установка случайно меняет сцены Mosaic, Drift, Flip и Ripple каждые 5 минут. Существующие настройки сохраняются. Пользовательский таймер обновляет локальные данные Steam каждые 15 минут. Права администратора не нужны.', '安装使用德语显示文本的 Backlog 1.0.2-DE1 吗？新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。现有设置保留。用户定时器每 15 分钟更新本地 Steam 游戏数据，无需管理员权限。', 'ドイツ語表示の Backlog 1.0.2-DE1 をインストールしますか？新規インストールでは Mosaic、Drift、Flip、Ripple が 5 分ごとにランダムに切り替わります。既存の設定は保持し、ユーザータイマーで Steam のローカルデータを 15 分ごとに更新します。管理者権限は不要です。'),
+    'backlog_q': L('Install Backlog 1.0.4-DE1 with German on-screen text? New installations shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes your local Steam library every 15 minutes. No administrator rights are needed.', 'Backlog 1.0.4-DE1 mit deutschen Bildschirmanzeigen installieren? Neue Installationen wechseln per Shuffle alle 5 Minuten zwischen Mosaik, Drift, Flip und Wellen. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten. Keine Administratorrechte erforderlich.', '¿Instalar Backlog 1.0.4-DE1 con textos en alemán? Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Se conservan los ajustes existentes. Un temporizador de usuario actualiza los datos locales de Steam cada 15 minutos. No requiere permisos de administrador.', 'Installer Backlog 1.0.4-DE1 avec des textes en allemand ? Les nouvelles installations alternent aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés. Un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes. Aucun droit administrateur requis.', 'Установить Backlog 1.0.4-DE1 с немецкими надписями? Новая установка случайно меняет сцены Mosaic, Drift, Flip и Ripple каждые 5 минут. Существующие настройки сохраняются. Пользовательский таймер обновляет локальные данные Steam каждые 15 минут. Права администратора не нужны.', '安装使用德语显示文本的 Backlog 1.0.4-DE1 吗？新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。现有设置保留。用户定时器每 15 分钟更新本地 Steam 游戏数据，无需管理员权限。', 'ドイツ語表示の Backlog 1.0.4-DE1 をインストールしますか？新規インストールでは Mosaic、Drift、Flip、Ripple が 5 分ごとにランダムに切り替わります。既存の設定は保持し、ユーザータイマーで Steam のローカルデータを 15 分ごとに更新します。管理者権限は不要です。'),
     'backlog_done': L('Backlog is installed. In Steam Game Mode / Big Picture, open Settings → Customization → Screensaver and select backlog. Existing config.js settings were preserved. New installs use shuffle with all four scenes, 5 minutes per scene and a 24-hour clock. Scenes and timing can be changed in the installed config.js. If the entry is missing, restart Steam.', 'Backlog ist installiert. In Steam im Spielmodus / Big Picture unter Einstellungen → Anpassung → Bildschirmschoner den Eintrag backlog auswählen. Eine vorhandene config.js wurde beibehalten. Neue Installationen verwenden Shuffle mit allen vier Szenen, 5 Minuten je Szene und eine 24-Stunden-Uhr. Szenen und Dauer lassen sich in der installierten config.js ändern. Fehlt der Eintrag, Steam neu starten.', 'Backlog instalado. En modo juego / Big Picture abre Ajustes → Personalización → Salvapantallas y elige backlog. Se conserva config.js. Una instalación nueva usa las cuatro escenas aleatorias, 5 minutos por escena y reloj de 24 horas. Edita config.js para cambiar escenas y duración. Si no aparece, reinicia Steam.', 'Backlog est installé. Dans Steam en mode jeu / Big Picture : Paramètres → Personnalisation → Économiseur d’écran → backlog. Le fichier config.js existant est conservé. Par défaut : quatre scènes aléatoires, 5 minutes et horloge sur 24 heures. Modifiez config.js pour changer les scènes et la durée. Redémarrez Steam si nécessaire.', 'Backlog установлен. В игровом режиме / Big Picture откройте настройки оформления и выберите заставку backlog. Существующий config.js сохранён. По умолчанию: четыре случайные сцены, по 5 минут и 24-часовые часы. Сцены и время меняются в config.js. Если заставки нет в списке, перезапустите Steam.', 'Backlog 已安装。在 Steam 游戏模式 / Big Picture 的设置 → 个性化 → 屏幕保护程序中选择 backlog。现有 config.js 已保留。新安装默认随机播放四种场景，每场景 5 分钟，使用 24 小时制。可编辑安装目录内的 config.js 更改场景和时间；如未出现，请重启 Steam。', 'Backlog をインストールしました。Steam のゲームモード / Big Picture の設定 → カスタマイズ → スクリーンセーバーで backlog を選択してください。既存の config.js は保持します。新規の場合は全 4 シーンのシャッフル、各 5 分、24 時間表示です。シーンと時間は config.js で変更できます。一覧にない場合は Steam を再起動してください。'),
 })
 
@@ -1734,7 +1734,7 @@ print("STARTER_KIT_NEON_ACTIVE:" + configured);
         if not self.ui.question(self.tr("backlog"), self.tr("backlog_q")):
             self.result(self.tr("backlog"), "skipped")
             return
-        ok, _ = self.attempt("Backlog 1.0.2-DE1", self.install_backlog)
+        ok, _ = self.attempt("Backlog 1.0.4-DE1", self.install_backlog)
         if ok:
             self.ui.info(self.tr("backlog"), self.tr("backlog_done"))
 
@@ -1835,7 +1835,7 @@ def main(argv=None):
         print(json.dumps({"version": VERSION, "os": read_os_release(), "user": pwd.getpwuid(os.getuid()).pw_name, "home": str(home),
                           "steam": str(discover_steam(home) or ""), "tools": {x: shutil.which(x) for x in ("python3", "zenity", "kdialog", "sudo", "passwd", "flatpak", "curl", "jq", "systemctl", "plasmashell", "kpackagetool6", "qdbus6", "qdbus-qt6", "qdbus")},
                           "languages": LANGUAGES, "included_recommendations": len(parse_recommend(EMBEDDED_RECOMMENDATIONS)),
-                          "backlog": {"version": "1.0.2-DE1", "language": "de", "shuffle_new_install": True, "minutes_new_install": 5, "sha256": BACKLOG_SHA256},
+                          "backlog": {"version": "1.0.4-DE1", "language": "de", "shuffle_new_install": True, "minutes_new_install": 5, "sha256": BACKLOG_SHA256},
                           "live_wallpaper": {"version": "0.3.2", "default_theme": "neon", "sha256": LIVE_WALLPAPER_SHA256}}, ensure_ascii=False, indent=2))
         return 0
     if os.geteuid() == 0:

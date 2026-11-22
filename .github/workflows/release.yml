@@ -53,5 +53,5 @@ jobs:
           else
             gh release create "$tag" --target "$GITHUB_SHA" --title "$tag — Linux Handheld Starter Kit" --notes-file "$notes" --draft
           fi
-          gh release upload "$tag" release/install.sh release/Linux-Handheld-Starter-Kit.desktop "release/Linux-Handheld-Starter-Kit-$tag.zip" release/Live_Background_KDE_v0.3.2.zip release/Backlog-v1.0.2-DE1-runtime.zip release/SHA256SUMS --clobber
+          gh release upload "$tag" release/install.sh release/Linux-Handheld-Starter-Kit.desktop "release/Linux-Handheld-Starter-Kit-$tag.zip" release/Live_Background_KDE_v0.3.2.zip release/Backlog-v1.0.4-DE1-runtime.zip release/SHA256SUMS --clobber
           gh release edit "$tag" --draft=false --prerelease=false --latest

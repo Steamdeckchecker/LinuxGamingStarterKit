@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://www.youtube.com/@SteamDeckChecker/"><img src="assets/steam-deck-checker.png" width="180" alt="Steam Deck Checker"></a></p>
 
-# Linux Handheld Starter Kit · 0.3.0
+# Linux Handheld Starter Kit · 0.3.1
 
 Geführte Ersteinrichtung für Linux-Handhelds mit
 **[SteamOS](https://store.steampowered.com/steamos/), [CachyOS](https://cachyos.org/)
@@ -14,8 +14,8 @@ Die Oberfläche nutzt **Zenity** oder **KDialog**, die Installationen laufen
 einzeln und synchron. Die `install.sh` enthält den vollständigen Programmcode.
 Ein Klonen des Projekts oder das Installieren von Python-Paketen ist nicht nötig.
 
-**Veröffentlichung:** v0.3.0 ergänzt den deutschen Backlog-Bildschirmschoner; LiveWallpaper, 28 Plugin-Empfehlungen und Desktop-Links bleiben enthalten.
-92 automatisierte Installer-Tests bestehen, darunter die Erstinstallation und Aktualisierung des
+**Veröffentlichung:** v0.3.1 aktualisiert den integrierten deutschen Backlog-Bildschirmschoner auf 1.0.4-DE1; LiveWallpaper, 28 Plugin-Empfehlungen und Desktop-Links bleiben enthalten.
+93 automatisierte Installer-Tests bestehen, darunter die Erstinstallation und Aktualisierung des
 Wallpaper-Pakets mit isolierten KDE-Werkzeugen. Die neue Integration muss noch auf einem vollständigen
 Plasma-6-Desktop unter SteamOS, CachyOS beziehungsweise Bazzite geprüft werden. Die Funktion einzelner
 Decky-Plugins und externer Apps hängt zusätzlich von deren eigener Unterstützung
@@ -33,7 +33,7 @@ für die jeweilige Steam-Version, Distribution und Hardware ab.
 | --- | --- |
 | [Linux-Handheld-Starter-Kit.desktop](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit.desktop) | Empfohlen: eigenständiger Starter per Doppelklick. |
 | [install.sh](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh) | Alternative für den Start im Terminal. |
-| [Quellcode-ZIP](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit-v0.3.0.zip) | Beide Starter, bearbeitbarer Quellcode, Webseite, Dokumentation und Tests. |
+| [Quellcode-ZIP](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/Linux-Handheld-Starter-Kit-v0.3.1.zip) | Beide Starter, bearbeitbarer Quellcode, Webseite, Dokumentation und Tests. |
 | [SHA256SUMS](https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/SHA256SUMS) | SHA-256-Prüfsummen für beide Starter und das ZIP. |
 
 Nur **eine** der beiden Startdateien herunterladen.
@@ -65,7 +65,7 @@ ausführen. Über das Kopiersymbol am Codeblock lässt er sich vollständig kopi
 curl -fL --retry 3 -o install.sh "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh" && bash install.sh
 ```
 
-Der Befehl speichert Version **0.3.0** als `install.sh` im aktuellen Ordner
+Der Befehl speichert Version **0.3.1** als `install.sh` im aktuellen Ordner
 und startet sie erst nach erfolgreichem Download. **Kein sudo voranstellen**;
 die benötigte Administratorberechtigung wird innerhalb des Assistenten angefragt.
 Wenn `install.sh` bereits heruntergeladen wurde, genügt `bash install.sh`.
@@ -406,10 +406,14 @@ Die vollständige englische Anleitung steht in [README.en.md](README.en.md).
 
 ## Backlog-Bildschirmschoner auf Deutsch
 
-Der optionale Ja/Nein-Schritt **nach LiveWallpaper und vor EmuDeck/RetroDECK** installiert **Backlog 1.0.2-DE1** mit deutschen Datums-, Spielstunden-, Zuletzt-gespielt- und Erfolgsanzeigen. Originalprojekt: [Backlog von Glidian](https://github.com/glidiandev/backlog), MIT-Lizenz; die Schriftlizenzen sind enthalten.
+Der optionale Ja/Nein-Schritt **nach LiveWallpaper und vor EmuDeck/RetroDECK** installiert **Backlog 1.0.4-DE1** mit deutschen Datums-, Spielstunden-, Zuletzt-gespielt- und Erfolgsanzeigen. Originalprojekt: [Backlog von Glidian](https://github.com/glidiandev/backlog), MIT-Lizenz; die Schriftlizenzen sind enthalten.
 
 Neue Installationen nutzen Mosaik, Drift, Flip und Wellen im Shuffle, je fünf Minuten und die 24-Stunden-Uhr. Bei Updates bleibt deine vorhandene `config.js` mit abweichenden Einstellungen erhalten. Szenen und Wechsel lassen sich unter `<Steam>/config/uioverrides/screensavers/backlog/config.js` mit `scenes`, `shuffle` und `minutesPerScene` einstellen. Der mitgelieferte eigenständige Backlog-Installer bietet dafür außerdem Szenen-, Dauer- und Uhrdialoge.
 
 In Steam im Spielmodus / Big Picture unter **Einstellungen → Anpassung → Bildschirmschoner → backlog** aktivieren. Keine Systempakete oder Administratorrechte nötig. Ein Benutzertimer aktualisiert die lokalen Spieledaten alle 15 Minuten; ausschalten mit `python3 ~/.local/share/backlog/sync.py --unschedule` (Standard-Datenordner).
 
-Im Komplettpaket liegt `assets/Backlog-v1.0.2-DE1-runtime.zip`. Die einzelnen Starter laden genau dieses per SHA-256 geprüfte Paket. Alle Laufzeitdateien des angehängten DE1-Pakets bleiben unverändert; nur die großen Vorschau-Bilder der Dokumentation sind weggelassen. Ein Test der neuen Integration im echten Steam-Spielmodus steht noch aus.
+Im Komplettpaket liegt `assets/Backlog-v1.0.4-DE1-runtime.zip`. Die einzelnen Starter laden genau dieses per SHA-256 geprüfte Paket. Alle Laufzeitdateien des angehängten DE1-Pakets bleiben unverändert; nur die großen Vorschau-Bilder der Dokumentation sind weggelassen. Ein Test der neuen Integration im echten Steam-Spielmodus steht noch aus.
+
+### Neu in Backlog 1.0.4-DE1
+
+Die [deutsche Version 1.0.4-DE1](https://github.com/Steamdeckchecker/backlog-german/releases/tag/v1.0.4-DE1) berücksichtigt zusätzlich den Steam-Cache des jeweiligen Spiels für zuverlässigere Erfolge. In Steam versteckte Spiele samt Screenshots werden standardmäßig ausgelassen und bei der nächsten Synchronisation aus bereits synchronisierten Daten entfernt. Um sie bewusst wieder anzuzeigen, in der installierten config.js unter `library: { ... }` die Option `showHidden: true` ergänzen. Eine ältere config.js ohne diese Option funktioniert weiter und blendet versteckte Spiele ebenfalls aus. Die übrigen Einstellungen bleiben erhalten.

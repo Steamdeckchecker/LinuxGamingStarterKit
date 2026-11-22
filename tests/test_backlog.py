@@ -144,3 +144,14 @@ assert.match(test.fmtDate(new Date(2026,10,19,12)), /DO, 19\. NOV/);
 '''
         result = subprocess.run([node, '-e', script], input=json.dumps(payload), text=True, capture_output=True, timeout=15)
         self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_bundled_1_0_4_regressions_for_achievements_hidden_games_and_config(self):
+        stage = kit.extract_archive(ROOT / 'assets' / kit.BACKLOG_ARCHIVE,
+                                    self.work / 'regressions', limit=16 * 1024**2)
+        package = stage / 'backlog-de'
+        self.assertEqual((package / 'VERSION').read_text().strip(), '1.0.4-DE1')
+        result = subprocess.run(
+            [kit.sys.executable, '-m', 'unittest', 'discover', '-s', str(package / 'tests'), '-v'],
+            capture_output=True, text=True, timeout=60)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn('Ran 9 tests', result.stderr)

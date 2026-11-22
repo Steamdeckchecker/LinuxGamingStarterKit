@@ -20,12 +20,12 @@ CONTENT = json.loads((BASE / "content.json").read_text())
 LATEST = json.loads((BASE / "latest-videos.json").read_text())
 ORIGIN = "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site"
 CHANNEL = "https://www.youtube.com/@SteamDeckChecker/"
-PACKAGE = "/downloads/Linux-Handheld-Starter-Kit-v0.3.0.zip"
+PACKAGE = "/downloads/Linux-Handheld-Starter-Kit-v0.3.1.zip"
 SCRIPT = "/downloads/install.sh"
 LAUNCHER = "/downloads/Linux-Handheld-Starter-Kit.desktop"
 GITHUB = "https://github.com/Steamdeckchecker/LinuxGamingStarterKit"
 TERMINAL_COMMAND = 'curl -fL --retry 3 -o install.sh "https://linux-handheld-starter-kit.cocoabloom514.chatgpt.site/downloads/install.sh" && bash install.sh'
-OFFICIAL = {"SteamOS": "https://store.steampowered.com/steamos/", "CachyOS": "https://cachyos.org/", "Bazzite": "https://bazzite.gg/", "Decky Loader": "https://decky.xyz/", "RetroDECK": "https://retrodeck.net/", "EmuDeck": "https://www.emudeck.com/", "LiveWallpaper": "https://github.com/Steamdeckchecker/LiveWallpaper", "Backlog": "https://github.com/glidiandev/backlog", "steamdeckrepo.com": "https://steamdeckrepo.com/"}
+OFFICIAL = {"SteamOS": "https://store.steampowered.com/steamos/", "CachyOS": "https://cachyos.org/", "Bazzite": "https://bazzite.gg/", "Decky Loader": "https://decky.xyz/", "RetroDECK": "https://retrodeck.net/", "EmuDeck": "https://www.emudeck.com/", "LiveWallpaper": "https://github.com/Steamdeckchecker/LiveWallpaper", "Backlog": "https://github.com/Steamdeckchecker/backlog-german/releases/tag/v1.0.4-DE1", "steamdeckrepo.com": "https://steamdeckrepo.com/"}
 RECOMMENDATIONS = [line.strip() for line in (DIST / "downloads/recommend.txt").read_text().splitlines()
                    if line.strip().startswith("https://github.com/")]
 LANGUAGES = {"de": "Deutsch", "en": "English", "es": "Español", "fr": "Français", "ru": "Русский", "zh": "中文", "ja": "日本語"}
@@ -151,7 +151,7 @@ def page(lang):
   </section>
   <section class="closing"><div class="wrap"><h2>{E(t['ctaTitle'])}</h2><p>{E(t['ctaText'])}</p>{button(t)}</div></section>
 </main>
-<footer class="footer wrap"><div class="footer-top"><div class="footer-identity"><a href="{CHANNEL}" target="_blank" rel="noopener noreferrer" aria-label="Steam Deck Checker · YouTube"><img src="/assets/steam-deck-checker.png" alt="Steam Deck Checker" width="391" height="166" loading="lazy"></a><p>{E(t['footer'])}</p></div><nav class="footer-links" aria-label="Steam Deck Checker"><a href="{CHANNEL}" target="_blank" rel="noopener noreferrer">{icon('youtube')}YouTube</a><a href="{GITHUB}" target="_blank" rel="noopener noreferrer">{icon('github')}GitHub</a><a href="{PACKAGE}" download>{E(t['source'])}{icon('download')}</a></nav></div><div class="footer-bottom"><p>{E(t['footerNote'])}</p><span>Linux Handheld Starter Kit · v0.3.0</span></div><nav class="language-links" aria-label="{E(t['language'])}">{language_links}</nav></footer>
+<footer class="footer wrap"><div class="footer-top"><div class="footer-identity"><a href="{CHANNEL}" target="_blank" rel="noopener noreferrer" aria-label="Steam Deck Checker · YouTube"><img src="/assets/steam-deck-checker.png" alt="Steam Deck Checker" width="391" height="166" loading="lazy"></a><p>{E(t['footer'])}</p></div><nav class="footer-links" aria-label="Steam Deck Checker"><a href="{CHANNEL}" target="_blank" rel="noopener noreferrer">{icon('youtube')}YouTube</a><a href="{GITHUB}" target="_blank" rel="noopener noreferrer">{icon('github')}GitHub</a><a href="{PACKAGE}" download>{E(t['source'])}{icon('download')}</a></nav></div><div class="footer-bottom"><p>{E(t['footerNote'])}</p><span>Linux Handheld Starter Kit · v0.3.1</span></div><nav class="language-links" aria-label="{E(t['language'])}">{language_links}</nav></footer>
 </body></html>'''
 
 

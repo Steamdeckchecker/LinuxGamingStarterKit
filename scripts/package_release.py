@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 version = (ROOT / "VERSION").read_text(encoding="ascii").strip()
 if not re.fullmatch(r"\d+\.\d+\.\d+", version):
     raise SystemExit("VERSION must contain a numeric major.minor.patch version")
+installer_source = (ROOT / "starterkit.py").read_text(encoding="utf-8")
+backlog_archive = re.search(r'^BACKLOG_ARCHIVE = "([^\"]+)"', installer_source, re.M)[1]
 source_version = re.search(r'^VERSION = "([^"]+)"', (ROOT / "starterkit.py").read_text(encoding="utf-8"), re.M)
 if source_version is None or source_version[1] != version:
     raise SystemExit("VERSION and starterkit.py disagree")
@@ -32,6 +34,10 @@ for folder in ["assets", "tests", "scripts", "docs", ".github", "website"]:
             continue
         relative = path.relative_to(ROOT)
         if "__pycache__" in relative.parts or path.suffix == ".pyc":
+            continue
+        # Keep legacy archives in GitHub for older single-file installers,
+        # but bundle only the currently selected Backlog runtime.
+        if relative.parts[0] == "assets" and path.name.startswith("Backlog-v") and path.suffix == ".zip" and path.name != backlog_archive:
             continue
         if relative.parts[0] == "website":
             if relative.parts[1] == "dist" or relative.as_posix() == "website/worker/index.js":
@@ -60,7 +66,7 @@ assets = [out / name for name in launchers] + [archive]
 wallpaper = ROOT / "assets/Live_Background_KDE_v0.3.2.zip"
 shutil.copy2(wallpaper, out / wallpaper.name)
 assets.append(out / wallpaper.name)
-backlog = ROOT / "assets/Backlog-v1.0.2-DE1-runtime.zip"
+backlog = ROOT / "assets" / backlog_archive
 shutil.copy2(backlog, out / backlog.name)
 assets.append(out / backlog.name)
 (out / "SHA256SUMS").write_text("".join(f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.name}\n" for path in assets), encoding="ascii")

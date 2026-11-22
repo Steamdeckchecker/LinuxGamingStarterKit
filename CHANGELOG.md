@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1 — 2026-11-22
+
+- Backlog auf die deutsche Version 1.0.4-DE1 aktualisiert.
+- Zuverlässigere Erfolgsdaten; versteckte Spiele und Screenshots standardmäßig ausgelassen.
+- Bestehende Einstellungen und Downloadpfade älterer einzelner Starter bleiben erhalten.
+- Neue Pakete, Prüfsummen, Backlog-Regressionstests und Webseitenhinweise.
+
 ## 0.3.0 — 2026-11-19
 
 - Deutscher Backlog-Bildschirmschoner optional integriert, nach LiveWallpaper und vor Emulation.

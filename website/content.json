@@ -7,7 +7,7 @@
       "Installation",
       "Tutorial"
     ],
-    "release": "v0.3.0 · Backlog + LiveWallpaper",
+    "release": "v0.3.1 · Backlog + LiveWallpaper",
     "eyebrow": "VON STEAM DECK CHECKER",
     "hero": [
       "Dein Linux-Handheld.",
@@ -62,7 +62,7 @@
       {
         "label": "Backlog",
         "title": "Deine Spielebibliothek als Bildschirmschoner.",
-        "text": "Optional nach LiveWallpaper und vor der Emulation: Backlog 1.0.2-DE1 zeigt Datum, Spielstunden, zuletzt gespielte Spiele und Erfolge auf Deutsch. Bei einer neuen Installation wechseln Mosaik, Drift, Flip und Wellen per Shuffle alle 5 Minuten. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten.",
+        "text": "Optional nach LiveWallpaper und vor der Emulation: Backlog 1.0.4-DE1 zeigt Datum, Spielstunden, zuletzt gespielte Spiele und Erfolge auf Deutsch. Bei einer neuen Installation wechseln Mosaik, Drift, Flip und Wellen per Shuffle alle 5 Minuten. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten. Neu in 1.0.4: zuverlässigere Erfolge aus Steams Spiel-Cache; versteckte Spiele und ihre Screenshots werden standardmäßig ausgelassen. Optional zeigt library.showHidden: true sie nach der nächsten Synchronisation wieder an.",
         "note": "In Steam im Spielmodus / Big Picture unter Einstellungen → Anpassung → Bildschirmschoner „backlog“ auswählen."
       },
       {
@@ -135,7 +135,7 @@
       ],
       [
         "Kann ich Backlog überspringen?",
-        "Optional nach LiveWallpaper und vor der Emulation: Backlog 1.0.2-DE1 zeigt Datum, Spielstunden, zuletzt gespielte Spiele und Erfolge auf Deutsch. Bei einer neuen Installation wechseln Mosaik, Drift, Flip und Wellen per Shuffle alle 5 Minuten. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten. In Steam im Spielmodus / Big Picture unter Einstellungen → Anpassung → Bildschirmschoner „backlog“ auswählen."
+        "Optional nach LiveWallpaper und vor der Emulation: Backlog 1.0.4-DE1 zeigt Datum, Spielstunden, zuletzt gespielte Spiele und Erfolge auf Deutsch. Bei einer neuen Installation wechseln Mosaik, Drift, Flip und Wellen per Shuffle alle 5 Minuten. Vorhandene Einstellungen bleiben erhalten. Ein Benutzertimer aktualisiert die lokalen Steam-Spieledaten alle 15 Minuten. In Steam im Spielmodus / Big Picture unter Einstellungen → Anpassung → Bildschirmschoner „backlog“ auswählen. Neu in 1.0.4: zuverlässigere Erfolge aus Steams Spiel-Cache; versteckte Spiele und ihre Screenshots werden standardmäßig ausgelassen. Optional zeigt library.showHidden: true sie nach der nächsten Synchronisation wieder an."
       ]
     ],
     "ctaTitle": "Mach deinen Handheld zu deinem.",
@@ -158,7 +158,7 @@
     "latestWatch": "Auf YouTube ansehen",
     "latestChannel": "Alle Videos auf YouTube",
     "terminalAlternative": "Alternativ im Terminal starten",
-    "terminalAlternativeText": "Kopiere diesen Befehl in ein Terminal im Desktop-Modus. Er lädt Version 0.3.0 herunter und startet den Installer erst nach erfolgreichem Download. Als normaler Benutzer ausführen, ohne sudo.",
+    "terminalAlternativeText": "Kopiere diesen Befehl in ein Terminal im Desktop-Modus. Er lädt Version 0.3.1 herunter und startet den Installer erst nach erfolgreichem Download. Als normaler Benutzer ausführen, ohne sudo.",
     "videoCredit": "Die Startvideos stammen sowohl aus eigener Hand als auch von steamdeckrepo.com.",
     "tutorialWatch": "Tutorial auf YouTube ansehen"
   },
@@ -170,7 +170,7 @@
       "Installation",
       "Tutorial"
     ],
-    "release": "v0.3.0 · Backlog + LiveWallpaper",
+    "release": "v0.3.1 · Backlog + LiveWallpaper",
     "eyebrow": "BY STEAM DECK CHECKER",
     "hero": [
       "Your Linux handheld.",
@@ -225,7 +225,7 @@
       {
         "label": "Backlog",
         "title": "Your Steam library as a screensaver.",
-        "text": "Optional after LiveWallpaper and before emulation: Backlog 1.0.2-DE1 displays dates, playtime, last played and achievements in German. New installs shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes local Steam library data every 15 minutes.",
+        "text": "Optional after LiveWallpaper and before emulation: Backlog 1.0.4-DE1 displays dates, playtime, last played and achievements in German. New installs shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes local Steam library data every 15 minutes. New in 1.0.4: more reliable achievements from Steam’s per-game cache; hidden games and their screenshots are excluded by default. Optionally set library.showHidden: true to restore them after the next sync.",
         "note": "In Steam Game Mode / Big Picture, choose Settings → Customization → Screensaver → backlog."
       },
       {
@@ -298,7 +298,7 @@
       ],
       [
         "Can I skip Backlog?",
-        "Optional after LiveWallpaper and before emulation: Backlog 1.0.2-DE1 displays dates, playtime, last played and achievements in German. New installs shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes local Steam library data every 15 minutes. In Steam Game Mode / Big Picture, choose Settings → Customization → Screensaver → backlog."
+        "Optional after LiveWallpaper and before emulation: Backlog 1.0.4-DE1 displays dates, playtime, last played and achievements in German. New installs shuffle Mosaic, Drift, Flip and Ripple every 5 minutes. Existing settings are preserved. A user timer refreshes local Steam library data every 15 minutes. In Steam Game Mode / Big Picture, choose Settings → Customization → Screensaver → backlog. New in 1.0.4: more reliable achievements from Steam’s per-game cache; hidden games and their screenshots are excluded by default. Optionally set library.showHidden: true to restore them after the next sync."
       ]
     ],
     "ctaTitle": "Make your handheld your own.",
@@ -321,7 +321,7 @@
     "latestWatch": "Watch on YouTube",
     "latestChannel": "All videos on YouTube",
     "terminalAlternative": "Alternatively, use a terminal",
-    "terminalAlternativeText": "Copy this command into a terminal in Desktop Mode. It downloads version 0.3.0 and starts the installer only after the download succeeds. Run as your normal user, without sudo.",
+    "terminalAlternativeText": "Copy this command into a terminal in Desktop Mode. It downloads version 0.3.1 and starts the installer only after the download succeeds. Run as your normal user, without sudo.",
     "videoCredit": "The startup movies include our own creations as well as videos from steamdeckrepo.com.",
     "tutorialWatch": "Watch the tutorial on YouTube"
   },
@@ -333,7 +333,7 @@
       "Instalación",
       "Tutorial"
     ],
-    "release": "v0.3.0 · Backlog + LiveWallpaper",
+    "release": "v0.3.1 · Backlog + LiveWallpaper",
     "eyebrow": "POR STEAM DECK CHECKER",
     "hero": [
       "Tu consola Linux.",
@@ -388,7 +388,7 @@
       {
         "label": "Backlog",
         "title": "Tu biblioteca de Steam como salvapantallas.",
-        "text": "Opcional después de LiveWallpaper y antes de la emulación: Backlog 1.0.2-DE1 muestra fechas, horas, última partida y logros en alemán. Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Conserva los ajustes existentes y actualiza los datos locales de Steam cada 15 minutos mediante un temporizador de usuario.",
+        "text": "Opcional después de LiveWallpaper y antes de la emulación: Backlog 1.0.4-DE1 muestra fechas, horas, última partida y logros en alemán. Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Conserva los ajustes existentes y actualiza los datos locales de Steam cada 15 minutos mediante un temporizador de usuario. Novedades de 1.0.4: logros más fiables desde la caché de cada juego de Steam; los juegos ocultos y sus capturas se excluyen por defecto. Con library.showHidden: true vuelven a aparecer tras la siguiente sincronización.",
         "note": "En modo juego / Big Picture, elige Ajustes → Personalización → Salvapantallas → backlog."
       },
       {
@@ -461,7 +461,7 @@
       ],
       [
         "¿Puedo omitir Backlog?",
-        "Opcional después de LiveWallpaper y antes de la emulación: Backlog 1.0.2-DE1 muestra fechas, horas, última partida y logros en alemán. Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Conserva los ajustes existentes y actualiza los datos locales de Steam cada 15 minutos mediante un temporizador de usuario. En modo juego / Big Picture, elige Ajustes → Personalización → Salvapantallas → backlog."
+        "Opcional después de LiveWallpaper y antes de la emulación: Backlog 1.0.4-DE1 muestra fechas, horas, última partida y logros en alemán. Las instalaciones nuevas alternan al azar Mosaico, Drift, Flip y Ondas cada 5 minutos. Conserva los ajustes existentes y actualiza los datos locales de Steam cada 15 minutos mediante un temporizador de usuario. En modo juego / Big Picture, elige Ajustes → Personalización → Salvapantallas → backlog. Novedades de 1.0.4: logros más fiables desde la caché de cada juego de Steam; los juegos ocultos y sus capturas se excluyen por defecto. Con library.showHidden: true vuelven a aparecer tras la siguiente sincronización."
       ]
     ],
     "ctaTitle": "Haz que tu consola sea más tuya.",
@@ -484,7 +484,7 @@
     "latestWatch": "Ver en YouTube",
     "latestChannel": "Todos los vídeos en YouTube",
     "terminalAlternative": "También puedes usar una terminal",
-    "terminalAlternativeText": "Copia este comando en una terminal en modo escritorio. Descarga la versión 0.3.0 e inicia el instalador solo si la descarga se completa correctamente. Ejecútalo como usuario normal, sin sudo.",
+    "terminalAlternativeText": "Copia este comando en una terminal en modo escritorio. Descarga la versión 0.3.1 e inicia el instalador solo si la descarga se completa correctamente. Ejecútalo como usuario normal, sin sudo.",
     "videoCredit": "Los vídeos de inicio incluyen creaciones propias y vídeos de steamdeckrepo.com.",
     "tutorialWatch": "Ver el tutorial en YouTube"
   },
@@ -496,7 +496,7 @@
       "Installation",
       "Tutoriel"
     ],
-    "release": "v0.3.0 · Backlog + LiveWallpaper",
+    "release": "v0.3.1 · Backlog + LiveWallpaper",
     "eyebrow": "PAR STEAM DECK CHECKER",
     "hero": [
       "Votre console Linux.",
@@ -551,7 +551,7 @@
       {
         "label": "Backlog",
         "title": "Votre bibliothèque Steam en économiseur d’écran.",
-        "text": "En option après LiveWallpaper et avant l’émulation : Backlog 1.0.2-DE1 affiche les dates, heures jouées, dernières parties et succès en allemand. Une nouvelle installation alterne aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés et un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes.",
+        "text": "En option après LiveWallpaper et avant l’émulation : Backlog 1.0.4-DE1 affiche les dates, heures jouées, dernières parties et succès en allemand. Une nouvelle installation alterne aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés et un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes. Nouveautés de 1.0.4 : succès plus fiables grâce au cache Steam de chaque jeu ; jeux masqués et captures exclus par défaut. library.showHidden: true permet de les réafficher après la prochaine synchronisation.",
         "note": "Dans Steam en mode jeu / Big Picture : Paramètres → Personnalisation → Économiseur d’écran → backlog."
       },
       {
@@ -624,7 +624,7 @@
       ],
       [
         "Puis-je ignorer Backlog ?",
-        "En option après LiveWallpaper et avant l’émulation : Backlog 1.0.2-DE1 affiche les dates, heures jouées, dernières parties et succès en allemand. Une nouvelle installation alterne aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés et un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes. Dans Steam en mode jeu / Big Picture : Paramètres → Personnalisation → Économiseur d’écran → backlog."
+        "En option après LiveWallpaper et avant l’émulation : Backlog 1.0.4-DE1 affiche les dates, heures jouées, dernières parties et succès en allemand. Une nouvelle installation alterne aléatoirement Mosaïque, Drift, Flip et Ondes toutes les 5 minutes. Les réglages existants sont conservés et un minuteur utilisateur actualise les données Steam locales toutes les 15 minutes. Dans Steam en mode jeu / Big Picture : Paramètres → Personnalisation → Économiseur d’écran → backlog. Nouveautés de 1.0.4 : succès plus fiables grâce au cache Steam de chaque jeu ; jeux masqués et captures exclus par défaut. library.showHidden: true permet de les réafficher après la prochaine synchronisation."
       ]
     ],
     "ctaTitle": "Une console qui vous ressemble.",
@@ -647,7 +647,7 @@
     "latestWatch": "Regarder sur YouTube",
     "latestChannel": "Toutes les vidéos sur YouTube",
     "terminalAlternative": "Autre possibilité : le terminal",
-    "terminalAlternativeText": "Copiez cette commande dans un terminal en mode Bureau. Elle télécharge la version 0.3.0 et lance l’installateur uniquement si le téléchargement réussit. Utilisez votre compte habituel, sans sudo.",
+    "terminalAlternativeText": "Copiez cette commande dans un terminal en mode Bureau. Elle télécharge la version 0.3.1 et lance l’installateur uniquement si le téléchargement réussit. Utilisez votre compte habituel, sans sudo.",
     "videoCredit": "Les vidéos de démarrage comprennent des créations personnelles ainsi que des vidéos provenant de steamdeckrepo.com.",
     "tutorialWatch": "Voir le tutoriel sur YouTube"
   },
@@ -659,7 +659,7 @@
       "Установка",
       "Видео"
     ],
-    "release": "v0.3.0 · Backlog + LiveWallpaper",
+    "release": "v0.3.1 · Backlog + LiveWallpaper",
     "eyebrow": "ОТ STEAM DECK CHECKER",
     "hero": [
       "Ваша консоль с Linux.",
@@ -714,7 +714,7 @@
       {
         "label": "Backlog",
         "title": "Ваша библиотека Steam как заставка.",
-        "text": "По желанию после LiveWallpaper и перед эмуляцией: Backlog 1.0.2-DE1 показывает даты, время в играх и достижения на немецком языке. При новой установке Mosaic, Drift, Flip и Ripple случайно сменяются каждые 5 минут. Существующие настройки сохраняются; пользовательский таймер обновляет локальные данные Steam каждые 15 минут.",
+        "text": "По желанию после LiveWallpaper и перед эмуляцией: Backlog 1.0.4-DE1 показывает даты, время в играх и достижения на немецком языке. При новой установке Mosaic, Drift, Flip и Ripple случайно сменяются каждые 5 минут. Существующие настройки сохраняются; пользовательский таймер обновляет локальные данные Steam каждые 15 минут. В 1.0.4 улучшено чтение достижений из кеша Steam; скрытые игры и их снимки по умолчанию исключены. Параметр library.showHidden: true возвращает их после следующей синхронизации.",
         "note": "В игровом режиме Steam / Big Picture выберите заставку backlog в настройках оформления."
       },
       {
@@ -787,7 +787,7 @@
       ],
       [
         "Можно ли пропустить Backlog?",
-        "По желанию после LiveWallpaper и перед эмуляцией: Backlog 1.0.2-DE1 показывает даты, время в играх и достижения на немецком языке. При новой установке Mosaic, Drift, Flip и Ripple случайно сменяются каждые 5 минут. Существующие настройки сохраняются; пользовательский таймер обновляет локальные данные Steam каждые 15 минут. В игровом режиме Steam / Big Picture выберите заставку backlog в настройках оформления."
+        "По желанию после LiveWallpaper и перед эмуляцией: Backlog 1.0.4-DE1 показывает даты, время в играх и достижения на немецком языке. При новой установке Mosaic, Drift, Flip и Ripple случайно сменяются каждые 5 минут. Существующие настройки сохраняются; пользовательский таймер обновляет локальные данные Steam каждые 15 минут. В игровом режиме Steam / Big Picture выберите заставку backlog в настройках оформления. В 1.0.4 улучшено чтение достижений из кеша Steam; скрытые игры и их снимки по умолчанию исключены. Параметр library.showHidden: true возвращает их после следующей синхронизации."
       ]
     ],
     "ctaTitle": "Настройте консоль под себя.",
@@ -810,7 +810,7 @@
     "latestWatch": "Смотреть на YouTube",
     "latestChannel": "Все видео на YouTube",
     "terminalAlternative": "Также можно запустить через терминал",
-    "terminalAlternativeText": "Скопируйте эту команду в терминал в режиме рабочего стола. Она скачает версию 0.3.0 и запустит установщик только после успешной загрузки. Запускайте от обычного пользователя, без sudo.",
+    "terminalAlternativeText": "Скопируйте эту команду в терминал в режиме рабочего стола. Она скачает версию 0.3.1 и запустит установщик только после успешной загрузки. Запускайте от обычного пользователя, без sudo.",
     "videoCredit": "Среди стартовых видео есть собственные работы и видео с steamdeckrepo.com.",
     "tutorialWatch": "Смотреть инструкцию на YouTube"
   },
@@ -822,7 +822,7 @@
       "安装方法",
       "视频教程"
     ],
-    "release": "v0.3.0 · Backlog + LiveWallpaper",
+    "release": "v0.3.1 · Backlog + LiveWallpaper",
     "eyebrow": "由 STEAM DECK CHECKER 制作",
     "hero": [
       "你的 Linux 掌机。",
@@ -877,7 +877,7 @@
       {
         "label": "Backlog",
         "title": "将 Steam 游戏库变成屏幕保护程序。",
-        "text": "可在 LiveWallpaper 之后、模拟器之前选择安装 Backlog 1.0.2-DE1。日期、游戏时间、最近游玩和成就显示为德语。新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。保留现有设置，用户定时器每 15 分钟更新本地 Steam 数据。",
+        "text": "可在 LiveWallpaper 之后、模拟器之前选择安装 Backlog 1.0.4-DE1。日期、游戏时间、最近游玩和成就显示为德语。新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。保留现有设置，用户定时器每 15 分钟更新本地 Steam 数据。 1.0.4 改进了从 Steam 单个游戏缓存读取成就的可靠性；默认排除隐藏游戏及其截图。设置 library.showHidden: true 可在下次同步后重新显示。",
         "note": "在 Steam 游戏模式 / Big Picture 的设置 → 个性化 → 屏幕保护程序中选择 backlog。"
       },
       {
@@ -950,7 +950,7 @@
       ],
       [
         "可以跳过 Backlog 吗？",
-        "可在 LiveWallpaper 之后、模拟器之前选择安装 Backlog 1.0.2-DE1。日期、游戏时间、最近游玩和成就显示为德语。新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。保留现有设置，用户定时器每 15 分钟更新本地 Steam 数据。 在 Steam 游戏模式 / Big Picture 的设置 → 个性化 → 屏幕保护程序中选择 backlog。"
+        "可在 LiveWallpaper 之后、模拟器之前选择安装 Backlog 1.0.4-DE1。日期、游戏时间、最近游玩和成就显示为德语。新安装默认每 5 分钟随机切换 Mosaic、Drift、Flip 和 Ripple。保留现有设置，用户定时器每 15 分钟更新本地 Steam 数据。 在 Steam 游戏模式 / Big Picture 的设置 → 个性化 → 屏幕保护程序中选择 backlog。 1.0.4 改进了从 Steam 单个游戏缓存读取成就的可靠性；默认排除隐藏游戏及其截图。设置 library.showHidden: true 可在下次同步后重新显示。"
       ]
     ],
     "ctaTitle": "把掌机设置成你喜欢的样子。",
@@ -973,7 +973,7 @@
     "latestWatch": "在 YouTube 上观看",
     "latestChannel": "在 YouTube 上查看所有视频",
     "terminalAlternative": "也可以通过终端启动",
-    "terminalAlternativeText": "在桌面模式下，将此命令复制到终端运行。它会下载 0.3.0 版，并且仅在下载成功后启动安装程序。请以普通用户运行，不要使用 sudo。",
+    "terminalAlternativeText": "在桌面模式下，将此命令复制到终端运行。它会下载 0.3.1 版，并且仅在下载成功后启动安装程序。请以普通用户运行，不要使用 sudo。",
     "videoCredit": "启动视频既包含自行制作的作品，也包含来自 steamdeckrepo.com 的视频。",
     "tutorialWatch": "在 YouTube 上观看教程"
   },
@@ -985,7 +985,7 @@
       "インストール",
       "動画ガイド"
     ],
-    "release": "v0.3.0 · Backlog + LiveWallpaper",
+    "release": "v0.3.1 · Backlog + LiveWallpaper",
     "eyebrow": "STEAM DECK CHECKER 制作",
     "hero": [
       "Linux ハンドヘルドを。",
@@ -1040,7 +1040,7 @@
       {
         "label": "Backlog",
         "title": "Steam ライブラリをスクリーンセーバーに。",
-        "text": "LiveWallpaper の後、エミュレーターの前に Backlog 1.0.2-DE1 を任意でインストールできます。日付、プレイ時間、最終プレイ、実績はドイツ語表示です。新規インストールでは Mosaic、Drift、Flip、Ripple を 5 分ごとにシャッフル。既存設定は保持され、ユーザータイマーが Steam のローカルデータを 15 分ごとに更新します。",
+        "text": "LiveWallpaper の後、エミュレーターの前に Backlog 1.0.4-DE1 を任意でインストールできます。日付、プレイ時間、最終プレイ、実績はドイツ語表示です。新規インストールでは Mosaic、Drift、Flip、Ripple を 5 分ごとにシャッフル。既存設定は保持され、ユーザータイマーが Steam のローカルデータを 15 分ごとに更新します。 1.0.4 では Steam のゲーム別キャッシュからの実績取得を改善。非表示ゲームとスクリーンショットは標準で除外します。library.showHidden: true にすると次の同期後に再表示できます。",
         "note": "Steam のゲームモード / Big Picture で設定 → カスタマイズ → スクリーンセーバー → backlog を選択。"
       },
       {
@@ -1113,7 +1113,7 @@
       ],
       [
         "Backlog はスキップできますか？",
-        "LiveWallpaper の後、エミュレーターの前に Backlog 1.0.2-DE1 を任意でインストールできます。日付、プレイ時間、最終プレイ、実績はドイツ語表示です。新規インストールでは Mosaic、Drift、Flip、Ripple を 5 分ごとにシャッフル。既存設定は保持され、ユーザータイマーが Steam のローカルデータを 15 分ごとに更新します。 Steam のゲームモード / Big Picture で設定 → カスタマイズ → スクリーンセーバー → backlog を選択。"
+        "LiveWallpaper の後、エミュレーターの前に Backlog 1.0.4-DE1 を任意でインストールできます。日付、プレイ時間、最終プレイ、実績はドイツ語表示です。新規インストールでは Mosaic、Drift、Flip、Ripple を 5 分ごとにシャッフル。既存設定は保持され、ユーザータイマーが Steam のローカルデータを 15 分ごとに更新します。 Steam のゲームモード / Big Picture で設定 → カスタマイズ → スクリーンセーバー → backlog を選択。 1.0.4 では Steam のゲーム別キャッシュからの実績取得を改善。非表示ゲームとスクリーンショットは標準で除外します。library.showHidden: true にすると次の同期後に再表示できます。"
       ]
     ],
     "ctaTitle": "あなたらしいハンドヘルドに。",
@@ -1136,7 +1136,7 @@
     "latestWatch": "YouTube で見る",
     "latestChannel": "YouTube ですべての動画を見る",
     "terminalAlternative": "ターミナルから起動する場合",
-    "terminalAlternativeText": "デスクトップモードのターミナルにこのコマンドをコピーしてください。バージョン 0.3.0 をダウンロードし、成功した場合のみインストーラーを起動します。sudo を付けず、通常のユーザーで実行してください。",
+    "terminalAlternativeText": "デスクトップモードのターミナルにこのコマンドをコピーしてください。バージョン 0.3.1 をダウンロードし、成功した場合のみインストーラーを起動します。sudo を付けず、通常のユーザーで実行してください。",
     "videoCredit": "起動動画には、自作のものと steamdeckrepo.com からのものが含まれています。",
     "tutorialWatch": "YouTube で解説動画を見る"
   }
